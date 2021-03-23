@@ -1,0 +1,119 @@
+﻿
+body {
+    background-color: #ECEBE2;
+}
+
+.header
+{
+    background-image: url("images/headerbg.jpg");
+    background-repeat: repeat-x;
+    height: 45px;
+    padding: 5px 15px 0;
+    width: auto;
+}
+
+    .header h1
+    {
+        color: #E2EBED;
+        font-family: "Calibri",Arial,Helvetica,sans-serif;
+        font-size: 28px;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+
+        .header h1 span
+        {
+            color: #C2C8C9;
+            font-family: "Calibri",Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+        }
+
+
+.serchbox
+{
+    background-image: url("images/searchbg.jpg");
+    background-repeat: repeat-x;
+    border: 1px solid #000000;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    height: 25px;
+    position: relative;
+    width: 205px;
+}
+
+.searchbtn
+{
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    background-image: url("images/searchbtn.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.inputtxt
+{
+    background-color: transparent;
+    border: 0 none;
+    color: #CCCCCC;
+    font-size: 12px;
+    outline: medium none;
+    padding: 4px 0 0 8px;
+    width: 176px;
+}
+
+
+.usebtnbg
+{
+    background-image: url("images/namebg.jpg");
+    background-repeat: repeat-x;
+    border: 1px solid #000000;
+    border-radius: 4px 4px 4px 4px;
+    color: #CCCCCC;
+    float: left;
+    font-size: 12px;
+    height: 27px;
+    line-height: 25px;
+    margin: 0 13px;
+    min-width: 115px;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+
+    .usebtnbg input
+    {
+        margin: 0 4px 0 0;
+        background-image: url("images/userico.jpg");
+        width: 11px;
+        height: 11px;
+        border: none;
+    }
+
+.header a
+{
+    color: #CCCCCC;
+    font-size: 12px;
+    line-height: 27px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.mainFooter
+{
+    background-image: url("images/footercurve.png");
+    height:53px;
+    background-color: #ECEBE2;
+}
+
+.personInfo
+{
+   
+}

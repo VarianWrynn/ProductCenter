@@ -1,0 +1,85 @@
+﻿/* 常用
+-----------------------------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, blockquote, p { padding: 0; margin: 0; list-style-type: none; vertical-align: middle; }
+html, body { font-size: 12px; font-family: Arial,'微软雅黑'; }
+body { background: #efefef url(Image/BodyBg.jpg) repeat-x; }
+fieldset, img { border: 0; }
+.extra { display: none; }
+.clear { clear: both; display: block; }
+a { color: #000; text-decoration: none; }
+a:hover { text-decoration: underline; color: orange; }
+
+/*  分页
+-----------------------------------------------------------*/
+.pager { padding-top: 10px; text-align: center; line-height: 150%; font-size: 12px; clear: both; }
+.pager a, .pager span { display: inline-block; height: 24px; line-height: 24px; margin: 0 4px; padding: 0 10px; vertical-align: middle; text-decoration: none; border: 1px solid #C4C2C3; border-radius: 3px; color: #555454; font-family: arial; }
+.pager a:hover { text-decoration: none; color: #004361; border-color: #004361; }
+.pager .current { color: #fff; border: 1px solid #676767; background-color: #676767; }
+.pager .current.prev, .pager .current.next { color: #999; border-color: #999; background: #fff; }
+
+h3.title { margin: 15px 15px 10px 15px; padding: 0 0 8px 25px; font-size: 14px; font-weight: normal; color: #015286; border-bottom: solid 1px #16bbd9; background: url(Image/TitleBg.jpg) no-repeat left 3px; }
+
+/* 布局
+-----------------------------------------------------------*/
+.layHeader { }
+.layBanner { width: 990px; margin: auto; margin-top: 10px; }
+.layMain { width: 990px; margin: auto; margin-top: 10px; border: solid 1px #dcdcdc; background: #fff; }
+.layLeft { float: left; width: 280px; }
+.layRight { float: right; width: 700px; }
+.layFooter { width: 990px; margin: auto; margin: 10px auto; border: solid 1px #dcdcdc; background: #fff; }
+
+/* Header
+-----------------------------------------------------------*/
+.boxHeader { border-top: solid 2px #156393; background: url(Image/LogoBg1.png) repeat-x; }
+.boxHeader .wrap { width: 990px; height: 105px; margin: auto; background: url(Image/Logo.png) no-repeat left 20px; }
+.boxHeader .link { float:right; margin:30px 20px 0 0 ;   }
+.boxHeader .link a{ padding:0 5px; }
+
+/* Nav
+-----------------------------------------------------------*/
+.boxNav { width: 990px; height: 51px; line-height: 51px; margin: auto; font-size: 16px; text-align: center; }
+.boxNav a { display: inline-block; padding: 0 36px; font-size: 16px; font-weight: bold; }
+.boxNav a.selected { color: #fff; background: url(Image/NavSelected.png) no-repeat center; }
+.boxNav a:hover { text-decoration: none; color: #fff; background: url(Image/NavSelected.png) no-repeat center; }
+
+.boxCatalog { margin: 0 15px 25px 15px; }
+.boxCatalog li { height: 27px; line-height: 27px; padding-left: 20px; border-bottom: dotted 1px #dcdcdc; background: url(Image/Dot1.jpg) no-repeat left center; }
+.boxContacts { margin: 0 15px 25px 15px; line-height: 27px; }
+
+.boxAbout { margin: 0 15px 25px 15px; }
+.boxAbout p { line-height: 27px; text-indent: 2em; margin-bottom: 10px; padding-left: 180px; }
+.boxAbout img { float: left; width: 150px; padding: 5px; margin: 0 2px; border: solid 1px #dcdcdc; }
+
+
+.boxImages { margin: 0 15px 25px 15px; }
+.boxImages a { display: inline-block; }
+.boxImages a:hover { text-decoration: none; }
+.boxImages img { width: 147px; height: 110px; padding: 5px; margin: 0 2px; border: solid 1px #dcdcdc; }
+.boxImages span { display: block; padding: 3px; text-align: center; }
+
+.boxList { margin: 0 15px 25px 15px; }
+.boxList ul { }
+.boxList li { position: relative; height: 31px; line-height: 31px;  padding-left: 5px;list-style-position: inside; list-style-type: disc; border-bottom: dashed 1px #dcdcdc; }
+.boxList a { position: absolute; left: 15px; }
+.boxList i { position: absolute; right: 5px; font-style:normal; color:#676767;  }
+
+.boxDetail { margin: 0 15px 25px 15px; }
+.boxDetail h1{ margin:20px 0; font-size:18px; text-align:center; }
+.boxDetail .date{ padding-bottom:10px; text-align:center; color:#676767; border-bottom: solid 1px #dcdcdc;}
+.boxDetail .html{ padding:20px 0; line-height:1.8; font-size:14px; }
+.boxDetail .html p{margin-bottom:15px; }
+.boxDetail .html img{ width:600px; }
+
+/* Copyright
+-----------------------------------------------------------*/
+.boxFooter { line-height: 27px; padding: 10px; text-align: center; }
+.boxFooter span { padding: 0 10px; }
+
+
+/* Banner
+-----------------------------------------------------------*/
+.boxBanner { overflow: hidden; text-align: center; }
+
+/* Html
+-----------------------------------------------------------*/
+.boxHtml { overflow: hidden; }

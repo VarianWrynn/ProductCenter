@@ -1,0 +1,161 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ECom Synchronized</title>
+
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/Gray/easyui.css")" rel="Stylesheet" type="text/css" />
+
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common/cbBlue.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common/aButtons.css")" rel="Stylesheet" type="text/css" />
+
+    <link href="@Url.Content("~/Content/EComSynchronized/Index.css")" rel="Stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #keywordbg, .searchSKU, .attentionItem, #UpdateBy
+        {
+            border: 1px solid #959EA9;
+            border-radius: 5px;
+            color: #666666;
+            font-size: 14px;
+            height: 28px;
+            padding: 0 5px;
+            width: 210px;
+        }
+    </style>
+
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        seajs.config({
+            'map': [[/^(.*\.(?:css|js))(.*)$/i, '$1?20140611']]
+        });
+        seajs.use("EComSynchronized/Index", function (a) {
+
+        });
+    </script>
+</head>
+<body>
+
+    <div id="background" class="background" style="height: 100%">
+    </div>
+    <div id="progressBar" class="progressBar">
+        Loading,please wait...
+    </div>
+    <div>
+        <div id="SearchContent" class="mainarea" style="width: 99%;">
+            <h1 class="h1_SearchTitle">Search Conditions</h1>
+            <div class="filterhead"><a href="#">Filter</a></div>
+
+
+            <form id="searchProductFilterForm">
+                <div class="filterbg" style="height: auto;">
+                    <table width="98%" border="0" cellspacing="5">
+                        <tbody>
+                            <tr>
+                                <td width="18%" id="toolTipQueryHM" align="right">HM#/HMName:</td>
+                                <td width="12%">
+                                    <input type="text" id="keywordbg"></td>
+                                <td width="18%" id="toolTipQuerySKU" align="right">SKU#/SKUName:</td>
+                                <td width="12%">
+                                    <input type="text" class="searchSKU"></td>
+                                <td width="18%" id="toolTipQueryModifedByUser" align="right">Modifed User</td>
+                                <td width="12%">
+                                    <input type="text" id="UpdateBy"></td>
+                            </tr>
+                            <tr>
+
+                                <td width="18%" align="right">Brand:</td>
+                                <td width="12%">
+
+                                    <input id="cbBrand" style="width: 220px; height: 30px;"
+                                        data-options="
+                                            required:'required',
+                                            valueField:'Brand_Id',
+                                            textField:'Brand_Name',
+                                            value:0,
+                                            url:'../CMSCacheableData/BrandList?isNeedAll=true'
+                                        " />
+
+                                </td>
+                                <td width="18%" align="right">Channel:</td>
+                                <td width="12%">
+                                    <input id="cbChannel" name="cbChannel" style="width: 220px; height: 30px;"
+                                        data-options="
+                                            required:'required',
+                                            valueField:'ChannelID',
+                                            textField:'ChannelName',
+                                            value:0,
+                                            url:'../Common/GetChannelList?isNeedAll=true'
+                                        " />
+
+                                </td>
+                                <td width="18%" align="right">IsGroup:</td>
+                                <td width="12%">
+                                    <select id="cbMultiplePart"  required="required" name="cbMultiplePart" style="width: 220px; height: 30px;">
+                                        <option selected="selected" value="0">ALL</option>
+                                        <option value="1">No-Group</option>
+                                        <option value="2">Group</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Status:</td>
+                                <td>
+                                    <input id="cbStatus"  name="cbStatus" style="width: 220px; height: 30px;" disabled="disabled"
+                                        data-options="
+                                        required:'required',
+                                        valueField:'StatusID',
+                                        textField:'StatusName',
+                                        value:5,
+                                        url:'../CMSCacheableData/SKUStatusList?isNeedAll=true',
+                                        " />
+
+                                </td>
+                                <td align="right">Category:</td>
+                                <td>
+                                    <input id="cbCategory" name="cbCategory" style="width: 220px; height: 30px;"
+                                        data-options="
+                                        required:'required',
+                                        valueField:'CategoryID',
+                                        textField:'CategoryName',
+                                        value:0,
+                                        url:'../CMSCacheableData/SKUCategoryList?isNeedAll=true',
+                                        " />
+
+                                </td>
+                                <td align="right">Inventory:</td>
+                                <td>
+                                    <select id="cbInventory" name="cbInventory" required="required" style="width: 220px; height: 30px;">
+                                        <option selected="selected" value="0">ALL</option>
+                                        <option value="1">In Stock</option>
+                                        <option value="2">Low Inventory</option>
+                                        <option value="3">Out of Stock</option>
+                                        <option value="4">Low Inventory|Out of Stock</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="filtyerbtnarea">
+                        <input type="image" class="btnSearch" src="~/Content/images/searchbtn.png">
+                        <input type="image" class="btnReset" src="~/Content/images/btnReset.png">
+                    </div>
+                </div>
+            </form>
+            <br />
+            <div>
+                <table id="skuDG">
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

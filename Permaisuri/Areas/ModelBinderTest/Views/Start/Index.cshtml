@@ -1,0 +1,30 @@
+﻿@model Permaisuri.Areas.ModelBinderTest.Controllers.StartController.Persons
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+            @using (Html.BeginForm("DoQuery", "Start", FormMethod.Post, new {ID = "user_head_param_form", enctype = "multipart/form-data"}))
+            {
+                for (int i = 0; i < @Model.Data.Count; i++)
+                {
+                    <div>
+                        @Html.LabelFor(r => r.Data[i].Name) @Html.TextBoxFor(r => r.Data[i].Name)
+                        @Html.LabelFor(r => r.Data[i].Age) @Html.TextBoxFor(r => r.Data[i].Age)
+                        @Html.LabelFor(r => r.Data[i].Slogan) @Html.TextBoxFor(r => r.Data[i].Slogan)
+                    </div>
+                }
+                <input type="button" value="submit"/>
+                <button type="submit">aaaaaaa</button>
+            }
+        </div>
+    </body>
+</html>

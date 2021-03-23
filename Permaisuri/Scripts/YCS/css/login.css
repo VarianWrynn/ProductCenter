@@ -1,0 +1,19 @@
+* { padding: 0; margin: 0; }
+img { border: none; }
+body { background: url(images/login/bg.jpg) no-repeat #103D56; font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ,Ó×Ô²; }
+.footer { position: absolute; bottom: 20px; font-size: 13px; color: #C3CED5; text-align: center; width: 100%; }
+.page { width: 900px; height: 395px; position: absolute; left: 50%; top: 45%; margin-left: -450px; margin-top: -200px; background: #eee; background: url(images/login/img.png) right bottom no-repeat; }
+.nav { height: 65px; text-align: right; padding-right: 50px; }
+
+	.nav a { display: block; width: 36px; height: 36px; margin-left: 10px; float: right; background: url(images/login/icon-home.png)center center no-repeat; }
+a:hover { opacity: 0.8; }
+.nav a.btn-1 { background-image: url(images/login/icon-1.png); }
+.nav a.btn-2 { background-image: url(images/login/icon-2.png); }
+.ipt-wrap { width: 240px; height: 38px; border: 1px solid #8F9CA1; line-height: 38px; text-indent: 10px; color: #C1CACF; margin-top: 20px; }
+	.ipt-wrap input { height: 30px; line-height: 30px; width: 130px; background: none; border: none; margin-left: 10px; color: #C1CACF; }
+
+.line { margin-top: 16px; display: block; color: #C1CACF; }
+input:focus {outline: none;} 
+.btn { display: block; width: 240px; height: 38px; background: #1FBBA6; line-height: 38px; text-align: center; text-decoration: none; color: #fff; }
+.errors { color: red; padding-top: 7px; font-size: 14px; height: 13px; line-height: 13px; }
+.ipt-wrap.error { border-color: red; }

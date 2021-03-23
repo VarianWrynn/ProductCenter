@@ -1,0 +1,145 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Business Reports</title>
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/FancyBox/jquery.fancybox.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Reports/Index.css")" rel="Stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        seajs.config({
+            'map': [[/^(.*\.(?:css|js))(.*)$/i, '$1?20140611']]
+        });
+
+        seajs.use("Reports/Index", function (a) {
+
+        });
+    </script>
+</head>
+<body>
+
+    <div id="background" class="background" style="height: 100%">
+    </div>
+    <div id="progressBar" class="progressBar">
+        Loading,please wait...
+    </div>
+
+    <aside id="mainarea">
+        <h1>Business Reports</h1>
+        <div class="filterhead"><a href="#">Filter</a></div>
+        <form id="reportFilterForm">
+            <div class="filterbg">
+                <table width="100%" border="0" cellspacing="5">
+                    <tr>
+                        <td width="18%" align="right">Channel:</td>
+                        <td width="12%">
+                            <input id="cbChannel" name="cbChannel" required="required" style="width: 220px; height: 30px;"></td>
+                        <td width="8%" align="right">Brand:</td>
+                        <td>
+                            <input id="cbBrand" name="cbBrand" required="required" style="width: 220px; height: 30px;"></td>
+                        <td align="right" style="display: none;">SKUOrder:</td>
+                        <td style="display: none;">
+                            <input id="SKUOrder" name="SKUOrder" required="required" style="width: 220px; height: 28px; border-radius: 5px;"></td>
+
+                        <td align="right" style="display: none;">HMNUM:</td>
+                        <td style="display: none;">
+                            <input id="HMNUM" name="HMNUM" required="required" style="width: 220px; height: 28px; border-radius: 5px;"></td>
+
+                    </tr>
+                    <tr>
+                        <td align="right">Report Type:</td>
+                        <td>
+                            <select id="cbReportType" class="easyui-combobox" name="cbReportType" required="required" style="width: 220px; height: 30px;">
+                                @*     <option selected="selected" value="0">ALL</option>*@
+                                <option value="1">Sales by Channel</option>
+                                <option value="2">Sales by Product</option>
+                                <option value="5">Sales by HM#</option>
+                                <option value="3">Product Development Report</option>
+                                <option value="4">Low Inventory Report</option>
+                                <option value="6">Low Inventory Report By SKU</option>
+                                <option value="7">Cost Margin By Product Reports</option>
+                            </select></td>
+                        <td align="right">From:</td>
+                        <td>
+                            <input id="startTime" class="easyui-datebox" name="startTime" type="text" required="required" style="height: 28px; width: 100px;">
+                            To:
+                         <input id="endTime" class="easyui-datebox" name="endTime" type="text" required="required" style="height: 28px; width: 100px;">
+                        </td>
+
+                        <td width="18%" align="right" style="display: none;">QueueStatus:</td>
+                        <td width="12%" style="display: none;">
+                            <input id="QueueStatus" name="QueueStatus" style="width: 220px; height: 30px;"></td>
+
+                        <td width="18%" align="right" style="display: none;">AffectedSKU:</td>
+                        <td width="12%" style="display: none;">
+                            <input id="AffectedSKU" name="AffectedSKU" style="width: 220px; height: 30px;"></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <div class="filtyerbtnarea">
+                    <input type="image" id="reportSearch" src="~/Content/Reports/images/report-btn.png">
+                </div>
+            </div>
+        </form>
+
+        <section class="reasulthaed">
+            @*  <h3><strong>Report:</strong> Sales Totals</h3>
+            <h3><strong>From:</strong> 01/01/2013</h3>
+            <h3><strong>To:</strong> 02/01/2013</h3>*@
+            <a id="aPrintBtn" style="cursor: pointer;">
+                <img src="~/Content/images/printbtn.png"></a>
+            <a id="aExport" style="cursor: pointer;">
+                <img src="~/Content/images/exportCSV.png"></a>
+        </section>
+        <div class="salesblok">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="reporttable">
+                @*                <thead>
+                    <tr>
+                        <th width="25%" class="dataTableHeader" align="left">Channel </th>
+                        <th width="25%" class="dataTableHeader" align="center">Sales Totals</th>
+                        <th width="25%" class="dataTableHeader" align="center">Units Sold </th>
+                        <th width="25%" class="dataTableHeader" align="center">Avg. Sale Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>*@
+            </table>
+        </div>
+
+        <div class="pagina_hld">
+            <ul class="calpagi fl">
+                <li><a class="arrL" style="cursor: pointer">
+                    <img border="0" src="../Content/Products/images/icon_left.jpg" alt="Next" title="Next"></a></li>
+                <li><a id="aRow">1</a></li>
+                <li><a class="arrR" style="cursor: pointer">
+                    <img border="0" src="../Content/Products/images/icon_right.jpg" alt="Next" title="Next"></a></li>
+            </ul>
+            <ul class="showinghld">
+                <p class="fl">showing: </p>
+                <select id="opPageSize" class="selectyze3" name="style3">
+                    <option value="10" selected="selected">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
+            </ul>
+
+            <div class="resulthld">
+                <p>Results 1 - 9 of 9</p>
+            </div>
+        </div>
+        <input type="hidden" id="hiddenTotal" />
+    </aside>
+    <input type="hidden"  id="RType" value="@ViewBag.ReportType" />
+    <input type="hidden"  id="hiddenCMSImgUrl" value="@ViewBag.CMSImgUrl" />
+</body>
+</html>

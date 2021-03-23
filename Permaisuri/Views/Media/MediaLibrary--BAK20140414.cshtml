@@ -1,0 +1,246 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>Media Library</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/FancyBox/jquery.fancybox.css")" rel="Stylesheet" type="text/css" />
+    <link href="~/Content/Media/MediaLibrary.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .chosen-container
+        {
+            vertical-align: baseline;
+        }
+
+        .chosen-container-single .chosen-single
+        {
+            height: 27px;
+            line-height: 28px;
+        }
+    </style>
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        
+        seajs.use("Media/MediaLibrary", function (a) {
+
+        });
+    </script>
+   
+</head>
+<body>
+
+   @RenderPage(@Url.Content("~/Views/Shared/_LoadingView.cshtml"));
+
+    <aside id="mainarea">
+        <h1 class="h1_SearchTitle">Media Library</h1>
+        <div class="filterhead"><a href="#">Filter</a></div>
+        <form id="mediaLibForm">
+            <div class="filterbg">
+                <table width="98%" border="0" cellspacing="5">
+                    <tbody>
+                        <tr>
+                            <td width="18%" align="right">SKUOrder</td>
+                            <td>
+                                <input type="text" id="SKUOrder">
+                            </td>
+                            <td width="18%" align="right">HMNUM:</td>
+                            <td width="12%">
+                                @*<input type="text" id="txtKeywords" class="keywordbg">*@
+                                <input type="text" id="HMNUM">
+                            </td>
+
+                            <td width="18%" align="right">Channel:</td>
+                            <td width="12%">
+                                @*<input id="cbChannel" name="cbChannel"  required="required" style="width: 220px; height: 30px;">*@
+                                <input id="cbChannel" name="cbChannel" class="easyui-combobox" style="width: 220px; height: 30px;"
+                                    data-options="
+                                            required:'required',
+                                            valueField:'ChannelID',
+                                            textField:'ChannelName',
+                                            value:0,
+                                            url:'../Common/GetChannelList?isNeedAll=true'
+                                        " />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Status:</td>
+                            <td>
+                                <select id="cbStatus" class="easyui-combobox" name="cbStatus" style="width: 220px; height: 30px;">
+                                    <option selected="selected" value="0">ALL</option>
+                                    <option value="1">Attached to SKU</option>
+                                    <option value="2">Unattached</option>
+                                </select>
+                            </td>
+
+                            <td align="right">Brand:</td>
+                            <td>
+                                @*<input id="cbBrands" name="cbBrands"  required="required" style="width: 220px; height: 30px;">*@
+                                <input type="text" value="All" class="easyui-combobox" id="cbBrand" style="width: 220px; height: 30px;"
+                                    data-options="
+                                            required:'required',
+                                            valueField:'Brand_Id',
+                                            textField:'Brand_Name',
+                                            value:0,
+                                            url:'../CMSCacheableData/BrandList?isNeedAll=true'
+                                        " />
+                            </td>
+
+                            <td width="18%" align="right">Format:</td>
+                            <td width="12%">
+                                <select id="cbFormat" class="easyui-combobox" required="required" name="cbFormat" style="width: 220px; height: 30px;">
+                                    <option selected="selected" value="0">ALL</option>
+                                    <option value="1">image</option>
+                                    <option value="2">video</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Cloud Status</td>
+                            <td>
+                                <input type="text" value="All" class="easyui-combobox" id="cbCloudStatus" style="width: 220px; height: 30px;"
+                                    data-options="
+                                            required:'required',
+                                            valueField:'CloudStatusId',
+                                            textField:'CloudStatusName',
+                                            value:0,
+                                            url:'../CMSCacheableData/CloudStatusList?isNeedAll=true'
+                                        " /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="filtyerbtnarea">
+                    <input type="image" class="btnSearch" src="~/Content/images/searchbtn.png">
+                    <input type="image" class="btnReset" src="~/Content/images/btnReset.png">
+                </div>
+            </div>
+        </form>
+        <section class="productarea">
+            <section class="product_haed">
+                <p class="p_showing" id="p_showResults">@*Results 31 - 60 of 4205*@</p>
+                <a href="#" align="right">
+                    <img id="btn_addmedia" src="~/Content/Media/images/addmedia-btn.png" />
+                </a>
+            </section>
+            <div id="div_showOrhide">
+                <table id="dpop" class="popup" style="opacity: 1; top: 20px; left: 30px; display: none">
+                    <tbody>
+                        <tr>
+                            <td id="topleft" class="corner"></td>
+                            <td class="top"></td>
+                            <td id="topright" class="corner"></td>
+                        </tr>
+                        <tr>
+                            <td class="left"></td>
+                            <td>
+
+                                <a id="single_1" href="http://farm4.staticflickr.com/3712/9032543579_1217e6566b_b.jpg" title="Singapore from the air (Andrew Tan 2011)">
+                                    <img id="dynamicImg" alt="" style="float: left; margin-right: 20px;" src="~/Content/images/tip-img.jpg">
+                                </a>
+                                <table class="popupname" width="60%" cellspacing="0" cellpadding="5" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td height="25px">Name:</td>
+                                            <td><span id="span_Name"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25px">Format:</td>
+                                            <td id="td_Format"></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25px">Size:</td>
+                                            <td id="td_Size"></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25px">Date:</td>
+                                            <td id="td_Date"></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <h2 id="h2_url"></h2>
+                                <p class="p_showing">Attached to products:</p>
+                                <table class="productstable" width="100%" cellspacing="0" cellpadding="5" border="0">
+                                    <thead>
+                                        <tr>
+                                            <td>SKU</td>
+                                            <td>SKUName</td>
+                                            <td>Channel</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </td>
+                            <td class="rignt"></td>
+                        </tr>
+                        <tr>
+                            <td name="topleft" class="corner"></td>
+                            <td class="top"></td>
+                            <td name="topright" class="corner"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="div_picture">
+            </div>
+            <div id="pagina_hld" class="pagina_hld" style="display: none">
+                <ul class="calpagi fl">
+                    <li><a id="arrL" class="arrL" style="cursor: pointer">
+                        <img border="0" src="../Content/Products/images/icon_left.jpg" alt="Next" title="Next"></a></li>
+                    <li><a id="aRow">1</a></li>
+                    <li><a id="arrR" class="arrR" style="cursor: pointer">
+                        <img border="0" src="../Content/Products/images/icon_right.jpg" alt="Next" title="Next"></a></li>
+                </ul>
+                <ul class="showinghld">
+                    <p class="fl">showing: </p>
+                    <select id="opPageSize" class="selectyze3" name="style3">
+                        <option value="8" selected="selected">8</option>
+                        <option value="16">16</option>
+                        <option value="24">24</option>
+                        <option value="32">32</option>
+                        <option value="40">40</option>
+                    </select>
+                </ul>
+            </div>
+        </section>
+    </aside>
+    <div id="myModal" class="reveal-modal" style="top: 100px; opacity: 1; display: none">
+        <div id="content_1" class="content">
+            <h2>Attach Media to SKU #354679</h2>
+            <div class="fr" style="font-size: 12px;">
+                Search:
+                <input class="keywordbg" type="text" name="">
+            </div>
+            <ul>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+            </ul>
+            <div class="fr">
+                <input type="image" src="~/Content/Media/images/cancel-btn.jpg">
+                <input type="image" src="~/Content/Media/images/skubtn.jpg">
+            </div>
+        </div>
+        <a id="a_close_mediaAdd" class="close-reveal-modal">×</a>
+    </div>
+    <div id="add_media_bg" class="reveal-modal-bg" style="display: none; cursor: pointer;"></div>
+
+    <input type="hidden" id="hiddenCMSImgUrl" value="@ViewBag.CMSImgUrl" />
+
+    
+</body>
+</html>

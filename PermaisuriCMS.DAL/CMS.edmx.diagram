@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7630bd9ba61f421fa9484b0225cef216" Name="Diagram1" ZoomLevel="29">
+        <EntityTypeShape EntityType="CMSModel.Brand" Width="1.5" PointX="3.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Channel" Width="1.5" PointX="3.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.ChannelProperty" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_Ecom_Sync_Result" Width="1.5" PointX="2.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_HM_Costing" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_HMGroup_Relation" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_HMNUM" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_ProductCTN" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_ProductDimension" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_SKU" Width="1.5" PointX="6" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_SKU_Category" Width="1.5" PointX="4.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_SKU_Colour" Width="1.5" PointX="6.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_SKU_Costing" Width="1.5" PointX="3.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_SKU_Material" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_StockKey" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.LogOfUserLogin" Width="1.5" PointX="8.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.LogOfUserOperating" Width="1.5" PointX="7.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.LogOfUserOperatingDetails" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.MediaLibrary" Width="1.5" PointX="3" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Menu_Resource" Width="1.5" PointX="13" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.PropertyValues" Width="1.5" PointX="15.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Role_Menu_Relation" Width="1.5" PointX="15.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Security_Role" Width="1.5" PointX="13" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKU_HM_Relation" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKU_Media_Relation" Width="1.5" PointX="5.25" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKU_Status" Width="1.5" PointX="3.75" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.User_Channel_Relation" Width="1.5" PointX="15.25" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.User_Profile" Width="1.5" PointX="13" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.User_Profile_Ext" Width="1.5" PointX="15.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.User_Role_Relation" Width="1.5" PointX="15.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.User_Status" Width="1.5" PointX="10.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_HM_Inventory" Width="1.5" PointX="17.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.CMS_User_Profile_V" Width="1.5" PointX="17.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Ecom_ImageUrls_V" Width="1.5" PointX="17.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Ecom_ProductCartons_V" Width="1.5" PointX="17.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.HMGroup_Inventory_V" Width="1.5" PointX="11.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.PO_Order_V" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Reports_LowInventory_V" Width="1.5" PointX="5.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.Reports_Margin_By_Product_V" Width="1.5" PointX="19.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKU_Channel_Brand_Info_V" Width="1.5" PointX="19.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKU_LowestInventory_V" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKUInfo_V" Width="1.5" PointX="7.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.SKUInfo2_V" Width="1.5" PointX="19.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.User_Role_Menu_V" Width="1.5" PointX="19.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_Category_V" Width="1.5" PointX="17.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_Colour_V" Width="1.5" PointX="19.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_HM_Colour_Material_V" Width="1.5" PointX="9.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_ImageUrls_V" Width="1.5" PointX="11.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_Material_V" Width="1.5" PointX="13.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPo_NewDataFromPOD_V" Width="1.5" PointX="21.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPo_NewHM_V" Width="1.5" PointX="21.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_StockKeyInventory_V" Width="1.5" PointX="21.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMSModel.WebPO_Users_V" Width="1.5" PointX="21.75" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="CMSModel.FK_CMS_SKU_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_SKU_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_User_Channel_Relation_Channel" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_HMNUM_CMS_HM_Costing" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_HMGroup_Relation_CMS_HMNUM" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_HMNUM_CMS_StockKey" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_ProductCTN_CMS_HMNUM1" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_ProductDimension_CMS_HMNUM" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SKU_HM_Relation_CMS_HMNUM" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_SKU_CMS_SKU_Costing" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_CMS_SKU_SKU_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SKU_HM_Relation_CMS_SKU" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SKU_Media_Relation_CMS_SKU" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_MediaLibrary_CMS_StockKey" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SKU_HM_Relation_CMS_StockKey" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_SKU_Media_Relation_MediaLibrary" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Role_Menu_Relation_Menu_Resource" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_Role_Menu_Relation_Security_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_User_Role_Relation_Security_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_User_Channel_Relation_User_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_User_Profile_Ext_User_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_User_Profile_User_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="CMSModel.FK_User_Role_Relation_User_Profile" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

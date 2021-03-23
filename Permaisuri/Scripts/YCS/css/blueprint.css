@@ -1,0 +1,159 @@
+#alarm-scroll { z-index: 2000; }
+#magazine-nav { z-index: 10000; }
+#loading-wrap { z-index: 10003; }
+body { background: rgb(244, 241, 233); margin: 0px; padding: 0px; width: 100%; height: 100%; overflow: hidden; }
+#wrap { width: 100%; height: 100%; overflow: hidden; padding-top: 0; position: absolute; box-sizing: border-box; -moz-box-sizing: border-box; -moz-osx-font-smoothing: grayscale; }
+#contents { width: 100%; height: 100%; position: relative; }
+.scr-cont-base { left: 0px; top: 60%; width: 100%; height: 100%; position: absolute; }
+#scr-cont-wrap { margin: 0px auto; width: 100%; height: 100%; position: relative; min-width: 1020px; max-width: 1020px; }
+.scr-cont { width: 100%; position: absolute; }
+#scr-cont0 { height: 1800px; }
+#scr-cont1 { height: 1880px; }
+.underline-text { width: 100%; height: 100%; color: rgb(1, 80, 183); line-height: 1.35; letter-spacing: 0.15em; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 32px; font-style: normal; font-weight: normal; position: absolute; }
+.underline-text p { left: 50%; white-space: nowrap; position: absolute; -ms-word-wrap: break-word; }
+.underline-text p::after { background: url("images/underline.png") repeat-x; left: 0px; width: 100%; height: 1px; bottom: 1px; position: absolute; content: ""; }
+.italic { font-style: italic; }
+.ta-justify { text-align: justify; }
+.ta-left { text-align: left; }
+.block { position: absolute; box-sizing: border-box; -moz-box-sizing: border-box; z-index: 10; }
+.sentence { width: 100%; height: 100%; display: table; position: absolute; box-sizing: border-box; -moz-box-sizing: border-box; }
+.sentence-inner { vertical-align: middle; display: table-cell; }
+.sentence p { display: inline-block; }
+.block-bg-wh { background: rgb(255, 255, 255); width: 100%; height: 100%; position: absolute; }
+.block-bg-ye { background: rgb(248, 244, 240); width: 100%; height: 100%; position: absolute; }
+.block-cap { color: rgb(102, 102, 102); line-height: 1.7; letter-spacing: 0.02em; font-family: "Nobel-Book", "Avenir Next", "Corbel", sans-serif; font-size: 12px; font-style: normal; font-weight: normal; position: absolute; }
+.block-num { background: rgb(255, 255, 255); left: 20px; top: 20px; width: 40px; height: 40px; text-align: center; color: rgb(0, 0, 0); line-height: 40px; letter-spacing: 0.15em; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 13px; font-style: normal; font-weight: normal; position: absolute; }
+.block .title { text-align: center; color: rgb(0, 0, 0); line-height: 1.4; letter-spacing: 0.09em; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 14px; font-style: normal; font-weight: normal; margin-bottom: 9px; }
+.block .body { text-align: left; line-height: 1.45; letter-spacing: 0.03em; font-size: 14px; }
+#block0-0 { left: 0; top: 100px; width: 300px; height: 400px; z-index: 500; }
+#block0-0 .sentence { background: #5DA3DC; left: 20px; top: 20px; width: 260px; height: 360px; text-align: center; z-index: 101; color: #fff; }
+#block0-0 .sentence p { margin: 0px auto; width: 190px; }
+#block0-0 .block-bg-wh { z-index: 100; }
+#block0-1 { top: 50px; width: 793px; height: 493px; right: 0; }
+#block0-1 .block-img { top: 0; width: 773px; height: 493px; right: 20px; position: absolute; }
+#block0-1 .block-cap { text-align: right; right: 0px; }
+#block0-2 { top: 490px; width: 300px; height: 388px; right: 0; }
+#block0-2 .sentence { background: #4ABD9C; left: 20px; top: 20px; width: 260px; height: 348px; text-align: center; z-index: 121; color: #fff; }
+#block0-2 .sentence p { margin: 20px auto; width: 190px; }
+#block0-2 .block-bg-wh { z-index: 110; }
+#block0-3 { left: 0; top: 550px; width: 456px; height: 476px; z-index: 500; }
+#block0-3 .block-img { left: 20px; top: 20px; width: 416px; height: 436px; position: absolute; }
+
+#block0-4 { top: 810px; width: 725px; height: 465px; right: 0; z-index: 400; }
+#block0-4 .sentence { background: #F6F6F6; right: 20px; top: 20px; width: 705px; height: 465px; text-align: center; z-index: 121; color: #fff; }
+#block0-4 .sentence p { margin: 20px auto; width: 665px; }
+#block0-4 .block-bg-wh { z-index: 120; }
+
+#div-nav { height: 465px; width: 705px; }
+
+#div-nav a { display: block; height: 465px; float: left; width: 82px; text-align: center; text-decoration: none; color: #999; background: url(images/bg-nav-a.jpg) top left repeat-y; }
+#div-nav a img { width: 69px; margin-top: 186px; }
+#div-nav a span { display: block; font-size: 14px; text-decoration: none; }
+#div-nav a.on { width: 213px; }
+#div-nav a.on img { width: 129px; margin-top: 156px; }
+#block0-5 { left: 0; top: 810px; width: 300px; height: 505px; z-index: 600; background: #fff; }
+#block0-5 .sentence { background: #EE4B3F; left: 20px; top: 20px; width: 260px; height: 465px; text-align: center; z-index: 101; color: #fff; }
+#block0-5 .sentence p { margin: 0px auto; width: 190px; }
+#block0-5 .block-bg-wh { background: #FFF; }
+
+#block0-6 { left: 0; top: 1295px; width: 734px; height: 514px; z-index: 500; }
+#block0-6 .block-img { left: 20px; top: 20px; width: 694px; height: 474px; position: absolute; }
+
+#block0-7 { top: 1200px; width: 300px; height: 450px; right: 0; z-index: 500; }
+#block0-7 .sentence { background: #FACF80; left: 20px; top: 20px; width: 260px; height: 410px; text-align: center; z-index: 121; color: #fff; }
+#block0-7 .sentence p { margin: 20px auto; width: 190px; }
+#block0-7 .block-bg-wh { }
+#block0-71 { right: 0; top: 1617px; width: 410px; height: 265px; z-index: 600; }
+#block0-71 .block-img { right: 20px; top: 20px; width: 370px; height: 225px; position: absolute; }
+
+
+#block0-8 { left: 0; top: 1791px; width: 510px; height: 572px; z-index: 500; }
+#block0-8 .block-img { left: 20px; top: 20px; width: 470px; height: 532px; position: absolute; }
+
+#block0-9 { top: 2003px; width: 530px; height: 360px; right: 0; z-index: 500; }
+#block0-9 .sentence { background: #84CA7A; left: 20px; top: 20px; width: 490px; height: 320px; text-align: center; z-index: 121; color: #fff; }
+#block0-9 .sentence p { margin: 20px auto; width: 395px; }
+
+
+.cover-bg { background: rgb(230, 233, 237); left: 0px; width: 100%; height: 0px; bottom: 0px; position: absolute; }
+.cover-img-mask { background: rgb(255, 255, 255); left: 0px; width: 100%; height: 0px; bottom: 0px; position: absolute; }
+.cover-img { left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; position: absolute; }
+.cover-text-wrap { left: 50%; width: 500px; height: 67%; bottom: 0px; margin-left: -250px; position: absolute; }
+.cover-text { left: 0px; top: 0px; width: 500px; height: 300px; text-align: center; margin-top: 45px; position: absolute; }
+.cover-title { width: 100%; color: rgb(1, 80, 183); font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-style: normal; font-weight: normal; position: absolute; }
+.cover-copy { width: 100%; color: rgb(1, 80, 183); font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-style: normal; font-weight: normal; position: absolute; }
+.cover-title { top: 0px; line-height: 1; letter-spacing: 0.18em; font-size: 18px; }
+.cover-copy { top: 40px; line-height: 1; letter-spacing: 0.19em; font-size: 32px; }
+.cover-line { background: rgb(1, 80, 183); left: 50%; top: 98px; width: 30px; height: 2px; margin-left: -15px; position: absolute; }
+.cover-summary-wrap { top: 124px; width: 100%; position: absolute; }
+.cover-summary { color: rgb(1, 80, 183); line-height: 1.7em; letter-spacing: 0.04em; font-size: 14px; position: relative; }
+.lips-img { left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; position: absolute; }
+.lips-img .block-cap { left: 25px; top: 20px; z-index: 190; }
+.resume-wrap { background: rgb(255, 255, 255); left: 10%; top: 50%; width: 384px; height: 616px; margin-top: -323px; position: absolute; }
+.resume { left: 62px; top: 64px; width: 260px; line-height: 1.5; letter-spacing: 0.01em; font-family: "Nobel-Book", "Avenir Next", "Corbel", sans-serif; font-size: 13px; font-style: normal; font-weight: normal; position: absolute; }
+.resume-txt { height: auto; padding-top: 11px; padding-bottom: 11px; font-size: 12px; position: relative; }
+.resume-txt::after { background: url("images/underline.png") repeat-x; left: 0px; width: 100%; height: 1px; bottom: 0px; position: absolute; content: ""; }
+.resume .title { height: 40px; text-align: center; text-transform: uppercase; line-height: 40px; letter-spacing: 0.02em; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 13px; font-style: normal; font-weight: normal; border-top-color: rgb(1, 80, 183); border-bottom-color: rgb(1, 80, 183); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; position: relative; }
+.resume-txt p { letter-spacing: 0.06em; padding-left: 85px; font-weight: 500; position: relative; }
+.resume li { padding-right: 2px; padding-left: 2px; }
+.resume-year { letter-spacing: 0.1em; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 13px; font-style: normal; font-weight: normal; position: absolute; }
+.icon-arr { letter-spacing: 0.1em; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 13px; font-style: normal; font-weight: normal; position: absolute; }
+.resume-year { letter-spacing: 0.08em; }
+.icon-arr { left: 44px; letter-spacing: 0.01em; }
+.profile-img { left: 0px; top: 100%; width: 100%; height: 100%; overflow: hidden; position: absolute; }
+.credit-wrap { left: 0px; top: 0px; width: 100%; height: 100%; position: absolute; }
+.credit-bg-upper { left: 0px; top: -100%; width: 100%; height: 100%; overflow: hidden; position: absolute; }
+.credit-text-wrap { background: rgb(230, 233, 237); left: 0px; top: 50%; width: 100%; height: 100%; position: absolute; }
+.credit-text { width: 100%; text-align: center; bottom: 70px; color: rgb(0, 0, 0); line-height: 1.8; letter-spacing: 0.1em; font-family: "Nobel-Book", "Avenir Next", "Corbel", sans-serif; font-size: 12px; font-style: normal; font-weight: normal; position: absolute; }
+.credit-bg-bottom { background: rgb(230, 233, 237); left: 0px; top: -100%; width: 100%; height: 100%; position: absolute; }
+.repeat-wrap { left: 50%; width: 52px; height: 50%; bottom: 0px; margin-left: -26px; position: absolute; }
+.repeat-btn { left: 0px; top: 0px; width: 52px; height: 70px; position: absolute; cursor: pointer; }
+.pop-btn { position: absolute; cursor: pointer; }
+#block1-16 .pop-btn { width: 205px; height: 90px; }
+.pop-btn img { position: absolute; }
+.btn-icon { left: 0px; top: 54px; width: 188px; height: 30px; position: absolute; }
+.btn-icon img { top: 7px; right: 5px; position: absolute; }
+.btn-icon-over { opacity: 0; }
+.btn-text { height: 36px; color: rgb(1, 80, 183); line-height: 1; letter-spacing: 0.2em; overflow: hidden; font-family: "Nobel-Bold", "Avenir Next", "Corbel", sans-serif; font-size: 32px; font-style: normal; font-weight: normal; text-decoration: none; display: inline-block; white-space: nowrap; position: absolute; }
+.btn-text0 { top: 0px; }
+.btn-text1 { top: 43px; }
+.btn-text span { display: inline-block; opacity: 0; }
+.underline { background: rgb(1, 80, 183); width: 100%; height: 4px; }
+
+.profile-img { background: #4ABD9C; z-index: 1000; }
+
+body #scrollbar-wrap { padding-top: 0; }
+
+
+.page-home { position: absolute; width: 1000px; margin: auto; left: 50%; top: 20px; margin-left: -500px; height: 100%; }
+.page-home .logo { }
+.page-home header ul { list-style: none; float: right; padding: 0; margin: 0; }
+.page-home header li { float: left; margin-left: 50px; }
+.page-home header a { display: block; color: #fff; font-size: 16px; text-decoration: none; width: 50px; text-align: center; text-shadow:1px 1px rgba(0,0,0,0.3);line-height:1.4; font-family: "Microsoft YaHei",微软雅黑,幼圆;}
+.page-home header a:hover{color:#65C0C0}
+.page-home header a span { display: block; font-size: 12px; }
+.page-home .app-wrap { position: absolute; top: 50%; margin-top: -290px; height: 600px; width: 290px; right: 100px; }
+.header-title { text-align: center; width: 400px; height: 240px; margin-top: -120px; top: 50%; position: absolute; z-index: 9; }
+.header-title img{margin-bottom:10px;}
+.header-btn-1, .header-btn-2 { width: 165px; height: 43px; background: url(images/header-btn.png) top left no-repeat; display: inline-block; }
+.header-btn-2 { background-position: top right; }
+.sentence-inner .h1 { border-bottom: 1px solid #fff; font-size: 38px; display: block; font-family: "Microsoft YaHei",微软雅黑,幼圆; padding-bottom: 10px; margin-bottom: 10px; line-height: 1.2; }
+.sentence-inner .h2 { font-size: 20px; display: block; font-family: "Microsoft YaHei",微软雅黑,幼圆;padding-bottom: 5px; }
+.sentence-inner p { line-height: 1.6; font-size: 14px; font-family: "Microsoft YaHei",微软雅黑,幼圆;text-align:left; }
+.page-home-aboutus { height: 350px; width: 1000px; margin: auto; position: absolute; top: 50%; left: 50%; margin-left: -500px; margin-top: -230px; }
+.page-home-aboutus h2 { font-size: 30px; font-weight: normal;height:60px; }
+.page-home-aboutus .p-left, .page-home-aboutus .p-center, .page-home-aboutus .p-right { width: 240px; height: 350px; float: left; color: #fff; font-family: "Microsoft YaHei",微软雅黑,幼圆; font-size: 16px; line-height: 1.7; }
+.page-home-aboutus .p-center { width: 495px; }
+.page-home-aboutus .p-left ul { list-style: none; margin: 0; padding: 0; }
+.page-home-aboutus .p-left a { text-decoration: none; color: #fff; }
+.page-home-footer { position: absolute; bottom: 0; width: 100%; height: 60px; line-height: 60px; background: #F0F0F0; color: #878787; font-size: 14px; }
+.page-home-footer .wrap { width: 1000px; margin: auto; height: 60px; line-height: 60px; }
+.page-home-footer a { float: right; margin-left: 10px; text-decoration: none; }
+.page-home-footer a img { vertical-align: middle; }
+img { border: none; }
+a { text-decoration: none; }
+.banner-switch { position: absolute; right: -95px; top: 220px; width: 15px; }
+.banner-switch a { color: #fff; display: block; width: 15px; height: 15px; background: url(images/btn-slide.png) center bottom no-repeat; margin-bottom: 10px; }
+.banner-switch a.curr { background-position: center top; }
+.page-home header a.btn-login { background: url(images/login.png) center center no-repeat; height: 39px; width: 86px; padding: 0; margin-top:-1px;}
+.page-home header a.btn-login:hover{ background-image: url(images/login-h.png)}

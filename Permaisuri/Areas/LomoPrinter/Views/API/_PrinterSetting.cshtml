@@ -1,0 +1,234 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">打印机各项参数设置</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <td><a href="#" data-target="#DoPrinterSetting" data-toggle="modal">设置消费码</a></td>
+                <td><a href="#" data-target="#DoPrintTask" data-toggle="modal">提交打印任务</a></td>
+                <td><a href="#" data-target="#DoPrintQuery" data-toggle="modal">查询机器设置和状态</a></td>
+                <td><a href="#" data-target="#PrintTaskQuery" data-toggle="modal">查询打印任务</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="DoPrinterSetting" tabindex="0" role="dialog" aria-labelledby="DoPrinterSetting" aria-hidden="true">
+    <div class="modal-dialog" style="width:90%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">DoPrinterSetting</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th style="width: 20%">接口地址</th>
+                        <td class="address">/LomoPrinter/API/DoPrinterSetting</td>
+                    </tr>
+                    <tr>
+                        <th>请求方式</th>
+                        <td class="type">POST</td>
+                    </tr>
+                    <tr>
+                        <th>说明</th>
+                        <td>
+                            根据经销商Id获取品牌分类列表
+                            <table class="table-bordered">
+                                <tr><th>字段</th><th>数据类型<th>是否必填</th><th>说明</th></tr>
+                                <tr><td>terminal_id</td><td>int</td><td>是</td><td>终端机器ID</td></tr>
+                                <tr><td>terminal_token</td><td>int</td><td>是</td><td>终端机器token</td></tr>
+                                <tr><td>terminal_free_rcode</td><td>string</td><td>是</td><td>机器屏显消费码（即机器序号，5位数字）</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <textarea>
+                                {"terminal_id":"21020046","terminal_token":"wqpuYpLidDpcBAqw",
+                                "terminal_free_rcode":"88888"}
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返回结果<span class="glyphicon glyphicon-plus"></span></th>
+                        <td>
+                            <div class="result"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <a class="btn btn-primary" id="btn-c-open" href="#">请求接口</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="DoPrintTask" tabindex="0" role="dialog" aria-labelledby="DoPrintTask" aria-hidden="true">
+    <div class="modal-dialog" style="width:90%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">LoginTZPlateform</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th style="width: 20%">接口地址</th>
+                        <td class="address">/LomoPrinter/API/DoPrintTask</td>
+                    </tr>
+                    <tr>
+                        <th>请求方式</th>
+                        <td class="type">POST</td>
+                    </tr>
+                    <tr>
+                        <th>说明</th>
+                        <td>
+                            根据经销商Id获取品牌分类列表
+                            <table class="table-bordered">
+                                <tr><th>字段</th><th>数据类型<th>是否必填</th><th>说明</th></tr>
+                                <tr><td>terminal_id</td><td>int</td><td>是</td><td>终端机器ID</td></tr>
+                                <tr><td>job_img_url</td><td>string</td><td>是</td><td>打印图片的URL（JPEG,874x1240px）</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <textarea>
+                                {"terminal_id":"21020046","terminal_token":"wqpuYpLidDpcBAqw",
+                                "job_img_url":"http://img0.ph.126.net/wx-jJ9-8IEURg_ZBu1IApA==/6608567359748454180.jpg"}
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返回结果<span class="glyphicon glyphicon-plus"></span></th>
+                        <td>
+                            <div class="result"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <a class="btn btn-primary" id="btn-c-open" href="#">请求接口</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="DoPrintQuery" tabindex="0" role="dialog" aria-labelledby="DoPrintQuery" aria-hidden="true">
+    <div class="modal-dialog" style="width:90%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">DoPrintQuery</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th style="width: 20%">接口地址</th>
+                        <td class="address">/LomoPrinter/API/DoPrintQuery</td>
+                    </tr>
+                    <tr>
+                        <th>请求方式</th>
+                        <td class="type">POST</td>
+                    </tr>
+                    <tr>
+                        <th>说明</th>
+                        <td>
+                            根据经销商Id获取品牌分类列表
+                            <table class="table-bordered">
+                                <tr><th>字段</th><th>数据类型<th>是否必填</th><th>说明</th></tr>
+                                <tr><td>terminal_id</td><td>int</td><td>是</td><td>终端机器ID</td></tr>
+                                <tr><td>terminal_token</td><td>int</td><td>是</td><td>终端机器token</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <textarea>
+                                {"terminal_id":"21020046","terminal_token":"wqpuYpLidDpcBAqw"}
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返回结果<span class="glyphicon glyphicon-plus"></span></th>
+                        <td>
+                            <div class="result"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <a class="btn btn-primary" id="btn-c-open" href="#">请求接口</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="PrintTaskQuery" tabindex="0" role="dialog" aria-labelledby="PrintTaskQuery" aria-hidden="true">
+    <div class="modal-dialog" style="width:90%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">PrintTaskQuery</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th style="width: 20%">接口地址</th>
+                        <td class="address">/LomoPrinter/API/PrintTaskQuery</td>
+                    </tr>
+                    <tr>
+                        <th>请求方式</th>
+                        <td class="type">POST</td>
+                    </tr>
+                    <tr>
+                        <th>说明</th>
+                        <td>
+                            根据经销商Id获取品牌分类列表
+                            <table class="table-bordered">
+                                <tr><th>字段</th><th>数据类型<th>是否必填</th><th>说明</th></tr>
+                                <tr><td>terminal_id</td><td>int</td><td>是</td><td>终端机器ID</td></tr>
+                                <tr><td>terminal_token</td><td>int</td><td>是</td><td>终端机器token</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <textarea>
+                                {"terminal_id":"21020046","terminal_token":"wqpuYpLidDpcBAqw","job_id":"3231741"}
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>返回结果<span class="glyphicon glyphicon-plus"></span></th>
+                        <td>
+                            <div class="result"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <a class="btn btn-primary" id="btn-c-open" href="#">请求接口</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

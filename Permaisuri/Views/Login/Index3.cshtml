@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        云程科技
+    </title>
+    <meta name="keywords" content="云程科技,云车商">
+    <meta name="description" content="汽车行业移动垂直化先驱者。" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="~/Scripts/YCS/css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="~/Scripts/YCS/js/jquery-1.9.1.min.js"></script>
+    <div class="page">
+        <div class="nav">
+            <a href="#" class="btn-1"></a>
+            <a href="#" class="btn-2"></a>
+            <a href="/" class="btn-home"></a>
+        </div>
+        <a href="#">
+            <img src="~/Scripts/YCS/css/images/login/logo.png" alt="logo"/>
+        </a>
+        @* @Html.Action("Login", "User", new { Area = "Common", VPartial = "LoginForWeb" })*@
+        @Html.Partial("_LoginForWeb");
+    </div>
+    <div class="footer">2014©云程科技.技术支持  All Rights Reserved. 闽ICP备05053166号-1</div>
+
+
+    <script>
+        //$('.page').hide().fadeIn(1000);
+    </script>
+
+</body>
+</html>

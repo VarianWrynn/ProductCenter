@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YunCheShangDevModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CustomerSaleExtend">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="EmployeeId" Type="uniqueidentifier" />
+          <Property Name="PreImportant" Type="int" />
+          <Property Name="SaleStatus" Type="int" />
+          <Property Name="PreTime" Type="int" />
+          <Property Name="PreCarBrandId" Type="int" />
+          <Property Name="PreCarBrandName" Type="nvarchar" MaxLength="64" />
+          <Property Name="PreCarModelId" Type="int" />
+          <Property Name="PreCarModelName" Type="nvarchar" MaxLength="64" />
+          <Property Name="PreCarColor" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContractNo" Type="nvarchar" MaxLength="64" />
+          <Property Name="CarModelId" Type="int" />
+          <Property Name="OrderTime" Type="datetime" />
+          <Property Name="CarUse" Type="nvarchar" MaxLength="500" />
+          <Property Name="SignNo" Type="nvarchar" MaxLength="64" />
+          <Property Name="CarPrice" Type="int" />
+          <Property Name="Deposit" Type="int" />
+          <Property Name="BudgetCap" Type="int" />
+          <Property Name="BudgetLimit" Type="int" />
+          <Property Name="IsFirstCar" Type="bit" />
+          <Property Name="IsTestDrive" Type="bit" />
+          <Property Name="IsReplacement" Type="bit" />
+          <Property Name="IsFirstUpdate" Type="bit" />
+          <Property Name="IsLoan" Type="bit" />
+          <Property Name="IsFirstVisit" Type="bit" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="LastVisitTime" Type="datetime" />
+          <Property Name="LastTaskTime" Type="datetime" />
+          <Property Name="DriverTimes" Type="int" />
+          <Property Name="CallMinute" Type="int" />
+          <Property Name="VisitCount" Type="int" />
+          <Property Name="InvitationCount" Type="int" />
+          <Property Name="ToShopCount" Type="int" />
+          <Property Name="DataProgress" Type="int" />
+          <Property Name="Extend" Type="text" />
+          <Property Name="LastCallUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="CarCharacter" Type="nvarchar" MaxLength="500" />
+          <Property Name="CallTimes" Type="int" />
+          <Property Name="CarBrandId" Type="int" />
+          <Property Name="Budget" Type="nvarchar" MaxLength="100" />
+          <Property Name="InvitationTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EmployeeSaleInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeId" Type="uniqueidentifier" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastLoginTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EmployeeSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CalendarId" Type="int" />
+          <Property Name="EmployeeId" Type="uniqueidentifier" />
+          <Property Name="SaleTarge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SignTarge" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenantId" Type="int" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="OpenId" Type="nvarchar" MaxLength="64" />
+          <Property Name="Nickname" Type="nvarchar" MaxLength="64" />
+          <Property Name="Sex" Type="int" Nullable="false" />
+          <Property Name="Country" Type="nvarchar" MaxLength="64" />
+          <Property Name="Province" Type="nvarchar" MaxLength="64" />
+          <Property Name="City" Type="nvarchar" MaxLength="64" />
+          <Property Name="HeadImgUrl" Type="nvarchar" MaxLength="512" />
+          <Property Name="Privilege" Type="nvarchar" MaxLength="512" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Precision" Type="float" Nullable="false" />
+          <Property Name="LocationTime" Type="datetime" />
+          <Property Name="SubscribeTime" Type="datetime" />
+          <Property Name="UnsubscribeTime" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="64" />
+          <Property Name="Job" Type="nvarchar" MaxLength="64" />
+          <Property Name="IdCard" Type="nvarchar" MaxLength="64" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Income" Type="int" />
+          <Property Name="HasMarry" Type="bit" />
+          <Property Name="HasChild" Type="bit" />
+          <Property Name="FirstCar" Type="bit" />
+          <Property Name="IsLoan" Type="bit" />
+          <Property Name="HasHouse" Type="bit" />
+          <Property Name="Spouse" Type="nvarchar" MaxLength="64" />
+          <Property Name="SpouseMobilePhone" Type="nvarchar" MaxLength="64" />
+          <Property Name="PreEmployeeId" Type="uniqueidentifier" />
+          <Property Name="PreEmployeeName" Type="nvarchar" MaxLength="64" />
+          <Property Name="PreCarBrandId" Type="int" />
+          <Property Name="PreCarBrandName" Type="nvarchar" MaxLength="512" />
+          <Property Name="PreCarModelId" Type="int" />
+          <Property Name="PreCarModelName" Type="nvarchar" MaxLength="512" />
+          <Property Name="PreHasComment" Type="bit" Nullable="false" />
+          <Property Name="PreOrigin" Type="int" />
+          <Property Name="PreImportant" Type="int" />
+          <Property Name="PreStatus" Type="int" />
+          <Property Name="PreTime" Type="datetime" />
+          <Property Name="AfterEmployeeId" Type="uniqueidentifier" />
+          <Property Name="AfterEmployeeName" Type="nvarchar" MaxLength="64" />
+          <Property Name="AfterCarBrandId" Type="int" />
+          <Property Name="AfterCarBrandName" Type="nvarchar" MaxLength="512" />
+          <Property Name="CarProvince" Type="nvarchar" MaxLength="64" />
+          <Property Name="CarCity" Type="nvarchar" MaxLength="64" />
+          <Property Name="License" Type="nvarchar" MaxLength="64" />
+          <Property Name="FrameNo" Type="nvarchar" MaxLength="64" />
+          <Property Name="EngineNo" Type="nvarchar" MaxLength="64" />
+          <Property Name="Mileage" Type="int" />
+          <Property Name="MaintainDate" Type="datetime" />
+          <Property Name="InsuranceDate" Type="datetime" />
+          <Property Name="InsuranceTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="LicenseDate" Type="datetime" />
+          <Property Name="AfterTime" Type="datetime" />
+          <Property Name="Grade" Type="int" Nullable="false" />
+          <Property Name="No" Type="nvarchar" MaxLength="64" />
+          <Property Name="QRCode" Type="nvarchar" MaxLength="512" />
+          <Property Name="MessageBusiness" Type="int" Nullable="false" />
+          <Property Name="Point" Type="int" Nullable="false" />
+          <Property Name="Signin" Type="int" Nullable="false" />
+          <Property Name="Profile" Type="nvarchar(max)" />
+          <Property Name="AttachmentKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SigninTime" Type="datetime" />
+          <Property Name="LatestReadTime" Type="datetime" />
+          <Property Name="ContactTime" Type="datetime" />
+          <Property Name="SceneId" Type="int" />
+          <Property Name="SceneTitle" Type="nvarchar" MaxLength="128" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="512" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TenantId" Type="int" Nullable="false" />
+          <Property Name="TenantName" Type="nvarchar" MaxLength="512" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Role" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="512" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="64" />
+          <Property Name="Email" Type="nvarchar" MaxLength="64" />
+          <Property Name="OpenId" Type="nvarchar" MaxLength="64" />
+          <Property Name="IsLockout" Type="bit" Nullable="false" />
+          <Property Name="IsEnable" Type="bit" Nullable="false" />
+          <Property Name="AttendTime" Type="datetime" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenantId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Key" Type="nvarchar" MaxLength="64" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+          <Property Name="SortIndex" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tenant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegionId" Type="int" />
+          <Property Name="AgentId" Type="int" />
+          <Property Name="CompanyId" Type="int" />
+          <Property Name="ManufacturerId" Type="int" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="NamePY" Type="nvarchar" MaxLength="512" Nullable="false" />
+          <Property Name="NameShort" Type="nvarchar" MaxLength="256" />
+          <Property Name="Code" Type="nvarchar" MaxLength="64" />
+          <Property Name="Logo" Type="nvarchar" MaxLength="512" />
+          <Property Name="Image" Type="nvarchar" MaxLength="512" />
+          <Property Name="CardImage" Type="nvarchar" MaxLength="512" />
+          <Property Name="CarBrand" Type="nvarchar(max)" />
+          <Property Name="CarBrandDisable" Type="nvarchar(max)" />
+          <Property Name="CarModelDisable" Type="nvarchar(max)" />
+          <Property Name="Province" Type="nvarchar" MaxLength="64" />
+          <Property Name="City" Type="nvarchar" MaxLength="64" />
+          <Property Name="District" Type="nvarchar" MaxLength="64" />
+          <Property Name="SellTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="ServiceTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="HotlineTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="MaintainTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="SOSTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="ManufacturerTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="Address" Type="nvarchar" MaxLength="256" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Zoom" Type="int" Nullable="false" />
+          <Property Name="Region" Type="nvarchar" MaxLength="64" />
+          <Property Name="Contacts" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactsTel" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactsEmail" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContactsQQ" Type="nvarchar" MaxLength="64" />
+          <Property Name="Introduce" Type="nvarchar(max)" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="256" />
+          <Property Name="AccountType" Type="int" Nullable="false" />
+          <Property Name="QRCode" Type="nvarchar" MaxLength="512" />
+          <Property Name="SourceId" Type="nvarchar" MaxLength="256" />
+          <Property Name="WechatId" Type="nvarchar" MaxLength="256" />
+          <Property Name="AppId" Type="nvarchar" MaxLength="256" />
+          <Property Name="AppSecret" Type="nvarchar" MaxLength="256" />
+          <Property Name="Token" Type="nvarchar" MaxLength="256" />
+          <Property Name="Url" Type="nvarchar" MaxLength="512" />
+          <Property Name="OAuthDomain" Type="nvarchar" MaxLength="512" />
+          <Property Name="FollowerCount" Type="int" Nullable="false" />
+          <Property Name="IsOpenOnlinePay" Type="bit" Nullable="false" />
+          <Property Name="AttachmentKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IsEnable" Type="bit" Nullable="false" />
+          <Property Name="SortIndex" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TenantSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenantId" Type="int" />
+          <Property Name="Key" Type="nvarchar(max)" />
+          <Property Name="Value" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Customer_Group">
+          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Tenant">
+          <End Role="Tenant" Type="Self.Tenant" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomerSaleExtend_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CustomerSaleExtend" Type="Self.CustomerSaleExtend" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CustomerSaleExtend">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Tenant">
+          <End Role="Tenant" Type="Self.Tenant" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeSaleInfo_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EmployeeSaleInfo" Type="Self.EmployeeSaleInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeSaleInfo">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TenantSetting_Tenant">
+          <End Role="Tenant" Type="Self.Tenant" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TenantSetting" Type="Self.TenantSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TenantSetting">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="YunCheShangDevModelStoreContainer">
+          <EntitySet Name="CustomerSaleExtend" EntityType="Self.CustomerSaleExtend" Schema="crm" store:Type="Tables" />
+          <EntitySet Name="EmployeeSaleInfo" EntityType="Self.EmployeeSaleInfo" Schema="crm" store:Type="Tables" />
+          <EntitySet Name="EmployeeSetting" EntityType="Self.EmployeeSetting" Schema="crm" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="org" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="org" store:Type="Tables" />
+          <EntitySet Name="Group" EntityType="Self.Group" Schema="org" store:Type="Tables" />
+          <EntitySet Name="Tenant" EntityType="Self.Tenant" Schema="org" store:Type="Tables" />
+          <EntitySet Name="TenantSetting" EntityType="Self.TenantSetting" Schema="org" store:Type="Tables" />
+          <AssociationSet Name="FK_Customer_Group" Association="Self.FK_Customer_Group">
+            <End Role="Group" EntitySet="Group" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Tenant" Association="Self.FK_Customer_Tenant">
+            <End Role="Tenant" EntitySet="Tenant" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomerSaleExtend_Customer" Association="Self.FK_CustomerSaleExtend_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="CustomerSaleExtend" EntitySet="CustomerSaleExtend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Tenant" Association="Self.FK_Employee_Tenant">
+            <End Role="Tenant" EntitySet="Tenant" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeSaleInfo_Employee" Association="Self.FK_EmployeeSaleInfo_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmployeeSaleInfo" EntitySet="EmployeeSaleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TenantSetting_Tenant" Association="Self.FK_TenantSetting_Tenant">
+            <End Role="Tenant" EntitySet="Tenant" />
+            <End Role="TenantSetting" EntitySet="TenantSetting" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YunCheShangDevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomerSaleExtend">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeId" Type="Guid" />
+          <Property Name="PreImportant" Type="Int32" />
+          <Property Name="SaleStatus" Type="Int32" />
+          <Property Name="PreTime" Type="Int32" />
+          <Property Name="PreCarBrandId" Type="Int32" />
+          <Property Name="PreCarBrandName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PreCarModelId" Type="Int32" />
+          <Property Name="PreCarModelName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PreCarColor" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ContractNo" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="CarModelId" Type="Int32" />
+          <Property Name="OrderTime" Type="DateTime" Precision="3" />
+          <Property Name="CarUse" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SignNo" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="CarPrice" Type="Int32" />
+          <Property Name="Deposit" Type="Int32" />
+          <Property Name="BudgetCap" Type="Int32" />
+          <Property Name="BudgetLimit" Type="Int32" />
+          <Property Name="IsFirstCar" Type="Boolean" />
+          <Property Name="IsTestDrive" Type="Boolean" />
+          <Property Name="IsReplacement" Type="Boolean" />
+          <Property Name="IsFirstUpdate" Type="Boolean" />
+          <Property Name="IsLoan" Type="Boolean" />
+          <Property Name="IsFirstVisit" Type="Boolean" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastVisitTime" Type="DateTime" Precision="3" />
+          <Property Name="LastTaskTime" Type="DateTime" Precision="3" />
+          <Property Name="DriverTimes" Type="Int32" />
+          <Property Name="CallMinute" Type="Int32" />
+          <Property Name="VisitCount" Type="Int32" />
+          <Property Name="InvitationCount" Type="Int32" />
+          <Property Name="ToShopCount" Type="Int32" />
+          <Property Name="DataProgress" Type="Int32" />
+          <Property Name="Extend" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LastCallUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CarCharacter" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CallTimes" Type="Int32" />
+          <Property Name="CarBrandId" Type="Int32" />
+          <Property Name="Budget" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InvitationTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_CustomerSaleExtend_Customer" FromRole="CustomerSaleExtend" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="EmployeeSaleInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeId" Type="Guid" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_EmployeeSaleInfo_Employee" FromRole="EmployeeSaleInfo" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="EmployeeSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CalendarId" Type="Int32" />
+          <Property Name="EmployeeId" Type="Guid" />
+          <Property Name="SaleTarge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SignTarge" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenantId" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="OpenId" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Nickname" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="Int32" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Province" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="HeadImgUrl" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Privilege" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="Double" Nullable="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Precision" Type="Double" Nullable="false" />
+          <Property Name="LocationTime" Type="DateTime" Precision="3" />
+          <Property Name="SubscribeTime" Type="DateTime" Precision="3" />
+          <Property Name="UnsubscribeTime" Type="DateTime" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="MobilePhone" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Job" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="IdCard" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Income" Type="Int32" />
+          <Property Name="HasMarry" Type="Boolean" />
+          <Property Name="HasChild" Type="Boolean" />
+          <Property Name="FirstCar" Type="Boolean" />
+          <Property Name="IsLoan" Type="Boolean" />
+          <Property Name="HasHouse" Type="Boolean" />
+          <Property Name="Spouse" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SpouseMobilePhone" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PreEmployeeId" Type="Guid" />
+          <Property Name="PreEmployeeName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="PreCarBrandId" Type="Int32" />
+          <Property Name="PreCarBrandName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="PreCarModelId" Type="Int32" />
+          <Property Name="PreCarModelName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="PreHasComment" Type="Boolean" Nullable="false" />
+          <Property Name="PreOrigin" Type="Int32" />
+          <Property Name="PreImportant" Type="Int32" />
+          <Property Name="PreStatus" Type="Int32" />
+          <Property Name="PreTime" Type="DateTime" Precision="3" />
+          <Property Name="AfterEmployeeId" Type="Guid" />
+          <Property Name="AfterEmployeeName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="AfterCarBrandId" Type="Int32" />
+          <Property Name="AfterCarBrandName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="CarProvince" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="CarCity" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="License" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="FrameNo" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="EngineNo" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Mileage" Type="Int32" />
+          <Property Name="MaintainDate" Type="DateTime" Precision="3" />
+          <Property Name="InsuranceDate" Type="DateTime" Precision="3" />
+          <Property Name="InsuranceTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="LicenseDate" Type="DateTime" Precision="3" />
+          <Property Name="AfterTime" Type="DateTime" Precision="3" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="No" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="QRCode" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="MessageBusiness" Type="Int32" Nullable="false" />
+          <Property Name="Point" Type="Int32" Nullable="false" />
+          <Property Name="Signin" Type="Int32" Nullable="false" />
+          <Property Name="Profile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AttachmentKey" Type="Guid" Nullable="false" />
+          <Property Name="SigninTime" Type="DateTime" Precision="3" />
+          <Property Name="LatestReadTime" Type="DateTime" Precision="3" />
+          <Property Name="ContactTime" Type="DateTime" Precision="3" />
+          <Property Name="SceneId" Type="Int32" />
+          <Property Name="SceneTitle" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CustomerSaleExtend" Relationship="Self.FK_CustomerSaleExtend_Customer" FromRole="Customer" ToRole="CustomerSaleExtend" />
+          <NavigationProperty Name="Group" Relationship="Self.FK_Customer_Group" FromRole="Customer" ToRole="Group" />
+          <NavigationProperty Name="Tenant" Relationship="Self.FK_Customer_Tenant" FromRole="Customer" ToRole="Tenant" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="TenantId" Type="Int32" Nullable="false" />
+          <Property Name="TenantName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="MobilePhone" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="OpenId" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="IsLockout" Type="Boolean" Nullable="false" />
+          <Property Name="IsEnable" Type="Boolean" Nullable="false" />
+          <Property Name="AttendTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="EmployeeSaleInfo" Relationship="Self.FK_EmployeeSaleInfo_Employee" FromRole="Employee" ToRole="EmployeeSaleInfo" />
+          <NavigationProperty Name="Tenant" Relationship="Self.FK_Employee_Tenant" FromRole="Employee" ToRole="Tenant" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenantId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Key" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <Property Name="SortIndex" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Customer_Group" FromRole="Group" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Tenant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegionId" Type="Int32" />
+          <Property Name="AgentId" Type="Int32" />
+          <Property Name="CompanyId" Type="Int32" />
+          <Property Name="ManufacturerId" Type="Int32" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NamePY" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NameShort" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Logo" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="CardImage" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="CarBrand" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CarBrandDisable" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CarModelDisable" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Province" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="District" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SellTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="HotlineTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="MaintainTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SOSTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ManufacturerTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="Double" Nullable="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Zoom" Type="Int32" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Contacts" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ContactsTel" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ContactsEmail" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="ContactsQQ" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Introduce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="AccountType" Type="Int32" Nullable="false" />
+          <Property Name="QRCode" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="SourceId" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="WechatId" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="AppId" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="AppSecret" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Token" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="OAuthDomain" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="FollowerCount" Type="Int32" Nullable="false" />
+          <Property Name="IsOpenOnlinePay" Type="Boolean" Nullable="false" />
+          <Property Name="AttachmentKey" Type="Guid" Nullable="false" />
+          <Property Name="IsEnable" Type="Boolean" Nullable="false" />
+          <Property Name="SortIndex" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Customer_Tenant" FromRole="Tenant" ToRole="Customer" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Tenant" FromRole="Tenant" ToRole="Employee" />
+          <NavigationProperty Name="TenantSetting" Relationship="Self.FK_TenantSetting_Tenant" FromRole="Tenant" ToRole="TenantSetting" />
+        </EntityType>
+        <EntityType Name="TenantSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenantId" Type="Int32" />
+          <Property Name="Key" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tenant" Relationship="Self.FK_TenantSetting_Tenant" FromRole="TenantSetting" ToRole="Tenant" />
+        </EntityType>
+        <Association Name="FK_CustomerSaleExtend_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CustomerSaleExtend" Type="Self.CustomerSaleExtend" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CustomerSaleExtend">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeSaleInfo_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EmployeeSaleInfo" Type="Self.EmployeeSaleInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeSaleInfo">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Group">
+          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Tenant">
+          <End Role="Tenant" Type="Self.Tenant" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Tenant">
+          <End Role="Tenant" Type="Self.Tenant" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TenantSetting_Tenant">
+          <End Role="Tenant" Type="Self.Tenant" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TenantSetting" Type="Self.TenantSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TenantSetting">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="YunCheShanDevEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomerSaleExtend" EntityType="Self.CustomerSaleExtend" />
+          <EntitySet Name="EmployeeSaleInfo" EntityType="Self.EmployeeSaleInfo" />
+          <EntitySet Name="EmployeeSetting" EntityType="Self.EmployeeSetting" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="Group" EntityType="Self.Group" />
+          <EntitySet Name="Tenant" EntityType="Self.Tenant" />
+          <EntitySet Name="TenantSetting" EntityType="Self.TenantSetting" />
+          <AssociationSet Name="FK_CustomerSaleExtend_Customer" Association="Self.FK_CustomerSaleExtend_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="CustomerSaleExtend" EntitySet="CustomerSaleExtend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeSaleInfo_Employee" Association="Self.FK_EmployeeSaleInfo_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmployeeSaleInfo" EntitySet="EmployeeSaleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Group" Association="Self.FK_Customer_Group">
+            <End Role="Group" EntitySet="Group" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Tenant" Association="Self.FK_Customer_Tenant">
+            <End Role="Tenant" EntitySet="Tenant" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Tenant" Association="Self.FK_Employee_Tenant">
+            <End Role="Tenant" EntitySet="Tenant" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TenantSetting_Tenant" Association="Self.FK_TenantSetting_Tenant">
+            <End Role="Tenant" EntitySet="Tenant" />
+            <End Role="TenantSetting" EntitySet="TenantSetting" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YunCheShangDevModelStoreContainer" CdmEntityContainer="YunCheShanDevEntities">
+          <EntitySetMapping Name="CustomerSaleExtend">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.CustomerSaleExtend">
+              <MappingFragment StoreEntitySet="CustomerSaleExtend">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="PreImportant" ColumnName="PreImportant" />
+                <ScalarProperty Name="SaleStatus" ColumnName="SaleStatus" />
+                <ScalarProperty Name="PreTime" ColumnName="PreTime" />
+                <ScalarProperty Name="PreCarBrandId" ColumnName="PreCarBrandId" />
+                <ScalarProperty Name="PreCarBrandName" ColumnName="PreCarBrandName" />
+                <ScalarProperty Name="PreCarModelId" ColumnName="PreCarModelId" />
+                <ScalarProperty Name="PreCarModelName" ColumnName="PreCarModelName" />
+                <ScalarProperty Name="PreCarColor" ColumnName="PreCarColor" />
+                <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+                <ScalarProperty Name="CarModelId" ColumnName="CarModelId" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="CarUse" ColumnName="CarUse" />
+                <ScalarProperty Name="SignNo" ColumnName="SignNo" />
+                <ScalarProperty Name="CarPrice" ColumnName="CarPrice" />
+                <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+                <ScalarProperty Name="BudgetCap" ColumnName="BudgetCap" />
+                <ScalarProperty Name="BudgetLimit" ColumnName="BudgetLimit" />
+                <ScalarProperty Name="IsFirstCar" ColumnName="IsFirstCar" />
+                <ScalarProperty Name="IsTestDrive" ColumnName="IsTestDrive" />
+                <ScalarProperty Name="IsReplacement" ColumnName="IsReplacement" />
+                <ScalarProperty Name="IsFirstUpdate" ColumnName="IsFirstUpdate" />
+                <ScalarProperty Name="IsLoan" ColumnName="IsLoan" />
+                <ScalarProperty Name="IsFirstVisit" ColumnName="IsFirstVisit" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LastVisitTime" ColumnName="LastVisitTime" />
+                <ScalarProperty Name="LastTaskTime" ColumnName="LastTaskTime" />
+                <ScalarProperty Name="DriverTimes" ColumnName="DriverTimes" />
+                <ScalarProperty Name="CallMinute" ColumnName="CallMinute" />
+                <ScalarProperty Name="VisitCount" ColumnName="VisitCount" />
+                <ScalarProperty Name="InvitationCount" ColumnName="InvitationCount" />
+                <ScalarProperty Name="ToShopCount" ColumnName="ToShopCount" />
+                <ScalarProperty Name="DataProgress" ColumnName="DataProgress" />
+                <ScalarProperty Name="Extend" ColumnName="Extend" />
+                <ScalarProperty Name="LastCallUrl" ColumnName="LastCallUrl" />
+                <ScalarProperty Name="CarCharacter" ColumnName="CarCharacter" />
+                <ScalarProperty Name="CallTimes" ColumnName="CallTimes" />
+                <ScalarProperty Name="CarBrandId" ColumnName="CarBrandId" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="InvitationTime" ColumnName="InvitationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeSaleInfo">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.EmployeeSaleInfo">
+              <MappingFragment StoreEntitySet="EmployeeSaleInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="LastLoginTime" ColumnName="LastLoginTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeSetting">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.EmployeeSetting">
+              <MappingFragment StoreEntitySet="EmployeeSetting">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CalendarId" ColumnName="CalendarId" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="SaleTarge" ColumnName="SaleTarge" />
+                <ScalarProperty Name="SignTarge" ColumnName="SignTarge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+                <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="HeadImgUrl" ColumnName="HeadImgUrl" />
+                <ScalarProperty Name="Privilege" ColumnName="Privilege" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Precision" ColumnName="Precision" />
+                <ScalarProperty Name="LocationTime" ColumnName="LocationTime" />
+                <ScalarProperty Name="SubscribeTime" ColumnName="SubscribeTime" />
+                <ScalarProperty Name="UnsubscribeTime" ColumnName="UnsubscribeTime" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Job" ColumnName="Job" />
+                <ScalarProperty Name="IdCard" ColumnName="IdCard" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Income" ColumnName="Income" />
+                <ScalarProperty Name="HasMarry" ColumnName="HasMarry" />
+                <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+                <ScalarProperty Name="FirstCar" ColumnName="FirstCar" />
+                <ScalarProperty Name="IsLoan" ColumnName="IsLoan" />
+                <ScalarProperty Name="HasHouse" ColumnName="HasHouse" />
+                <ScalarProperty Name="Spouse" ColumnName="Spouse" />
+                <ScalarProperty Name="SpouseMobilePhone" ColumnName="SpouseMobilePhone" />
+                <ScalarProperty Name="PreEmployeeId" ColumnName="PreEmployeeId" />
+                <ScalarProperty Name="PreEmployeeName" ColumnName="PreEmployeeName" />
+                <ScalarProperty Name="PreCarBrandId" ColumnName="PreCarBrandId" />
+                <ScalarProperty Name="PreCarBrandName" ColumnName="PreCarBrandName" />
+                <ScalarProperty Name="PreCarModelId" ColumnName="PreCarModelId" />
+                <ScalarProperty Name="PreCarModelName" ColumnName="PreCarModelName" />
+                <ScalarProperty Name="PreHasComment" ColumnName="PreHasComment" />
+                <ScalarProperty Name="PreOrigin" ColumnName="PreOrigin" />
+                <ScalarProperty Name="PreImportant" ColumnName="PreImportant" />
+                <ScalarProperty Name="PreStatus" ColumnName="PreStatus" />
+                <ScalarProperty Name="PreTime" ColumnName="PreTime" />
+                <ScalarProperty Name="AfterEmployeeId" ColumnName="AfterEmployeeId" />
+                <ScalarProperty Name="AfterEmployeeName" ColumnName="AfterEmployeeName" />
+                <ScalarProperty Name="AfterCarBrandId" ColumnName="AfterCarBrandId" />
+                <ScalarProperty Name="AfterCarBrandName" ColumnName="AfterCarBrandName" />
+                <ScalarProperty Name="CarProvince" ColumnName="CarProvince" />
+                <ScalarProperty Name="CarCity" ColumnName="CarCity" />
+                <ScalarProperty Name="License" ColumnName="License" />
+                <ScalarProperty Name="FrameNo" ColumnName="FrameNo" />
+                <ScalarProperty Name="EngineNo" ColumnName="EngineNo" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="MaintainDate" ColumnName="MaintainDate" />
+                <ScalarProperty Name="InsuranceDate" ColumnName="InsuranceDate" />
+                <ScalarProperty Name="InsuranceTel" ColumnName="InsuranceTel" />
+                <ScalarProperty Name="LicenseDate" ColumnName="LicenseDate" />
+                <ScalarProperty Name="AfterTime" ColumnName="AfterTime" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="MessageBusiness" ColumnName="MessageBusiness" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="Signin" ColumnName="Signin" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="AttachmentKey" ColumnName="AttachmentKey" />
+                <ScalarProperty Name="SigninTime" ColumnName="SigninTime" />
+                <ScalarProperty Name="LatestReadTime" ColumnName="LatestReadTime" />
+                <ScalarProperty Name="ContactTime" ColumnName="ContactTime" />
+                <ScalarProperty Name="SceneId" ColumnName="SceneId" />
+                <ScalarProperty Name="SceneTitle" ColumnName="SceneTitle" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="TenantName" ColumnName="TenantName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+                <ScalarProperty Name="IsLockout" ColumnName="IsLockout" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="AttendTime" ColumnName="AttendTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Group">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.Group">
+              <MappingFragment StoreEntitySet="Group">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tenant">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.Tenant">
+              <MappingFragment StoreEntitySet="Tenant">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NamePY" ColumnName="NamePY" />
+                <ScalarProperty Name="NameShort" ColumnName="NameShort" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CardImage" ColumnName="CardImage" />
+                <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+                <ScalarProperty Name="CarBrandDisable" ColumnName="CarBrandDisable" />
+                <ScalarProperty Name="CarModelDisable" ColumnName="CarModelDisable" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="SellTel" ColumnName="SellTel" />
+                <ScalarProperty Name="ServiceTel" ColumnName="ServiceTel" />
+                <ScalarProperty Name="HotlineTel" ColumnName="HotlineTel" />
+                <ScalarProperty Name="MaintainTel" ColumnName="MaintainTel" />
+                <ScalarProperty Name="SOSTel" ColumnName="SOSTel" />
+                <ScalarProperty Name="ManufacturerTel" ColumnName="ManufacturerTel" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Zoom" ColumnName="Zoom" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="ContactsTel" ColumnName="ContactsTel" />
+                <ScalarProperty Name="ContactsEmail" ColumnName="ContactsEmail" />
+                <ScalarProperty Name="ContactsQQ" ColumnName="ContactsQQ" />
+                <ScalarProperty Name="Introduce" ColumnName="Introduce" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+                <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+                <ScalarProperty Name="WechatId" ColumnName="WechatId" />
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="AppSecret" ColumnName="AppSecret" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="OAuthDomain" ColumnName="OAuthDomain" />
+                <ScalarProperty Name="FollowerCount" ColumnName="FollowerCount" />
+                <ScalarProperty Name="IsOpenOnlinePay" ColumnName="IsOpenOnlinePay" />
+                <ScalarProperty Name="AttachmentKey" ColumnName="AttachmentKey" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="SortIndex" ColumnName="SortIndex" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TenantSetting">
+            <EntityTypeMapping TypeName="YunCheShangDevModel.TenantSetting">
+              <MappingFragment StoreEntitySet="TenantSetting">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

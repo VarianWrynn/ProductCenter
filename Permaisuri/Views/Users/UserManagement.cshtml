@@ -1,0 +1,189 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserManagement</title>
+    <link href="@Url.Content("~/Content/themes/Gray/easyui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common/cbBlue.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common/aButtons.css")" rel="Stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        seajs.config({
+            'map': [[/^(.*\.(?:css|js))(.*)$/i, '$1?20140611']]
+        });
+
+        seajs.use("Users/UserManagement", function (a) {
+        });
+    </script>
+</head>
+<body>
+
+    <div id="background" class="background" style="height: 100%">
+    </div>
+    <div id="progressBar" class="progressBar">
+        Loading,please wait...
+    </div>
+
+    <div>
+        <div id="SearchContent" class="mainarea" style="width: 99%;">
+            <h1 class="h1_SearchTitle">User Search</h1>
+            <div class="filterhead"><a href="#">Filter</a></div>
+            <table class="filterbg" border="0" style="width: 100%">
+                <caption>
+                    <div id="descDiv">
+                    </div>
+                </caption>
+                <tr>
+                    <td align="right">User Account:
+                    </td>
+                    <td>
+                        <input type="text" class="keywordbg" id="shUserAccount" />
+                    </td>
+                    <td align="right">Display Name:
+                    </td>
+                    <td>
+                        <input class="keywordbg" type="text" id="shDisplayName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Status:
+                    </td>
+                    <td>
+                        <input id="shStatus" style="width: 235px; height: 30px;" required="required" />
+                        @* <select id="shStatus" class="easyui-combobox" style="width: 220px; height: 30px;">
+                            <option value="0">All</option>
+                            <option value="1">CMS Disable</option>
+                            <option value="2">CMS Enable</option>
+                            <option value="3">WebPO Disabled</option>
+                            <option value="4">WebPO Enaled</option>
+                        </select>*@
+                    </td>
+                    <td align="right">Email:
+                    </td>
+                    <td>
+                        <input class="keywordbg" type="text" id="shEmail" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; height: 30px;">
+                        <div class="filtyerbtnarea">
+                            <input type="image" class="btnSearch" id="btnSearching" src="~/Content/images/searchbtn.png">
+                            <input type="image" class="btnReset" id="btnReset" src="~/Content/images/btnReset.png">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div>
+                <table id="userManageDG"></table>
+            </div>
+            <div>
+                <form id="userInfoDigForm" style="min-height: 200px; display: none;">
+                    <table id="userInfoTable" border="1" style="height: 100%; width: 100%; display: none; border-collapse: collapse">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>User Account</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input id="userAccount" type="text" class="easyui-validatebox" data-options="required:true,validType:'length[2,10]'" validtype="IsExistUser['#userAccount']" />
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div>DisplayName</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input id="displayName" type="text" class="easyui-validatebox" data-options="required:true,validType:'length[2,10]'" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>Password</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input id="pwd" type="password" class="easyui-validatebox" data-options="required:true" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>Confirm Password</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input id="rpwd" type="password" class="easyui-validatebox" required="required" validtype="equals['#pwd']" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>Emaile</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <input id="emaile" type="text" class="easyui-validatebox" data-options="required:true,validType:'email'" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>User Status</div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <select id="userStatus">
+                                            <option value="1">Enable</option>
+                                            <option value="0">Disable</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            @*<tr><td colspan="4"><div style="text-align:right; font-size:medium; color:red" id="retMsg"><label class="retMsgError"></label></div></td></tr>*@
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div id="roleSetting" style="display: none;">
+                <div id="roleSettingTitle">Setting XXX's Role</div>
+                <hr />
+                <div>
+                    <table border="0" id="roleListTab">
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div id="channelSettingDiv" style="display: none; padding: 10px;">
+                <form id="channelSettingForm">
+                    <div id="channelSettingTitle">Setting XXX's Role</div>
+                    <hr />
+                    <p>
+                        Plase choose one channel then click “Save” button to associate channel with current user.
+ @*                     You can choose more than one Channel to associate with current  user.
+                      Using "Alt"+right click can choose it conveniently.*@
+                    </p>
+
+                    <span style="padding-right: 10px;">
+                        <select multiple style="width: 350px;" class="multipleSelect">
+                        </select>
+                    </span>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <input type="hidden" id="AllUserStatus" value="@ViewBag.AllUserStatus" />
+    <input type="hidden" id="ChannelHidden" value="@ViewBag.ChannelList" />
+</body>
+</html>

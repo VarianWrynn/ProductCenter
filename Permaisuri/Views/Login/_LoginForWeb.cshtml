@@ -1,0 +1,100 @@
+﻿
+<div class="errors"></div>
+@using (Html.BeginForm("Login", "User"))
+{
+    <div class="ipt-wrap">
+        <label for="UserName">用户名:</label>
+        <input autocomplete="off" maxlength="64" id="UserName" name="UserName" type="text" value="" />
+    </div>
+    <div class="ipt-wrap">
+        <label for="Password">密　码:</label>
+        <input autocomplete="off" maxlength="64" id="Password" name="Password" type="password" value="" />
+    </div>
+    <label class="line"><input id="IsRemember" onclick="jQuery(this).next().val(jQuery(this)[0].checked)" type="checkbox" /><input name="IsRemember" type="hidden" value="false" /> 记住登录</label>
+    <div class="line">
+        <a href="#" class="btn" id="btn-login">登录</a>
+    </div>
+    <input type="hidden" name="Application" value="Common" />
+    <input type="hidden" name="Application" value="Admin" />
+    <input type="hidden" name="Application" value="WX" />
+    <input type="hidden" name="ResultType" value="Json" />
+}
+<script>
+    $(function ()
+    {
+        var isBusy = false;
+        $('#UserName,#Password').bind('keyup', function (e) {
+            if (e.keyCode == 13) {
+                $('#btn-login').click();
+            }
+        });
+        $('#btn-login').on('click', function ()
+        {
+            if (isBusy) return;
+
+            if (valid())
+            {
+                isBusy = true;
+                $('#btn-login').html('正在登录...');
+
+                var form = $("form");
+                $.ajax
+                ({
+                    url: form.attr("action"),
+                    data: form.serialize(),
+                    type: "post",
+                    error: function ()
+                    {
+                        isBusy = false;
+                        $('#btn-login').html('登录');
+                    },
+                    success: function (result)
+                    {
+                        if (result.Errors)
+                        {
+                            $(".errors").text(result.Errors);
+
+                            isBusy = false;
+                            $('#btn-login').html('登录');
+                        }
+                        else
+                        {
+                            location = "/OA";
+                        }
+                    }
+                });
+            }
+        });
+
+        function valid()
+        {
+            var isValid = true;
+            $('.errors').text("");
+
+            if ($('#UserName').val() == "")
+            {
+                $('#UserName').parent().addClass('error');
+                isValid = false;
+            }
+            else
+            {
+                $('#UserName').parent().removeClass("error");
+            }
+
+            if ($('#Password').val() == "")
+            {
+                $('#Password').parent().addClass('error');
+                isValid = false;
+            }
+            else
+            {
+                $('#Password').parent().removeClass('error');
+            }
+            if (!isValid)
+            {
+                $('.error').eq(0).find('input').focus();
+            }
+            return isValid;
+        }
+    });
+</script>

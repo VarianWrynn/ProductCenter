@@ -1,0 +1,53 @@
+﻿@model PermaisuriCMS.Model.CMS_SKU_Model
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable=no" />
+    <title>SKU Product Configuration</title>
+    <link href="@Url.Content("~/Scripts/PlugIn/Bootstrap3.3/css/bootstrap.min.css")" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <aside id="mainarea">
+            <div class="breadcam">
+                <ul>
+                    <li><span class="whitearrow">SKU @Model.SKU ( @Html.Label(Model.BrandName)  |  @Html.Label(Model.ChannelName))</span></li>
+                </ul>
+            </div> 
+            <h2>Product Configuration <span>SKU: @Model.SKU  |  Brand:  @Html.Label(Model.BrandName)  |  Channel: @Html.Label(Model.ChannelName)  </span></h2>
+            <div class="fr">
+                <span>
+                    <select id="opStatus" class="chosen-select" disabled="disabled">
+                        @foreach (PermaisuriCMS.Model.SKU_Status_Model status in Model.StatusList)
+                        {
+                            if (status.StatusID == Model.StatusID)
+                            {
+                                <option value="@status.StatusID" selected="selected">@status.StatusName</option>
+                            }
+                            else
+                            {
+                                <option value="@status.StatusID">@status.StatusName</option>
+                            }
+                        }
+                    </select>
+                    &nbsp;@*<input type="image" id="btnDuplicate" style="border: 1px;" src="~/Content/Products/images/duplicate-btn.png">*@
+                </span>
+                <span>
+
+                    <a class="buttonCMS greenCMS" id="btnDuplicate">Duplicate</a>
+                </span>
+
+            </div>
+        </aside>
+</div>
+   <script src="@Url.Content("~/Scripts/jquery-2.1.1.js")"></script>
+   <script src="@Url.Content("~/Scripts/PlugIn/Bootstrap3.3/js/bootstrap.min.js")"></script>
+</body>
+</html>

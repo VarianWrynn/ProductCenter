@@ -1,0 +1,538 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#mainarea {
+    /*float: left; 如果这里是float会导致 easyUI alert出的界面出现巨大偏差！2013年9月16日16:14:04 王力*/
+    margin: 0;
+    padding: 25px 0 0 12px;
+    width: 99%;
+    min-width:1103px;
+}
+
+.breadcam {
+    float: left;
+    margin: 0;
+    padding: 0 0 22px;
+    width: 100%;
+}
+
+.breadcam ul {
+    background-image: url("../images/uparrpw.jpg");
+    background-position: left 4px;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 9px;
+}
+
+
+.breadcam ul li {
+    color: #336633;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    list-style: none outside none;
+    padding: 0 2px 0 0;
+}
+
+
+.breadcam ul li a {
+    background-image: url("../images/arrow_right.jpg");
+    background-position: 99% 4px;
+    background-repeat: no-repeat;
+    color: #336633;
+    font-size: 11px;
+    font-weight: normal;
+    list-style: none outside none;
+    padding: 0 17px 0 10px;
+    text-decoration: none;
+}
+
+
+.breadcam ul li .whitearrow {
+    /*background-image: url("images/arrow_down.gif");*/
+    background-position: 100% 7px;
+    background-repeat: no-repeat;
+    color: #336633;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    list-style: none outside none;
+    padding: 0 10px;
+}
+
+
+#mainarea h2 {
+    color: #000000;
+    /*float: left;如果这里是float会导致 easyUI alert出的界面出现巨大偏差！2013年9月16日16:14:04 王力*/
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 12px;
+}
+
+
+#mainarea h2 span {
+    color: #000000;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 12px 15px;
+}
+
+
+.fr {
+    float: right;
+    padding-right:8px;
+}
+
+.prodetailsbg
+{
+    background-image: url("images/dottedbg.jpg");
+    border-radius: 0 5px 5px 5px;
+    float: left;
+    margin: 0;
+    padding: 12px;
+    /*width: 1081px;*/
+    width: 97%;
+}
+
+
+.prodetailsbg table td {
+    color: #666666;
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.productname {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 340px;
+}
+
+
+.skuname {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 120px;
+}
+
+#SKU_QTY{
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 120px;
+    float:right;
+}
+
+
+.upcname {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 145px;
+}
+
+
+.feildsarea {
+    border-top: 1px solid #BFC0B7;
+    float: left;
+    margin: 0;
+    padding: 25px 0;
+    width: 100%;
+}
+
+
+.feildsarea p {
+    color: #666666;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 12px;
+}
+
+
+.liberyhld {
+    border: 3px solid gray;
+    float: left;
+    list-style: none outside none;
+    margin: 0 3px 2px 0px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 201px;
+    height: 201px;
+    /*max-height:201px;
+    max-width:201px;*/
+}
+
+
+.liberyhld span {
+    bottom: 4px;
+    height: 17px;
+    position: absolute;
+    right: 3px;
+    width: 10px;
+    z-index: 1;
+}
+
+
+.addmediabtn {
+    float: left;
+    margin: 75px 0 0 7px;
+    cursor:pointer;
+}
+
+
+.relatestable {
+    float: left;
+    width: 100%;
+}
+
+.ProductDesc {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    height: 138px;
+    padding: 5px;
+    width: 685px;
+}
+
+
+.Specifications {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    height: 138px;
+    padding: 5px;
+    width: 339px;
+}
+
+
+.keywordname {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 685px;
+}
+
+.URL {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 99%;
+}
+
+.srpinput,.mrpinput,.qtypinput {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 100px;
+}
+
+.piecesarea table thead tr th
+{
+    text-align:left;
+    color: #666666;
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 0;
+    font-weight:lighter;
+}
+
+.CTNInput
+{
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 3px;
+    margin: 0 3px 0 0;
+    width: 140px;
+}
+.CTNWeight
+{
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 3px;
+    margin: 0 3px 0 0;
+    width: 35px;
+}
+
+
+
+.keywordbg {
+    /*background-image: url("images/inputbg.jpg");
+    background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 242px;
+}
+
+.feildsarea ul {
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.piecesarea {
+    background-color: #EEF1E8;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 0 10px;
+    padding: 5px;
+    width: 99%;
+}
+
+
+#deplicateSKUName {
+    /*background-image: url("images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 150px;
+}
+
+#duplicateDIV p
+{
+    margin-bottom:15px;
+}
+
+.duplicatAddBtn {
+    cursor: pointer;
+    float: right;
+    margin: 15px 70px 0 7px;
+}
+
+.duplicatCancelBtn {
+    cursor: pointer;
+    float: right;
+    margin: 15px 10px 0 7px;
+}
+
+#SkuImgUploadForm a
+{
+    cursor: pointer;
+    float: right;
+}
+.SkuImgUploadOKBtn
+{
+   margin: 15px 70px 0 7px;
+}
+.SkuImgUploadCancelBtn {
+    margin: 15px 10px 0 7px;
+}
+
+
+
+.reveal-modal-bg {
+    background-image: url("images/overlay-bg.png");
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.reveal-modal {
+    background-color: #FBF9E1;
+    border: 6px solid #B9C1C2;
+    border-radius: 10px 10px 10px 10px;
+    /*left: 46%;*/
+    margin-left: 20px;
+    padding: 30px 20px 34px;
+    position: absolute;
+    top: 100px;
+    display:none;
+    width: 90%;
+    z-index: 101;
+}
+.reveal-modal h2 {
+    color: #333333;
+    float: left;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+.reveal-modal ul {
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+.reveal-modal ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 8px 0 0;
+}
+.reveal-modal ul li a {
+    border: 2px solid #999999;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 73px;
+    list-style: none outside none;
+    margin: 0 8px 0 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 73px;
+}
+.reveal-modal ul li a:hover {
+    border: 2px solid #FFCC33;
+}
+.reveal-modal ul li a:last-child {
+    margin: 0;
+}
+.reveal-modal ul li a span {
+    bottom: 4px;
+    height: 17px;
+    left: 3px;
+    position: absolute;
+    width: 10px;
+    z-index: 999;
+}
+.reveal-modal p {
+    color: #333333;
+    font-family: 'pt_sansregular',Arial,Times,serif;
+    font-size: 13px;
+    line-height: 20px !important;
+    margin: 0;
+    padding: 15px 0 0 !important;
+}
+.reveal-modal.small {
+    margin-left: -140px;
+    width: 200px;
+}
+.reveal-modal.medium {
+    margin-left: -240px;
+    width: 400px;
+}
+.reveal-modal.large {
+    margin-left: -340px;
+    width: 600px;
+}
+.reveal-modal.xlarge {
+    margin-left: -440px;
+    width: 800px;
+}
+.reveal-modal .close-reveal-modal {
+    color: #AAAAAA;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 0.5;
+    position: absolute;
+    right: 11px;
+    top: 8px;
+}
+
+/*add or modified css for ProductPieces 2013年10月5日14:23:51 lee -start*/
+.productPoecesHeadTB
+{
+    
+}
+.productPoecesHeadTB tr
+{
+    padding:0 8px;
+    text-align:center;
+}
+/* add or modified css for ProductPieces 2013年10月5日14:23:51 lee -end */
+
+/*for primary image style 2013-10-08*/
+
+.liberyhld .primaryFlags
+{
+    bottom: 30px;
+    /*height: 20px;*/
+    position: absolute;
+    right: 35px;
+    width: 10px;
+    z-index: 1;
+}
+
+.hmCost {
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 150px;
+}
+
+.fancyboxDiv
+{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+    .fancyboxDiv img
+    {
+        vertical-align:middle;
+    }

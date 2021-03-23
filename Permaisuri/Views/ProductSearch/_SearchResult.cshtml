@@ -1,0 +1,99 @@
+﻿<section class="productarea">
+    <section class="product_haed">
+        <a class="addlt" href="#">
+            <img src="~/Content/images/addbtn.png">
+        </a>
+        @* <a href="#">
+            <img src="~/Content/Products/images/addlink.png"></a> removed 2013-09-26 *@
+        <a id="aExport" href="#">
+            <img src="~/Content/images/exportCSV.png">
+        </a>
+    </section>
+    <div class="searcharea">
+        @* <table id="searchResultDG"></table>*@
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="reporttable">
+            <thead>
+                <tr>
+                    <th width="3%" align="center">&nbsp;</th>
+                    <th width="3%" align="center">&nbsp;</th>
+                    <th width="24%" align="left" orderby="1" id="tooltipProductName">Product Name <span>&nbsp;</span></th>
+                    <th width="10%" align="left" orderby="2" id="tooltipSKUOrder">SKU <span>&nbsp;</span></th>
+                    @* <th width="8%"  align="left" orderby="3" id="tooltipSKUQty">SKU QTY <span>&nbsp;</span> </th>*@
+                    <th width="15%" align="left" orderby="4" id="tooltipInventory">Real Inventory <span>&nbsp;</span> </th>
+                    <th width="10%" align="left" orderby="5" id="tooltipSalePrice">Sale Price <span>&nbsp;</span> </th>
+                    <th width="12%" align="left" orderby="6" id="tooltipChannel">Channel <span>&nbsp;</span>
+                    <th align="left" orderby="7" id="tooltipModifedTime">
+                        last update<span class="sort-desc">&nbsp;</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="searchResultBody">
+                <tr style="padding: 0; margin: 0;">
+                    <td valign="top" align="left" style="padding: 0; margin: 0;" colspan="8">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5" class="slidingDiv" style="display: none;">
+                            <tbody>
+                                <tr>
+                                    <td width="3%">&nbsp;</td>
+                                    <td width="3%">&nbsp;</td>
+                                    <td width="24%">
+                                        <img src="~/Content/Products/images/arrow.png">
+                                        Table
+                                    </td>
+                                    <td width="10%">
+                                        <img src="~/Content/Products/images/arrow.png">
+                                        50325.00T
+                                    </td>
+                                    <td width="10%" align="right" class="rightpad"><span class="strongtxt">0</span> </td>
+                                    <td width="40%">NOTE: 300 pcs expected on 5/25/2013</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <img src="~/Content/Products/images/arrow.png">
+                                        Chair
+                                    </td>
+                                    <td>
+                                        <img src="~/Content/Products/images/arrow.png">
+                                        50325.00T
+                                    </td>
+                                    <td align="right" class="rightpad"><font>36</font></td>
+                                    <td>NOTE: 600 pcs expected on 5/25/2013</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagina_hld">
+        <ul class="calpagi fl">
+            <li>
+                <a class="arrL" style="cursor: pointer">
+                    <img border="0" src="../Content/Products/images/icon_left.jpg" alt="Next" title="Next">
+                </a>
+            </li>
+            <li><a id="aRow">1</a></li>
+            <li>
+                <a class="arrR" style="cursor: pointer">
+                    <img border="0" src="../Content/Products/images/icon_right.jpg" alt="Next" title="Next">
+                </a>
+            </li>
+        </ul>
+        <ul class="showinghld">
+            <p class="fl">showing: </p>
+            <select id="opPageSize" class="selectyze3" name="style3">
+                <option value="10" selected="selected">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+        </ul>
+
+        <div class="resulthld">
+            <p>Results 1 - 9 of 9</p>
+        </div>
+    </div>
+</section>

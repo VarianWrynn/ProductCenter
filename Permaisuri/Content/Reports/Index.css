@@ -1,0 +1,326 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+#mainarea {
+    float: left;
+    margin: 0;
+    padding: 10px 5px 10px 10px;
+    width: 98%;
+    min-width:1103px;
+}
+
+
+#mainarea h1 {
+    color: #000000;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 12px;
+}
+
+
+.filterhead {
+    background-image: url("../images/dottedbg.jpg");
+    border-radius: 5px 5px 0 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 72px;
+}
+
+
+.filterhead a {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.filterbg {
+    background-image: url("../images/dottedbg.jpg");
+    border-radius: 0 5px 5px 5px;
+    float: left;
+    height: 165px;
+    margin: 0;
+    padding: 12px 0;
+    width:100%;
+    min-width: 1105px;
+}
+
+
+.filterbg table td {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px 0;
+}
+
+
+.smallinput {
+    background-color: #FFFFFF;
+    background-image: url("../images/inputbg-small.jpg");
+    background-repeat: repeat-x;
+    border: 1px solid #9CA995;
+    border-radius: 5px 5px 5px 5px;
+    height: 18px;
+    padding: 5px;
+    width: 100px;
+}
+
+
+.filtyerbtnarea {
+    background-image: url("../images/filterlline.jpg");
+    background-position: left top;
+    background-repeat: repeat-x;
+    padding: 15px 30px 3px 15px;
+    text-align: right;
+    /*width:100%;*/
+    min-width: 1060px;
+}
+
+
+.reasulthaed {
+    background-image: url("../images/barheading.jpg");
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #BBCAAD;
+    border-left: 1px solid #C6C8BE;
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #FFFFFF;
+    float: left;
+    margin: 12px 0 0;
+    padding: 7px 0 6px 20px;
+    width:98%;
+    min-width: 1078px;
+}
+
+.reasulthaed h3 {
+    color: #333333;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 8px 20px 0 0;
+    padding: 0;
+}
+
+
+.reasulthaed a {
+    color: #247F12;
+    float: right;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin: 0 25px 0 0;
+    padding: 0;
+}
+
+
+.salesblok {
+    background-color: #FFFFFF;
+    background-image: url("images/salesblk-bg.jpg");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #9C9E96;
+    border-left: 1px solid #C6C8BE;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #C6C8BE;
+    float: left;
+    min-height: 200px;
+    padding-bottom: 55px;
+    width:100%;
+    min-width: 1098px;
+}   
+
+
+table.reporttable {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+table.reporttable th.dataTableHeader {
+    background-image: url("../images/thbg.jpg");
+    background-repeat: repeat-x;
+    border-collapse: collapse;
+    border-right: 1px solid #969D89;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 11px 7px 11px 11px;
+    text-decoration: none;
+}
+
+
+table.reporttable tr.odd_row {
+    background-color: #F6F5F5;
+    border-collapse: collapse;
+    color: #616161;
+    margin: 0;
+    padding: 15px 7px 15px 11px;
+}
+
+table.reporttable td {
+    color: #333333;
+    font-size: 12px;
+    padding: 12px 6px 12px 10px;
+}
+
+
+table.reporttable td span {
+    color: #2B95BD;
+}
+
+
+table.reporttable td span {
+    color: #2B95BD;
+}
+
+
+table.reporttable tr.odd_row {
+    background-color: #F6F5F5;
+    border-collapse: collapse;
+    color: #616161;
+    margin: 0;
+    padding: 15px 7px 15px 11px;
+}
+
+.pagina_hld {
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+.fl {
+    float: left;
+}
+
+.calpagi {
+    margin: 10px 0 11px;
+}
+
+
+.calpagi li {
+    color: #666666;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 17px;
+    list-style: none outside none;
+    margin: 0;
+}
+
+.calpagi li a {
+    background-color: #747F6F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 13px;
+    margin: 0 6px;
+    padding: 6px 9px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.calpagi li a.arrL {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+}
+.calpagi li a.arrR {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.showinghld {
+    float: left;
+    margin: 10px 0 11px 400px;
+}
+
+
+.showinghld p {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px 4px 0 0;
+}
+
+.resulthld {
+    float: right;
+    margin: 10px 0 11px 10px;
+}
+
+
+.resulthld p {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px 4px 0 0;
+}
+
+.autocut4AffectedSKU {
+        width: 500px; 
+        overflow:hidden;
+        white-space:nowrap ;
+        text-overflow:ellipsis ;
+        -o-text-overflow:ellipsis ;
+        -icab-text-overflow: ellipsis ;
+        -khtml-text-overflow: ellipsis ;
+        -moz-text-overflow: ellipsis ;
+        -webkit-text-overflow: ellipsis ;
+        height: 20px;
+        display:block;
+}
+.reportAffectedSKU {
+    min-width:400px;
+}
+
+.reportAffectedSKU2 {
+    min-width:200px;
+}
+.strongtxt {
+    color: #FF0000 !important;
+    font-weight: normal;
+}
+
+table.reporttable td font {
+    color: #FF9900;
+}
+
+.sort-asc
+{
+    background: url("../images/datagrid_icons.png") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+    padding: 0 13px 0 0;
+}
+
+.sort-desc
+{
+    background: url("../images/datagrid_icons.png") no-repeat scroll -16px center rgba(0, 0, 0, 0);
+    padding: 0 13px 0 0;
+}
+
+#totalSatis
+{
+   color:black;
+}
+
+    #totalSatis span
+    {
+        color: black;
+        font-weight: bold;
+    }

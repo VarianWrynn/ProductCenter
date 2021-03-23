@@ -1,0 +1,86 @@
+﻿@model PermaisuriCMS.Model.UploadImagesModel
+
+
+@{
+    
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UploadImage</title>
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Media/img/imgareaselect-animated.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Media/UploadImage.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Media/popup.css")" rel="Stylesheet" type="text/css" />
+
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        seajs.use("Media/UploadImage", function (a) {
+
+        });
+    </script>
+
+</head>
+<body>
+    <div>
+        <div class="upbox clearfix">
+            <div class="upPhoto">
+                <div class="upcon" id="user_head_upload_box">
+                    <p class="phototxt">please chose a image to upload</p>
+                    <div class="upfile">
+                        @using (Html.BeginForm("UploadingImage2Server", "Media", FormMethod.Post, new { ID = "user_head_form", enctype = "multipart/form-data" }))
+                        {
+                            <input type="file" name="upImage" class="filebtn" />
+                            <input type="button" class="upimgbtn" value="Uploading" />						
+                        }
+                    </div>
+                </div>
+                <div id="user_head_show_box" style="width: 300px; height: 300px; line-height: 300px; text-align: center; background: gray no-repeat; margin-bottom: 40px; display: none">
+                    <img id="user_head_origin" style="vertical-align: middle;" src="@Url.Content("~/Content/Media/img/load.gif")">
+                </div>
+                <div class="sysbtn">
+                    @using (Html.BeginForm("SaveImages", "Media", FormMethod.Post, new { ID = "user_head_param_form", enctype = "multipart/form-data" }))
+                    {
+                        @Html.HiddenFor(model => model.headFileName, new { id = "head_name" })
+                        @Html.HiddenFor(model => model.x, new { id = "head_x" })
+                        @Html.HiddenFor(model => model.y, new { id = "head_y" })
+                        @Html.HiddenFor(model => model.width, new { id = "head_width" })
+                        @Html.HiddenFor(model => model.height, new { id = "head_height" })                     
+                        <input type="hidden" class="SKUID"  name="SKUID" value="@ViewBag.SKUID" />                         
+                        <input type="submit" class="btnyes" value="Save">
+                        <input type="button" class="btnno" value="Cancel">
+                    }
+
+                </div>
+            </div>
+            <div class="upPhotolist clearfix">
+                <div class="upimg upbig">
+                    <div class="upimgbox up_1">
+                        <img style="width: 160px; height: 160px" id="user_head_160">
+                    </div>
+                    <p>Size of 160×160 pixel</p>
+                </div>
+            </div>
+            <div class="upimg upsmall">
+                <div class="upsm">
+                    <div class="upimgbox up_2">
+                        <img style="width: 100px; height: 100px" id="user_head_100">
+                    </div>
+                    <p>
+                        middel size iamge<br>
+                        Size of 100×100 pixel
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <input type="hidden" value="@ViewBag.CustomerMediaPath" id="CustomerMediaPath" />
+</body>
+</html>

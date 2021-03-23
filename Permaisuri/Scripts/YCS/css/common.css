@@ -1,0 +1,99 @@
+.extra { display: none;}
+article { display: block; }
+aside { display: block; }
+details { display: block; }
+figcaption { display: block; }
+figure { display: block; }
+footer { display: block; }
+header { display: block; }
+hgroup { display: block; }
+main { display: block; }
+nav { display: block; }
+section { display: block; }
+summary { display: block; }
+audio { display: inline-block; }
+canvas { display: inline-block; }
+video { display: inline-block; }
+audio:not([controls]) { height: 0px; display: none; }
+[hidden] { display: none; }
+html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+body { margin: 0px; }
+a:focus { outline: dotted thin; }
+a:active { outline: 0px; }
+a:hover { outline: 0px; }
+h1 { margin: 0.67em 0px; font-size: 2em; }
+abbr[title] { border-bottom-color: currentColor; border-bottom-width: 1px; border-bottom-style: dotted; }
+b { font-weight: bold; }
+strong { font-weight: bold; }
+dfn { font-style: italic; }
+hr { height: 0px; box-sizing: content-box; -moz-box-sizing: content-box; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+code { font-family: monospace, serif; font-size: 1em; }
+kbd { font-family: monospace, serif; font-size: 1em; }
+pre { font-family: monospace, serif; font-size: 1em; }
+samp { font-family: monospace, serif; font-size: 1em; }
+pre { white-space: pre-wrap; }
+q { quotes: "“" "”" "‘" "’"; }
+small { font-size: 80%; }
+sub { line-height: 0; font-size: 75%; vertical-align: baseline; position: relative; }
+sup { line-height: 0; font-size: 75%; vertical-align: baseline; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0px currentColor; border-image: none; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0px; }
+fieldset { margin: 0px 2px; padding: 0.35em 0.62em 0.75em; border: 1px solid rgb(192, 192, 192); border-image: none; }
+legend { padding: 0px; border: 0px currentColor; border-image: none; }
+button { margin: 0px; font-family: inherit; font-size: 100%; }
+input { margin: 0px; font-family: inherit; font-size: 100%; }
+select { margin: 0px; font-family: inherit; font-size: 100%; }
+textarea { margin: 0px; font-family: inherit; font-size: 100%; }
+button { line-height: normal; }
+input { line-height: normal; }
+button { text-transform: none; }
+select { text-transform: none; }
+button { cursor: pointer; -webkit-appearance: button; }
+html input[type='button'] { cursor: pointer; -webkit-appearance: button; }
+input[type='reset'] { cursor: pointer; -webkit-appearance: button; }
+input[type='submit'] { cursor: pointer; -webkit-appearance: button; }
+button[disabled] { cursor: default; }
+html input[disabled] { cursor: default; }
+input[type='checkbox'] { padding: 0px; box-sizing: border-box; }
+input[type='radio'] { padding: 0px; box-sizing: border-box; }
+input[type='search'] { box-sizing: content-box; -moz-box-sizing: content-box; -webkit-appearance: textfield; -webkit-box-sizing: content-box; }
+textarea { overflow: auto; vertical-align: top; }
+table { border-collapse: collapse; border-spacing: 0; }
+html { line-height: 1.5; font-family: "Fenix", "Georgia", serif; font-size: 16px; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+html[lang='ja'] { line-height: 1.79; font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; font-size: 14px; }
+body { color: black; background-color: white; }
+html { height: 100%; }
+body { height: 100%; }
+h1 { margin: 0px; }
+h2 { margin: 0px; }
+h3 { margin: 0px; }
+h4 { margin: 0px; }
+h5 { margin: 0px; }
+h6 { margin: 0px; }
+p { margin: 0px; }
+pre { margin: 0px; }
+blockquote { margin: 0px; }
+ol { margin: 0px; }
+ul { margin: 0px; }
+dl { margin: 0px; }
+dd { margin: 0px; }
+ol { padding: 0px; }
+ul { padding: 0px; }
+li { list-style-type: none; }
+a { color: inherit; text-decoration: none; }
+abbr[title] { border-bottom-width: 0px; }
+img { vertical-align: middle; }
+table { margin: 0px; }
+fieldset { margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; }
+label { cursor: pointer; }
+::selection { text-shadow: none; background-color: rgb(136, 136, 136); }
+body{font-family:"Microsoft YaHei",微软雅黑,幼圆;}
+body .num{font-family:arial;}
+body .sentence-inner .num{font-size:24px;}
+/*隐藏WEIBO*/
+.btn-footer-icon{display:none;}
+.page-home-footer,body .page-footer .wrap{text-align:center;}

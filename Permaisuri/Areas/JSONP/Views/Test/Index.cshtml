@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        <link href="~/Scripts/PlugIn/Bootstrap3.3/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery-2.1.1.js"></script>
+        <script src="~/Scripts/jquery.jsonp-2.3.0.js"></script>
+        <script src="~/Scripts/PlugIn/Bootstrap3.3/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            /*JSONP在两年前，微软移动项目天天再用，而今天从搭建Demo到最终调试通过，花了足足一个下午4小时的时间。有时候效率慢
+            不是因为自己不懂，而是缺乏每天定量的练习---一万小时理论！  2014年12月3日17:52:52*/
+            $(function () {
+                $("#doUpdate").on("click", function() {
+                    var data = {
+                        ChannelID: 100,
+                        ChannelName: "Lee.Wang",
+                        ShortName: "Lee",
+                        API: true,
+                        Modify_Date: "2014-12-03"
+                    };
+                    var strUrl = "";
+                    $.jsonp({
+                        type: "GET",
+                        dataType: 'jsonp',
+                        async: true,
+                        url: strUrl + "/JSONP/Test/UpdateBrand?callback=?",
+                        data: { "data2": JSON.stringify(data) },
+                        success: function (retData) {
+                            var html = "";
+                            $.each(retData, function (i,j) {
+                                html += i +':  '+ j+ '</br>';
+                            });
+                            $("#resultDiv").html(html);
+                        },
+                        error: function(xmlHttpRequest, textStatus, errorThrown) {
+                            alert("任务管理:更新或者新增任务失败");
+                        }
+                    }); // end of jsonp  request
+                });
+            })
+
+
+            //var myjson;
+            //if (typeof (JSON) == "undefined") {//for IE 6 7 
+            //    myjson = require('json2');
+            //}
+            //else {// for other browsers
+            //    myjson = JSON;
+            //}
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <input type="button" id="doUpdate" value="Update" />
+            </div>
+            
+            <div id="resultDiv">
+                
+            </div>
+        </div>
+       
+    </body>
+</html>

@@ -1,0 +1,42 @@
+﻿@model IList<Permaisuri.Areas.ModelBinderTest.Controllers.StartController.Person>
+
+@{
+    Layout = null;
+    ViewBag.Title = "Model Binder with list of strong type!";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div>
+        @if(Model.Count==0)
+        {
+            using (Html.BeginForm())
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    <fieldset>
+                        <legend> Address @(i+1)</legend>
+                        <div> <label> Name:@Html.Editor("[" + i + "].Name")</label></div>
+                        <div> <label> Age:@Html.Editor("[" + i + "].Age")</label></div>
+                        <div> <label> Slogan:@Html.Editor("[" + i + "].Slogan")</label></div>
+                    </fieldset>
+                }
+                <button type="submit">submit</button>
+            }
+        }
+        else
+        {
+            foreach (var person in Model)
+            {
+                <p> @person.Name,@person.Age,@person.Slogan</p>
+            }
+            @Html.ActionLink("BBBBBack","DoQuedy2")
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD9EA328-4F85-4D8B-B802-924A4F860931}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PermaisuriCMS.DAL</RootNamespace>
+    <AssemblyName>PermaisuriCMS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.0.0.86\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Brand.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Channel.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_Ecom_Sync.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_HMGroup_Relation.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_HMNUM.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_HMNUM_Status.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_HM_Costing.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_HM_Inventory.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_ProductCTN.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_ProductDimension.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_ShipVia.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_ShipViaType.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_SKU.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_SKU_Category.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_SKU_Colour.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_SKU_Costing.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_SKU_Material.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_StockKey.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CMS_User_Profile_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSaleExtend.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ecom_AvgOrderAmount_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ecom_ImageUrls_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ecom_Order_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ecom_ReportByChannel_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ecom_ReportByHM_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ecom_ReportByProduct_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSaleInfo.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSetting.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_ReportByChannel_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_ReportByHM_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_ReportByProduct_SP_Result.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Export2Excel.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Group.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogOfUserLogin.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogOfUserOperating.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogOfUserOperatingDetails.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MediaCloudStatus.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MediaLibrary.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Resource.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PO_Order_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PO_Order_V_DAL.cs" />
+    <Compile Include="PermaisuriCMSDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermaisuriCMSDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermaisuriCMSDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermaisuriCMSDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermaisuriCMSDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports_LowInventory_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports_Margin_By_Product_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role_Menu_Relation.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Security_Role.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SKU_HM_Relation.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SKU_Media_Relation.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SKU_Status.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TenantSetting.cs">
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Channel_Relation.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Profile.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Profile_DAL.cs" />
+    <Compile Include="User_Profile_Ext.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Role_Menu_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Role_Relation.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Status.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebPO_Category_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebPO_Colour_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebPO_HM_Colour_Material_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebPO_ImageUrls_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebPO_Material_V.cs">
+      <DependentUpon>PermaisuriCMSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YunCheShan.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YunCheShan.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YunCheShan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YunCheShan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YunCheShan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YunCheShan.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <Fakes Include="Fakes\EntityFramework.fakes" />
+    <EntityDeploy Include="PermaisuriCMSDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PermaisuriCMSDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="PermaisuriCMSDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PermaisuriCMSDB.edmx</DependentUpon>
+      <LastGenOutput>PermaisuriCMSDB.Context.cs</LastGenOutput>
+    </None>
+    <None Include="PermaisuriCMSDB.edmx.diagram">
+      <DependentUpon>PermaisuriCMSDB.edmx</DependentUpon>
+    </None>
+    <None Include="PermaisuriCMSDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PermaisuriCMSDB.edmx</DependentUpon>
+      <LastGenOutput>PermaisuriCMSDB.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="YunCheShan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>YunCheShan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="YunCheShan.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YunCheShan.edmx</DependentUpon>
+      <LastGenOutput>YunCheShan.Context.cs</LastGenOutput>
+    </None>
+    <None Include="YunCheShan.edmx.diagram">
+      <DependentUpon>YunCheShan.edmx</DependentUpon>
+    </None>
+    <None Include="YunCheShan.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>YunCheShan.edmx</DependentUpon>
+      <LastGenOutput>YunCheShan.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PermaisuriCMS.Common\PermaisuriCMS.Common.csproj">
+      <Project>{9b53bf69-8208-4108-a0b5-f2ee04f7e4f5}</Project>
+      <Name>PermaisuriCMS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

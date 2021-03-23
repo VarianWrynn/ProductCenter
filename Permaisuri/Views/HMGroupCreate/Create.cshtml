@@ -1,0 +1,305 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create HMNUM Group</title>
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/FancyBox/jquery.fancybox.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/HMGroupCreate/Create.css?20140611")" rel="Stylesheet" type="text/css" />
+
+    <style type="text/css">
+        /*jQuery UI 与 easyUI发生冲突,该冲突主要体现在easyUI的 $.messager.alert()等方法的位置偏移巨大 2013年11月19日15:33:03*/
+        .ui-resizable
+        {
+            position: absolute;
+        }
+
+        .chosen-container
+        {
+            vertical-align: baseline;
+        }
+
+        .chosen-container-single .chosen-single
+        {
+            height: 27px;
+            line-height: 28px;
+        }
+    </style>
+
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        seajs.config({
+            'map': [[/^(.*\.(?:css|js))(.*)$/i, '$1?20140611']]
+        });
+
+        seajs.use("HMGroupCreate/Create", function () {
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="background" class="background" style="height: 100%">
+    </div>
+    <div id="progressBar" class="progressBar">
+        Loading,please wait...
+    </div>
+    <div>
+        <aside id="mainarea">
+            <div class="breadcam">
+                <ul>
+                    <li><span class="whitearrow">Create New Product Group</span></li>
+                </ul>
+            </div>
+            <h2>HMNUM Product Group <span>Create New Product Group</span></h2>
+
+            <div class="prodetailsbg">
+                <form id="HMBaseForm">
+                    <table width="100%" border="0" cellspacing="5">
+                        <tbody>
+                            <tr>
+                                <td style="width: 40%" align="left">Product Name</td>
+                                <td style="width: 25%" align="left">HM#</td>
+                                <td style="width: 25%" align="left">StockKey</td>
+                                <td align="left">Status</td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <input type="text" value="" class="easyui-validatebox" id="ProductName" name="ProductName"
+                                        data-options="required:true,validType:'length[3,200]'"></td>
+                                <td align="left">
+                                    <input type="text" value="" class="easyui-validatebox  hmnum" id="HMNUM" name="HMNUM" style="ime-mode:disabled"
+                                        data-options="required:true,validType:'length[3,50]'"></td>
+                                <td>
+                                    <input type="text" value="" class="stockKey" id="StockKey" name="StockKey" disabled="disabled">
+                                </td>
+                                <td align="left">
+                                    <input type="text" value="unaudited" id="Status" name="Status" style="width: 210px; height: 30px;"
+                                        data-options="
+                                            required:'required',
+                                            valueField:'StatusID',
+                                            textField:'StatusName',
+                                            value:1,
+                                            url:'../CMSCacheableData/HMNUMStatusList?isNeedAll=false'
+                                        " />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="left" id="tooltipShipViaType">ShipVia Type</td>
+                                <td align="left">Category</td>
+                                <td align="left">SubCategory</td>
+                                <td align="left" id="tooltipNetWeight"> Net Weight</td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <input type="text" value="" id="ShipViaType" name="ShipViaType" style="min-width: 200px; height: 30px;"
+                                        data-options="
+                                            required:'required',
+                                            valueField:'ShipViaTypeID',
+                                            textField:'ShipViaTypeName',
+                                            url:'../CMSCacheableData/ShipViaTypeList?isNeedAll=false'
+                                        " />
+                                </td>
+                                <td align="left">
+                                    <input type="text" value="" style="min-width: 120px; height: 28px;" required="required" class="CategoryName" id="CategoryName" name="CategoryName"></td>
+                                <td align="left">
+                                    <input type="text" value="Sectional Group" style="min-width: 120px; height: 28px;" required="required" class="SubCategoryName" id="SubCategoryName" name="SubCategoryName" disabled="disabled"></td>
+                                <td align="left"><input type="text" value=""  class="easyui-numberbox NetWeight" id="NetWeight" name="NetWeight" data-options="required:'required',min:1,precision:2"/></td>
+                               
+                            </tr>
+
+                            <tr>
+                                <td align="left">Comments</td>
+                                <td align="left">&nbsp;</td>
+                                <td align="left">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="left" colspan="4">
+                                    <textarea class="comments" id="Comments" name="Comments"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" align="right">
+                                    <div>
+                                        <span style="padding: 0 0 0 0;">
+                                            <a id="aSKUAdd" class="buttonCMS greenCMS submitGPBaseInfo">Submit Basic Info </a>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </form>
+
+                <form id="AddHMForm" style="display: none">
+                    <p><strong>Add</strong>  HM#</p>
+
+                    <div class="addHMArea">
+                        <table width="100%" border="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <td>Image</td>
+                                    <td>QTY</td>
+                                    <td id="tooltipMasterPack">MP</td>
+                                    <td>HM#</td>
+                                    <td>ProductName</td>
+                                    <td>Inventory</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr cpid="0" rid="0">
+                                    <td>
+                                        <div name="WEBPOImgDIV">
+                                            <a class="fancybox">
+                                                <img style="width: 60px;"></a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="comboQTY" class="comboQTY" style="width: 120px; height: 28px;">
+                                    </td>
+
+                                    <td>
+                                        <input type="text" name="MasterPack" style="width: 70px; height: 28px;" value="N/A" disabled="disabled">
+                                    </td>
+
+                                    <td>
+                                        <input type="text" name="autoHMNUM" data-options="required:true" class="easyui-validatebox" style="width: 180px; height: 28px;" value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="autoProductName" disabled="disabled" style="width: 260px; height: 28px;" value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="Inventory" style="width: 50px; height: 28px;" disabled="disabled" value="0">
+                                    </td>
+                                    <td>
+                                        <img class="cartonTrash" src="../Content/Products/images/trash-big.png" style="cursor: pointer;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div align="right">
+                        <span style="padding: 0 50px 0 0;">
+                            <a class="buttonCMS greenCMS addNewHM">Add More HMNUM</a>
+                           @* <img title="Add HM# to current item" src="../Content/images/addbtn.png" alt="Add HM# to current item" class="addNewHM" style="cursor: pointer;">*@</span>
+                      
+                    </div>
+                </form>
+
+                <form id="HMCostingForm" style="display: none">
+                    <div class="feildsarea">
+                        <p><strong>Costing</strong> for HM#Group</p>
+                        <table width="100%" border="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <td id="tooltipFirstCost">First Cost</td>
+                                    <td id="tooltipOceanFreight">Ocean Freight</td>
+                                    <td id="tooltipDrayage">Drayage</td>
+                                    <td id="tooltipUSAHandlingCharge">USA Handling Charge</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" value="$0.00" id="FirstCost" class="easyui-validatebox hmCost" required="required" disabled="disabled"></td>
+                                    <td>
+                                        <input type="text" value="$0.00" id="OceanFreight" class="easyui-validatebox hmCost" required="required" disabled="disabled"></td>
+                                    <td>
+                                        <input type="text" value="$0.00" id="Drayage" class="easyui-validatebox hmCost" required="required" disabled="disabled"></td>
+                                    <td>
+                                        <input type="text" value="$0.00" id="USAHandlingCharge" class="easyui-validatebox hmCost" required="required" disabled="disabled"></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="4" align="right">
+                                        <div style="padding-top: 5px;">
+                                            <span style="padding: 0 0 0 0;">
+                                                <a class="buttonCMS greenCMS editCosting">Edit costing </a>
+                                            </span>
+                                            <span style="padding: 0 50px 0 0;">
+                                                <a class="buttonCMS greenCMS submitCosting" style="display: none;">Submit </a>
+                                            </span>
+                                            <span style="padding: 0 0 0 0;">
+                                                <a class="buttonCMS greenCMS cancelCosting" style="display: none;">cancel </a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <div style="float: right;">
+                            <a id="Go2Confirm" class="buttonCMS grayCMS">Product Configuration </a>
+                        </div>
+                    </div>
+                </form>
+
+                <form id="CTNForm" style="display: none">
+                    <div class="feildsarea" id="productCTN">
+                        <p class="mediaP">Product Cartons</p>
+                        <div class="hmCTNs" id="hmCTNs">
+                            <table width="100%" cellspacing="5" cellpadding="5" border="0">
+                                <thead>
+                                    <tr>
+                                        <td style="width: 15%">Title</td>
+                                        <td>Cube</td>
+                                        <td>Length</td>
+                                        <td>Width</td>
+                                        <td>Height</td>
+                                        <td style="width: 35%">Commnets</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </form>
+
+                <form id="DimForm" style="display: none">
+                    <div class="feildsarea" id="productDim">
+                        <p>Product Dimensions</p>
+                        <div class="hmDims" id="hmDims">
+                            <table width="100%" cellspacing="5" cellpadding="5" border="0">
+                                <thead>
+                                    <tr>
+                                        <td style="width: 15%">Title</td>
+                                        <td>Cube</td>
+                                        <td>Length</td>
+                                        <td>Width</td>
+                                        <td>Height</td>
+                                        <td style="width: 35%">Commnets</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </aside>
+    </div>
+    <input type="hidden" id="hiddenProductID" value="0" />
+</body>
+</html>

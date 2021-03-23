@@ -1,0 +1,81 @@
+﻿
+        <h1 class="h1_SearchTitle">Search Condition</h1>
+        <div class="filterhead"><a href="#">Filter</a></div>
+        <form id="mediaLibForm">
+            <div class="filterbg">
+                <table width="98%" border="0" cellspacing="5">
+                    <tbody>
+                        <tr>
+                            <td width="18%" align="right">SKUOrder</td>
+                            <td>
+                                <input type="text" id="SKUOrder">
+                            </td>
+                            <td width="18%" align="right">HMNUM:</td>
+                            <td width="12%">
+                                <input type="text" id="HMNUM">
+                            </td>
+
+                            <td width="18%" align="right">Channel:</td>
+                            <td width="12%">
+                                <input id="cbChannel" name="cbChannel" class="easyui-combobox" style="width: 220px; height: 30px;"
+                                    data-options="
+                                            required:'required',
+                                            valueField:'ChannelID',
+                                            textField:'ChannelName',
+                                            value:0,
+                                            url:'@Url.Content("~/Common/GetChannelList?isNeedAll=true")'
+                                        " />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Status:</td>
+                            <td>
+                                <select id="cbStatus" class="easyui-combobox" name="cbStatus" style="width: 220px; height: 30px;">
+                                    <option selected="selected" value="0">ALL</option>
+                                    <option value="1">Attached to SKU</option>
+                                    <option value="2">Unattached</option>
+                                </select>
+                            </td>
+
+                            <td align="right">Brand:</td>
+                            <td>
+                                <input type="text" value="All" class="easyui-combobox" id="cbBrand" style="width: 220px; height: 30px;"
+                                    data-options="
+                                            required:'required',
+                                            valueField:'Brand_Id',
+                                            textField:'Brand_Name',
+                                            value:0,
+                                            url:'@Url.Content("~/CMSCacheableData/BrandList?isNeedAll=true")'
+                                        " />
+                            </td>
+
+                            <td width="18%" align="right">Format:</td>
+                            <td width="12%">
+                                <select id="cbFormat" class="easyui-combobox" required="required" name="cbFormat" style="width: 220px; height: 30px;">
+                                    <option selected="selected" value="0">ALL</option>
+                                    <option value="1">image</option>
+                                    <option value="2">video</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Cloud Status</td>
+                            <td>
+                                <input type="text" value="All" class="easyui-combobox" id="cbCloudStatus" style="width: 220px; height: 30px;"
+                                    data-options="
+                                            required:'required',
+                                            valueField:'CloudStatusId',
+                                            textField:'CloudStatusName',
+                                            value:0,
+                                            url:'@Url.Content("~/CMSCacheableData/CloudStatusList?isNeedAll=true")'
+                                        " /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="filtyerbtnarea">
+                    <input type="image" class="btnSearch" src="~/Content/images/searchbtn.png">
+                    <input type="image" class="btnReset" src="~/Content/images/btnReset.png">
+                </div>
+            </div>
+        </form>

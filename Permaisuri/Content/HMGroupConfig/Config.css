@@ -1,0 +1,320 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+#mainarea {
+    /*float: left; 如果这里是float会导致 easyUI alert出的界面出现巨大偏差！2013年9月16日16:14:04 王力*/
+    margin: 0;
+    padding: 25px 0 0 12px;
+    width: 99%;
+    min-width:1103px;
+}
+
+.breadcam {
+    float: left;
+    margin: 0;
+    padding: 0 0 22px;
+    width: 100%;
+}
+
+.breadcam ul {
+    background-image: url("../images/uparrpw.jpg");
+    background-position: left 4px;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 9px;
+}
+
+
+.breadcam ul li {
+    color: #336633;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    list-style: none outside none;
+    padding: 0 2px 0 0;
+}
+
+
+.breadcam ul li a {
+    background-image: url("images/arrow_right.jpg");
+    background-position: 99% 4px;
+    background-repeat: no-repeat;
+    color: #336633;
+    font-size: 11px;
+    font-weight: normal;
+    list-style: none outside none;
+    padding: 0 17px 0 10px;
+    text-decoration: none;
+}
+
+
+.breadcam ul li .whitearrow {
+    /*background-image: url("images/arrow_down.gif");*/
+    background-position: 100% 7px;
+    background-repeat: no-repeat;
+    color: #336633;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    list-style: none outside none;
+    padding: 0 10px;
+}
+
+
+#mainarea h2 {
+    color: #000000;
+    /*float: left;如果这里是float会导致 easyUI alert出的界面出现巨大偏差！2013年9月16日16:14:04 王力*/
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 12px;
+}
+
+
+#mainarea h2 span {
+    color: #000000;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 12px 15px;
+}
+
+
+.fr {
+    float: right;
+    padding-right:8px;
+}
+
+.prodetailsbg {
+    background-image: url("../images/dottedbg.jpg");
+    border-radius: 0 5px 5px 5px;
+    float: left;
+    margin: 0;
+    padding: 12px;
+    width:97%;
+    border-top: 1px solid #BFC0B7;
+}
+
+
+.prodetailsbg table td {
+    color: #666666;
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 0;
+}
+
+input
+{
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+}
+
+.productname {
+    /*background-image: url("../images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    /*width: 360px;*/
+    width:90%
+}
+
+
+.hmnum {
+    /*background-image: url("../images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    /*width: 150px;*/
+    width:90%
+}
+
+
+.NetWeight, .stockKey
+{
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width:90%
+}
+
+.ColourName,.MaterialName,.CategoryName
+{
+    width:90%;
+}
+
+.SubCategoryName
+{
+    width:90%;
+}
+
+.hmCost{
+    /*background-image: url("../images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 150px;
+}
+
+
+.feildsarea {
+    border-top: 1px solid #BFC0B7;
+    float: left;
+    margin: 0;
+    padding: 25px 0;
+    width: 100%;
+}
+
+
+.feildsarea p {
+    color: #666666;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 12px;
+}
+
+
+.liberyhld {
+    border: 1px solid #000000;
+    float: left;
+    list-style: none outside none;
+    margin: 0 3px 2px 0px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 201px;
+    height: 201px;
+    /*max-height:201px;
+    max-width:201px;*/
+}
+
+
+.liberyhld span {
+    bottom: 4px;
+    height: 17px;
+    position: absolute;
+    right: 3px;
+    width: 10px;
+    z-index: 1;
+}
+
+
+.addmediabtn {
+    float: left;
+    margin: 75px 0 0 7px;
+    cursor:pointer;
+}
+
+
+.relatestable {
+    float: left;
+    width: 100%;
+}
+
+.comments {
+    /*background-image: url("../images/inputbg.jpg");*/
+    /*background-repeat: repeat-x;*/
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    height: 100px;
+    padding: 5px;
+    width: 99%
+}
+
+.hmCTNs,.hmDims {
+    background-color: #EEF1E8;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 0 10px;
+    padding: 5px;
+    width: 99%;
+}
+
+    .hmCTNs table input, .hmDims table input
+    {
+        width: 80px;
+        height: 28px;
+        color: #666666;
+    }
+
+.hmCTNs table thead tr th
+{
+    text-align:center;
+}
+
+.hmDims table thead tr th
+{
+    text-align:center;
+}
+
+.titleAutoCut
+{
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    height: 20px;
+    display: block;
+}
+
+/*这里之所以要用ID是因为...用class会被上面的样式给覆盖掉...2013年11月16日10:34:27*/
+#CTNCommnetsTD input,#DimCommnetsTD input
+{
+    width:100%;
+}
+
+
+/*#ChildrenHMForm input*/
+.chiStyle
+{
+    border: 1px solid #959EA9;
+    border-radius: 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 150px;
+}
+
+#ImgUploadForm a
+{
+    cursor: pointer;
+    float: right;
+}
+.ImgUploadOKBtn
+{
+   margin: 15px 70px 0 7px;
+}
+.ImgUploadCancelBtn {
+    margin: 15px 10px 0 7px;
+}

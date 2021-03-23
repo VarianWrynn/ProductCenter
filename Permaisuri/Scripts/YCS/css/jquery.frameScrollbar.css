@@ -1,0 +1,11 @@
+#scrollbar-wrap { top: 0px; width: 10px; height: 100%; right: 0px; padding-top: 35px; position: absolute; box-sizing: border-box; -moz-box-sizing: border-box; }
+#scrollbar { width: 100%; height: 100%; position: relative; }
+.select-none { -khtml-user-select: none; -moz-user-select: none; user-select: none; }
+.scroll-tools { transition: opacity 0.8s ease-in-out, right 0.4s ease-in-out; left: auto; top: 0px; width: 10px; height: auto; right: 0px; bottom: 0px; position: absolute; z-index: 1000; -webkit-transition: opacity .8s ease-in-out, right .4s ease-in-out; -moz-transition: opacity .8s ease-in-out, right .4s ease-in-out; -o-transition: opacity .8s ease-in-out, right .4s ease-in-out; }
+.scroll-tools-off { right: -16px; opacity: 0; }
+.dragger-container { left: 0px; top: 0px; height: auto; right: 0px; bottom: 0px; position: absolute; }
+.dragger { top: 0px; height: 128px; display: block; position: absolute; min-height: 30px; max-height: 690px; }
+.dragger-bar { margin: 0px 1px; transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; width: 5px; height: 100%; display: block; position: relative; cursor: pointer; background-color: #999; background-color: rgba(0,0,0, 0.2); -webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out; -moz-transition: opacity .2s ease-in-out, background-color .2s ease-in-out; -o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out; }
+.dragger-bar:hover { background-color: #555; background-color: rgba(0,0,0, 0.5); }
+.dragger-bar:active { background-color: rgba(0,0,0, 0.5); }
+.scrollbar-mask { background: rgb(255, 255, 255); width: 0px; height: 100%; opacity: 0; }

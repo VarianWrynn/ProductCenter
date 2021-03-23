@@ -1,0 +1,115 @@
+﻿<h1>Product Search</h1>
+<div class="filterhead"><a href="#">Filter</a></div>
+<form id="searchProductFilterForm">
+    <div class="filterbg">
+        <table width="98%" border="0" cellspacing="5">
+            <tbody>
+                <tr>
+                    <td width="18%" id="toolTipQueryHM" align="right">HM#/HMName:</td>
+                    <td width="12%">
+                        <input type="text" id="keywordbg">
+                    </td>
+                    <td width="18%" id="toolTipQuerySKU" align="right">SKU#/SKUName:</td>
+                    <td width="12%">
+                        <input type="text" class="searchSKU">
+                    </td>
+                    <td width="18%" id="toolTipQueryModifedByUser" align="right">Modifed User</td>
+                    <td width="12%">
+                        <input type="text" id="UpdateBy">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td width="18%" align="right">Brand:</td>
+                    <td width="12%">
+                        @*  <input id="cbBrand" name="cbBrand" required="required" style="width: 220px; height: 30px;">*@
+
+                        <input type="text" value="All" id="cbBrand" style="width: 220px; height: 30px;"
+                               data-options="
+                                            required:'required',
+                                            valueField:'Brand_Id',
+                                            textField:'Brand_Name',
+                                            value:0,
+                                            url:'../CMSCacheableData/BrandList?isNeedAll=true'
+                                        " />
+
+                    </td>
+                    <td width="18%" align="right">Channel:</td>
+                    <td width="12%">
+
+                        <input id="cbChannel" name="cbChannel" style="width: 220px; height: 30px;"
+                               data-options="
+                                            required:'required',
+                                            valueField:'ChannelID',
+                                            textField:'ChannelName',
+                                            value:0,
+                                            url:'../Common/GetChannelList?isNeedAll=true'
+                                        " />
+
+                    </td>
+                    <td width="18%" align="right">IsGroup:</td>
+                    <td width="12%">
+                        <select id="cbMultiplePart" required="required" name="cbMultiplePart" style="width: 220px; height: 30px;">
+                            <option selected="selected" value="0">ALL</option>
+                            <option value="1">No-Group</option>
+                            <option value="2">Group</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Status:</td>
+                    <td>
+                        @*      <select id="cbStatus"  required="required" name="cbStatus" style="width: 220px; height: 30px;">
+                                <option selected="selected" value="-1">ALL</option>
+                                <option value="0">Active</option>
+                                <option value="1">Discontinued</option>
+                                <option value="10">Items requiring attention</option>
+                            </select>*@
+
+                        <input id="cbStatus" name="cbStatus" style="width: 220px; height: 30px;"
+                               data-options="
+                                        required:'required',
+                                        valueField:'StatusID',
+                                        textField:'StatusName',
+                                        value:0,
+                                        url:'../CMSCacheableData/SKUStatusList?isNeedAll=true',
+                                        " />
+
+                    </td>
+                    <td align="right">Category:</td>
+                    <td>
+                        @*                                    <select id="cbCategory" name="cbCategory" required="required" style="width: 220px; height: 30px;">
+                                <option selected="selected" value="0">ALL</option>
+                                <option value="1">InDoor</option>
+                                <option value="2">OutDoor</option>
+                            </select>*@
+
+                        <input id="cbCategory" name="cbCategory" style="width: 220px; height: 30px;"
+                               data-options="
+                                        required:'required',
+                                        valueField:'CategoryID',
+                                        textField:'CategoryName',
+                                        value:0,
+                                        url:'../CMSCacheableData/SKUCategoryList?isNeedAll=true',
+                                        " />
+
+                    </td>
+                    <td align="right">Inventory:</td>
+                    <td>
+                        <select id="cbInventory" name="cbInventory" required="required" style="width: 220px; height: 30px;">
+                            <option selected="selected" value="0">ALL</option>
+                            <option value="1">In Stock</option>
+                            <option value="2">Low Inventory</option>
+                            <option value="3">Out of Stock</option>
+                            <option value="4">Low Inventory|Out of Stock</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="filtyerbtnarea">
+            <input type="image" class="btnSearch" src="~/Content/images/searchbtn.png">
+            <input type="image" class="btnReset" src="~/Content/images/btnReset.png">
+        </div>
+    </div>
+</form>

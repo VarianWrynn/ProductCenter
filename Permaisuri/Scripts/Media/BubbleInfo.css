@@ -1,0 +1,50 @@
+﻿       
+.bubbleInfo {
+
+}
+
+
+.popup {
+    background: none repeat scroll 0 0 #FBF9E6;
+    border: 1px solid #999999;
+    border-collapse: collapse;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 2px 2px 2px #999999;
+    line-height: 1.2em;
+    padding-bottom: 15px;
+    position: absolute;
+    width: 520px;
+    z-index: 999;
+   
+}
+
+.popup h2 {
+    background-color: #F7E39F;
+    border-radius: 3px 3px 3px 3px;
+    color: #2F671B !important;
+    font-size: 12px !important;
+    margin: 8px 0 !important;
+    padding: 5px !important;
+    text-align: left;
+    width: 99%;
+}
+.popu p {
+    color: #666666 !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    padding: 5px 0 !important;
+    text-align: left;
+}
+.popup td.corner {
+    height: 15px;
+    width: 19px;
+}
+.popup table.popup-contents {
+    background: none repeat scroll 0 0 #FBF9E6;
+    border: 1px solid #999999;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 2px 2px 2px #999999;
+    font-size: 12px;
+    line-height: 1.2em;
+}

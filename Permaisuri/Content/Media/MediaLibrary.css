@@ -1,0 +1,514 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ECEBE2;
+}
+
+#mainarea {
+    float: left;
+    margin: 0;
+    /*padding: 20px;*/
+    padding: 20px 0 0 10px;
+    width: 99%;
+}   
+.mediaarea {
+    float: left;
+    margin: 25px;
+    padding: 0;
+    width: 1095px;
+}
+.mediaarea p {
+    color: #272727;
+    float: left;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+.mediaarea ul {
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+.mediaarea ul li {
+    border: 4px solid #999999;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 159px;
+    list-style: none outside none;
+    margin: 0 18px 0 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 159px;
+}
+.mediaarea ul li:last-child {
+    margin: 0;
+}
+.mediaarea ul li span {
+    bottom: 4px;
+    height: 17px;
+    left: 3px;
+    position: absolute;
+    width: 10px;
+    z-index: 999;
+}
+
+.DivSelectyze {
+    float: left;
+    position: relative;
+}
+
+
+.mac .selectyzeValue {
+    background: url("images/bg_mac.png") no-repeat scroll 0 0 transparent;
+    color: #6B6666;
+    font: 13px/35px Arial;
+    height: 35px;
+    padding-left: 15px;
+    width: 244px;
+}
+
+.DivSelectyze .selectyzeValue {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 10;
+}
+
+
+.mac .UlSelectize {
+    background-color: #ECEBE2;
+    left: 1px;
+    top: 28px;
+    width: 250px;
+}
+
+.DivSelectyze .UlSelectize {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+}
+
+
+.mac .optgroupTitle {
+    background-color: #FFFFFF;
+    color: #969696;
+    display: none;
+    font-size: 13px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.DivSelectyze ul {
+    list-style: none outside none;
+}
+.filtyerbtnarea {
+    background-image: url("images/filterlline.jpg");
+    background-position: left top;
+    background-repeat: repeat-x;
+    padding: 15px 30px 0 15px;
+    text-align: right;
+    width: auto;
+}
+
+.p_showing {
+    color: #272727;
+    float: left;
+    font-size: 12px;
+    margin: 5px;
+    padding: 0;
+    font-size:small;
+    font-weight:900;
+    min-width: 150px;/*这个参数设置是为了防止设置页面大小，比如从8切换到40的时候，result列表因为数字不同造成长短不同 引起页面布局跳动 2014年5月15日10:28:50*/
+}
+
+
+.productarea {
+    float: left;
+    padding: 0;
+    width: 99%;
+}
+.product_haed {
+    background-image: url("images/barheading.jpg");
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #BBCAAD;
+    border-left: 1px solid #C6C8BE;
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #FFFFFF;
+    float: left;
+    margin: 12px 0 0;
+    padding: 7px 0 6px 10px;
+    width: 99%;
+}
+.product_haed a {
+    color: #247F12;
+    float: right;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+.addlt {
+    float: left !important;
+}
+.product_haed a {
+    color: #247F12;
+    float: right;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.searcharea {
+    background-color: #FFFFFF;
+    background-image: url("images/salesblk-bg.jpg");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #9C9E96;
+    border-left: 1px solid #C6C8BE;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #C6C8BE;
+    float: left;
+    min-height: 100px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+
+table.reporttable {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.reporttable th.dataTableHeader {
+    background-image: url("images/thbg.jpg");
+    background-repeat: repeat-x;
+    border-collapse: collapse;
+    border-right: 1px solid #969D89;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 11px 7px 11px 11px;
+    text-decoration: none;
+}
+
+
+table.reporttable tr.odd_row {
+    background-color: #F6F5F5;
+    border-collapse: collapse;
+    color: #616161;
+    margin: 0;
+    padding: 15px 7px 15px 11px;
+}
+
+
+table.reporttable td {
+    color: #333333;
+    font-size: 12px;
+    padding: 12px 6px 12px 10px;
+}
+
+
+table.reporttable td span {
+    color: #2B95BD;
+}
+
+.strongtxt {
+    color: #FF0000 !important;
+    font-weight: normal;
+}
+
+
+.skuinput {
+    background-color: #FEF9C6;
+    background-image: url("images/skuinputbg.jpg");
+    background-position: left top;
+    background-repeat: repeat-x;
+    border: 0 none;
+    border-radius: 6px 6px 6px 6px;
+    color: #333333;
+    font-size: 12px;
+    height: 25px;
+    outline: medium none;
+    padding: 2px 5px;
+    text-align: right;
+    width: 59px;
+}
+
+
+.pagina_hld {
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.showinghld {
+    float: left;
+    /*margin: 10px 0 11px 400px;*/
+     margin: 5px 0 0 200px;
+}
+
+.showinghld p {
+    color: #333333;
+    font-size: 12px;
+    margin: 0 6px 0 0;
+    /*padding: 6px 4px 0 0;*/
+}
+.calpagi {
+    /*margin: 10px 0 11px;*/
+    margin: 0 0 0 60px;
+}
+.fl {
+    float: left;
+}
+
+
+.calpagi li {
+    color: #666666;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 17px;
+    list-style: none outside none;
+    margin: 0;
+}
+
+
+.calpagi li a {
+    background-color: #747F6F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 13px;
+    margin: 0 6px;
+    padding: 6px 9px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.calpagi li a.arrL {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.calpagi li a {
+    background-color: #747F6F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 13px;
+    margin: 0 6px;
+    padding: 6px 9px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.DivSelectyze {
+    float: left;
+    position: relative;
+}
+
+
+.grey .selectyzeValue {
+    background: url("images/showing-bg.png") no-repeat scroll 0 0 transparent;
+    color: #797979;
+    font: 13px/31px Arial;
+    height: 30px;
+    padding-left: 5px;
+    width: 46px;
+}
+.DivSelectyze .selectyzeValue {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.grey .UlSelectize {
+    background-color: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    left: 0;
+    top: 29px;
+    width: 44px;
+}
+.DivSelectyze .UlSelectize {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+}
+.DivSelectyze ul {
+    list-style: none outside none;
+}
+
+
+.grey li a {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #797979;
+    font: 13px/30px Arial;
+    height: 28px;
+    padding-left: 10px;
+}   
+
+table.reporttable td font {
+    color: #FF9900;
+}
+
+
+.calpagi li a.arrR {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    /*float: left;*/
+    margin: 0;
+    padding: 0 !important;
+}
+
+.bubbleInfo {
+    border: 4px solid #999999;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 159px;
+    margin: 12px 18px 0 0;
+    position: relative;
+    text-align: center;
+    width: 159px;
+}
+
+.popup {
+    background: none repeat scroll 0 0 #FBF9E6;
+    border: 1px solid #999999;
+    border-collapse: collapse;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 2px 2px 2px #999999;
+    /*display: none;*/
+    line-height: 1.2em;
+    padding-bottom: 15px;
+    position: absolute;
+    width: 520px;
+    z-index: 999;
+}
+
+.popup h2 {
+    background-color: #F7E39F;
+    border-radius: 3px 3px 3px 3px;
+    color: #2F671B !important;
+    font-size: 12px !important;
+    margin: 8px 0 !important;
+    padding: 5px !important;
+    text-align: left;
+    width: 99%;
+}
+.popu p {
+    color: #666666 !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    padding: 5px 0 !important;
+    text-align: left;
+}
+.popup td.corner {
+    height: 15px;
+    width: 19px;
+}
+.popup table.popup-contents {
+    background: none repeat scroll 0 0 #FBF9E6;
+    border: 1px solid #999999;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 2px 2px 2px #999999;
+    font-size: 12px;
+    line-height: 1.2em;
+}
+table.popup-contents th {
+    text-align: right;
+    text-transform: lowercase;
+}
+table.popup-contents td {
+    text-align: left;
+}
+.trigger
+{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.popupname {
+    float: left;
+    font-size: 11px;
+    text-align: left;
+}
+.popupname td {
+    padding: 1px 5px;
+}
+.popupname td span {
+    color: #008000;
+}
+.productstable {
+    float: left;
+    font-size: 11px;
+    text-align: left;
+}
+.productstable td {
+    padding: 1px 5px;
+}
+.productstable td span {
+    color: #008000;
+}
+#mainarea h2 {
+    color: #000000;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 12px;
+}
+
+.fr
+{
+    float:right;
+}
+
+#HMNUM
+{
+    border: 1px solid #959EA9;
+    border-radius: 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 220px;
+}
+
+#SKUOrder{
+    border: 1px solid #959EA9;
+    border-radius: 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 220px;
+}

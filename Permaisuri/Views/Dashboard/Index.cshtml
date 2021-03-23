@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+
+@model List<PermaisuriCMS.Model.Channel_Model>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashbord</title>
+    <link href="@Url.Content("~/Content/themes/gray/easyui.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/icon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Common.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Dashboard/Index.css")" rel="Stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/sea.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        seajs.config({
+            'map': [[/^(.*\.(?:css|js))(.*)$/i, '$1?20140611']]
+        });
+
+        seajs.use("Dashboard/Index", function (a) {
+
+        });
+    </script>
+</head>
+<body>
+    <div id="background" class="background" style="height:100%" >
+    </div>
+    <div id="progressBar" class="progressBar" >
+        Loading,please wait...
+    </div>
+    <div class="bigbarhead">
+        <div style="float:left;width:43%">
+        <label></label>
+        <span>
+            <select multiple style="width:95%" class="multipleSelect">
+                @foreach (var Channel in Model)
+                { 
+                    if(Channel.ChannelID==1||Channel.ChannelID==2||Channel.ChannelID==12)
+                    {
+                        <option value="@Channel.ChannelID" selected="selected">@Channel.ChannelName</option>
+                    }else
+                    {
+                         <option value="@Channel.ChannelID">@Channel.ChannelName</option>
+                    }
+                }
+            </select>
+        </span>
+             </div>
+        <div style="float:right;margin-right:15px;">
+            <label>Start Time</label>
+            <span>
+                <input id="sTime" type="text" class="easyui-datebox" style="width:120px;" required="required" value="@DateTime.Now.AddYears(-7).ToString("yyyy-MM-dd")" /></span>
+            <label style="margin-left:20px;">End Time</label>
+            <span>
+                <input id="eTime" type="text" class="easyui-datebox" style="width:120px" required="required" value="@DateTime.Now.ToString("yyyy-MM-dd")"  /></span>
+            <span style="margin-left:20px;"> <input type="button" value="Query" id="queryEcomOrder" /></span>
+        </div>
+    </div>
+    <div id="container"></div>
+    <div>
+    </div>
+
+    <div class="bigbarhead">
+        <h3>Key Metrics</h3>
+    </div>
+    <section id="matricsarea">
+    </section>
+
+    <div class="channelarea">
+        <div class="channelhead">
+            <h3 style="float: left;">Channel Inventory Alerts</h3>
+            <div class="lowInvRecord">total:0 records <span>More...</span></div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dataTable" id="lowInvTable">
+        </table>
+
+    </div>
+
+    <div class="channelarea">
+        <div class="channelhead">
+            <h3 style="float: left;">Product Development Queue</h3>
+            <div class="productDevCount">total:0 records <span>More...</span></div>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="dataTable" id="productDve">
+            <tbody>
+                <tr class="odd_row">
+                    <td valign="top"><span>Item #254987</span></td>
+                    <td valign="top" align="left"><font class="greentxt">Images Uploaded</font></td>
+                    <td valign="top" align="right">updated 5/14/2013&gt;</td>
+                </tr>
+                <tr>
+                    <td valign="top"><span>Item #254987</span></td>
+                    <td valign="top" align="left"><font class="greentxt">Images Uploaded</font></td>
+                    <td valign="top" align="right">updated 5/14/2013&gt;</td>
+                </tr>
+                <tr class="odd_row">
+                    <td valign="top"><span>Item #254987</span></td>
+                    <td valign="top" align="left"><font class="greentxt">Images Uploaded</font></td>
+                    <td valign="top" align="right">updated 5/14/2013&gt;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

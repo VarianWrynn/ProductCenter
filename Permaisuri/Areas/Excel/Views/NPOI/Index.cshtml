@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable=no" />
+    <title>Lomo Printer's API </title>
+    <link href="@Url.Content("~/Scripts/PlugIn/Bootstrap3.3/css/bootstrap.min.css")" rel="Stylesheet" type="text/css" />
+    <style type="text/css">
+        textarea {
+            width: 780px;
+            height: 180px;
+        }
+
+        .result {
+            -moz-word-break: break-all;
+            -o-word-break: break-all;
+            word-break: break-all;
+        }
+
+        .glyphicon {
+            cursor: pointer;
+        }
+
+        .table td {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>接口文档</h1>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">文档概述</div>
+            <div class="panel-body">
+                接口版本信息：V0.1.20140919<br />
+                <br /> 2、新增接口会在接口名称后添加<span class="label label-primary">new</span>标签
+                <br /> 3、修改接口会在接口名称后添加<span class="label label-success">modify</span>标签
+                <br /> 4、删除或弃用接口会在接口名称后添加<span class="label label-default">del</span>标签
+                <br /> 6、返回错误值为{"Errors": "手机号码不能为空"}
+            </div>
+        </div>
+
+        @Html.Partial("_NOPIImport");
+        
+        @Html.Partial("_LinqFuncTest");
+        
+    </div>
+
+    <script src="@Url.Content("~/Scripts/jquery-2.1.1.js")"></script>
+    <script src="@Url.Content("~/Scripts/PlugIn/Bootstrap3.3/js/bootstrap.min.js")"></script>
+
+    <script type="text/javascript">
+        $(".modal .btn").on("click", function () {
+            var $table = $(this).closest("table");
+
+            var address = $table.find(".address").html();
+            var type = $table.find(".type").html();
+            var data = $.trim($table.find("textarea").val());
+            var check = $table.find(".check").val();
+            data = eval("(" + data + ")");
+            if (check != "") {
+                data.check = check;
+            }
+            $.ajax({
+                url: address,
+                type: type,
+                data: data,
+                dataType: "JSON"
+            }).done(function (result) {
+                var html = JSON.stringify(result, null, '<br />');
+                $table.find(".result").html(html.replaceAll("<br /><br />", "<br />").replaceAll("<br /><br />", "<br />"));
+                $(".glyphicon").click();
+            }).fail(function () {
+                alert("请求失败~~");
+            });
+            return false;
+        });
+
+        $(".glyphicon").on("click", function () {
+            var $table = $(this).closest("table");
+
+            if ($(this).hasClass("glyphicon-plus")) {
+                $table.find(".result").show();
+                $(this).removeClass("glyphicon-plus").addClass("glyphicon-minus");
+            } else {
+                $table.find(".result").hide();
+                $(this).removeClass("glyphicon-minus").addClass("glyphicon-plus");
+            }
+        });
+
+        String.prototype.replaceAll = function (reallyDo, replaceWith, ignoreCase) {
+            if (!RegExp.prototype.isPrototypeOf(reallyDo)) {
+                return this.replace(new RegExp(reallyDo, (ignoreCase ? "gi" : "g")), replaceWith);
+            } else {
+                return this.replace(reallyDo, replaceWith);
+            }
+        }
+    </script>
+</body>
+</html>

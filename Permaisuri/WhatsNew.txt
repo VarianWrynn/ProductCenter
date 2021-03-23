@@ -1,0 +1,120 @@
+2014年12月3日：
+  新增JSONP的DEMO；
+  新增 HttpWebRequest Help类
+
+
+
+2014年6月11日
+
+需要再测试的功能有：
+库存的核对。【get】
+ADD NEW SKU，无法添加，必须SHIPVIA的值必须手动更新一下，该BUG需要修复。第一次添加SKUORDER时，URL不会保留。【get】
+SKU同步时，SHIPVIA的值。 同时SHIPVIA页面双击提示语句去掉。【get】
+图片删除功能不可用，需更新。【get】
+ECOM同步提示看不懂。【get】
+SEARCH PRODUCT页面中ADD，需要调整成新的添加方式的页面. 【get】
+不同MERCHANTID，用相同的SKUORDER不行，提示已存在。--需要调整掉  【get】
+
+HM GROUP无法打开页面，所以添加SKU和同步未测试。 【get】
+
+=================================================
+需要重新讨论的内容如下：
+1. HMNUM
+
+问题点：有库存的HMNUM（未添加过的），都没办法添加HMNUM。
+
+目前同步原则：订单最近3个月的 有StockKey的---造成最新订单都是目的地是CUSTOMER/TAICANG的，都不属于同步范围。
+
+是否需要过滤： 配件是订单类型为Accessory，ECOMCHINA是订单客户为ECOMCHINA
+
+建议：
+
+同步规则建议调整为，只要有STOCKKEY的都全部同步（除配件），同时状态区分是否已添加到CMS中。HMNUM相关的基本属性取除配件，ECOMCHINA订单外的最新订单的信息。
+
+SHIPVIA 需要初始化。
+
+2. Group的HM#命名规则
+
+HM#: 目前测试规则是不允许有特列字符，包含空格，/,& ... 该规则与ECOM目前数据不一致。所以请销售部门自己定义规则后同时修改ECOM系统。
+
+
+2014年5月31日
+	1. 库存只取WEBPO C1的 排除 C2，C3 【get】
+	2.排除大类别 小类别的问题 [Category有BUG 应该只返回1级目录类别] 【get】
+	3.组合产品的子产品：在HM Configuration页面新增一个lable 显示当前HM有没有被关联了组合产品（有则列表新式展示）
+	4. Add New Product-->Add New SKU 【get】
+	5. 创建SKU/组合产品的流程顺序可能要改动（之前在群里像你们提出没反馈）
+
+	6. HMNUM List 价格需要同步成最后确定的几个。【get】
+
+
+2014-1-24:
+	   1. Now you can upload media on ProductConfiguration page.
+
+2014-1-23:
+       1. Some DropdowList now can get benifits from MVC Cache setting.
+
+2014-1-8:
+		1:所有模块的图像都设置成可配置的来支持云端的URL.
+
+2014-1-7:
+ Reports: 
+		1:Product Development Report-fixed order by bug (Jin feedback)
+
+ Product Search
+		1: Add column sortting indicator.
+		2: Fiex RetailPrice sortting bug.
+
+ ProductConfiguration:
+		1:Sale Rep (Actived Channel Setting) can not see "First Cost","Landed Cost","Estimate Freight" on this model.
+
+2014-1-6
+non-admins can be restricted to viewing specific channels. For example, a Costco sales rep should only be able to view the data for the Costco channel (plus their other channels, if any)”
+
+
+2014-1-5
+SKU ProductConfiguration:
+		1.	Add new  fields’ tips for Retail and Sale Price
+		2. Sale Price now can display the data which is exported from HM-ALL Item.
+		3. fixed some CSS style bug for Costing fileds.
+
+Reports:
+		1.	add profit information(COG,Margin column)
+		2.	image can be displayed normally (just displaying CMS’ images)
+
+Product Search
+		1.	Add real inventory information. 
+
+Add Media
+		1.	You can see the image come from WEBPO when you choose the HM#, click it can display original image.
+
+
+
+
+2013-12-27
+	Images:
+		1. Displaying  image from WEBPO and eCom system (Base on HMNUM)
+		   Affected on ProductConfiguration、HMNUMConfiguration,Add New Product(for SKU),Create HM Group pages.
+		1. 新增其他系统的图像展示。
+		   在ProductConfiguration、HMNUMConfiguration,Add New Product(for SKU),Create HM Group页面，
+		   新增来自WEBPO和eCom系统的图片（根据HMNUM）.
+	Style:
+		1. Adjusting the style of Product Pieces on ProductConfiguration page.
+		1. 调整ProductConfiguration页面的Product Pieces样式。
+
+	Inventory:
+		1. Add the real inventory information of HMNUM, this number can be uploaded dynamically when user choose 
+		   different HMNUM,
+		1. Product Pieces的增加库存显示，并且会根据用户动态选择不同HMNUM，实时展示实际库存信息
+
+	Dashboard:
+		1.Now you can choose multiple channels and tiem period to query Order information.
+		1.用户可以一次性多选多个渠道和时间段来查询对应的订单信息。
+
+		2.KeyMetrics:the metrics  of "Avg.daily orders" and "Average order amount" showing dynamically according to 
+		  different period of the start time and the end time.
+		2.KeyMetrics:平均日订单和平均订单金额2个面板会根据用户选择的不同的起始时间进行动态计算展示。
+
+   ProductConfiguration:
+       1. Fixed bug: when operator input some special characters,server will stop it to sumit.
+

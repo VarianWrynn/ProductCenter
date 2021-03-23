@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="58033e2bf22a4bef8c52f0acfe573c66" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Menu_Resource" Width="1.5" PointX="8.875" PointY="19.25" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Role_Menu_Relation" Width="1.5" PointX="6.625" PointY="19.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Security_Role" Width="1.5" PointX="3.875" PointY="17" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.User_Profile_Ext" Width="1.5" PointX="1" PointY="20.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.User_Role_Relation" Width="1.5" PointX="3.75" PointY="21.375" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.User_Role_Menu_V" Width="1.5" PointX="7.5" PointY="10" />
+        <AssociationConnector Association="PermaisuriCMSModel.Security_RoleUser_Role_Relation" />
+        <AssociationConnector Association="PermaisuriCMSModel.Security_RoleRole_Menu_Relation" />
+        <AssociationConnector Association="PermaisuriCMSModel.Menu_ResourceRole_Menu_Relation" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.LogOfUserOperating" Width="1.5" PointX="0.625" PointY="15" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.PO_Order_V" Width="1.5" PointX="4" PointY="10.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.User_Status" Width="1.5" PointX="1.75" PointY="25.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.LogOfUserLogin" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.User_Channel_Relation" Width="1.5" PointX="7.5" PointY="27.625" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_User_Profile_V" Width="1.5" PointX="6.125" PointY="22.5" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_User_Profile_VUser_Channel_Relation" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_ProductDimension" Width="1.5" PointX="25.5" PointY="17.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_HM_Inventory" PointX="32.5" PointY="31" Width="1.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.WebPO_Category_V" Width="1.5" PointX="31.125" PointY="20.375" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Ecom_ImageUrls_V" Width="1.5" PointX="3.875" PointY="14.125" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.WebPO_ImageUrls_V" Width="1.5" PointX="7.625" PointY="12.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.WebPO_Colour_V" Width="1.5" PointX="27.625" PointY="17.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.WebPO_HM_Colour_Material_V" Width="1.5" PointX="10.75" PointY="7.625" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.WebPO_Material_V" Width="1.5" PointX="31.875" PointY="27.625" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_SKU_Colour" Width="1.5" PointX="12.625" PointY="19.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_SKU_Material" Width="1.5" PointX="17.125" PointY="19.75" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Reports_Margin_By_Product_V" Width="1.5" PointX="10.054230959179918" PointY="12.417746668876031" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Reports_LowInventory_V" Width="1.5" PointX="7.75" PointY="15.625" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Brand" Width="1.5" PointX="20.625" PointY="28.875" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Channel" Width="1.5" PointX="6.25" PointY="34.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_HM_Costing" Width="1.5" PointX="32.5" PointY="23.25" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_HMGroup_Relation" Width="1.5" PointX="25.5" PointY="23.25" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_HMNUM" Width="1.5" PointX="28.375" PointY="22.375" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_ProductCTN" Width="1.5" PointX="32.375" PointY="15.25" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_SKU_Category" Width="1.5" PointX="11.5" PointY="23.625" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_SKU_Costing" Width="1.5" PointX="11.5" PointY="27.625" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.MediaLibrary" Width="1.5" PointX="20.5" PointY="35" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.SKU_Media_Relation" Width="1.5" PointX="15.75" PointY="36.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.SKU_Status" Width="1.5" PointX="18.125" PointY="27.25" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.User_Profile" Width="1.5" PointX="3.75" PointY="24.375" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_User_Channel_Relation_Channel" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_HMNUM_CMS_HM_Costing" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_HMGroup_Relation_CMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_ProductCTN_CMS_HMNUM1" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_ProductDimension_CMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_SKU_Media_Relation_MediaLibrary" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_User_Channel_Relation_User_Profile" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_User_Profile_Ext_User_Profile" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_User_Profile_User_Status" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_User_Role_Relation_User_Profile" />
+        <AssociationConnector Association="PermaisuriCMSModel.WebPO_Category_VCMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.WebPO_Colour_VCMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.WebPO_Material_VCMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_HMNUMCMS_HM_Inventory" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_SKU" Width="1.5" PointX="14.875" PointY="22.875" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_SKU_Brand" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_SKU_Channel" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_SKU_CMS_SKU_Costing" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_SKU_SKU_Status" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_SKU_Media_Relation_CMS_SKU" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_SKU_ColourCMS_SKU" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_SKU_MaterialCMS_SKU" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_SKU_CategoryCMS_SKU" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_SKU_CategoryCMS_SKU_Sub" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.SKU_HM_Relation" Width="1.5" PointX="21" PointY="23.75" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_SKU_HM_Relation_CMS_HMNUM" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_SKU_HM_Relation_CMS_SKU" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.LogOfUserOperatingDetails" Width="1.5" PointX="2.625" PointY="36.125" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_Ecom_Sync" Width="1.5" PointX="11.125" PointY="32" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_Ecom_Sync_CMS_SKU" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.MediaCloudStatus" Width="1.5" PointX="20.75" PointY="40.375" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_MediaLibrary_MediaCloudStatus" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_StockKey" Width="1.5" PointX="24.75" PointY="31.625" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_HMNUM_CMS_StockKey" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_MediaLibrary_CMS_StockKey" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_SKU_HM_Relation_CMS_StockKey" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.Export2Excel" Width="1.5" PointX="21.125" PointY="12.375" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_HMNUMExport2Excel" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_Ecom_SyncExport2Excel" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_HMNUM_Status" Width="1.5" PointX="29.875" PointY="33.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_ShipVia" Width="1.5" PointX="27" PointY="33.5" />
+        <EntityTypeShape EntityType="PermaisuriCMSModel.CMS_ShipViaType" Width="1.5" PointX="26.375" PointY="28.75" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_HMNUM_CMS_HMNUM_Status" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_HMNUM_CMS_ShipViaType" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_ShipVia_CMS_ShipViaType" />
+        <AssociationConnector Association="PermaisuriCMSModel.FK_CMS_SKU_CMS_ShipViaType" />
+        <AssociationConnector Association="PermaisuriCMSModel.CMS_SKU_CategoryCMS_SKU_Category" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

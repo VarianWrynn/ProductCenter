@@ -1,0 +1,48 @@
+﻿body
+{
+     background-color: #ECEBE2;
+}
+
+.filterhead {
+    background-image: url("../images/dottedbg.jpg");
+    border-radius: 5px 5px 0 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 72px;
+}
+
+.filterhead a {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.filterbg {
+    background-image: url("../images/dottedbg.jpg");
+    border-radius: 0 5px 5px 5px;
+    height: 200px;
+    margin: 0;
+    padding: 12px 0;
+    width:99%;
+}
+
+
+.filterbg table td {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px 0;
+}
+
+
+#keywordbg,.searchSKU,.attentionItem,#UpdateBy{
+    border: 1px solid #959EA9;
+    border-radius: 5px 5px 5px 5px;
+    color: #666666;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 5px;
+    width: 210px;
+}

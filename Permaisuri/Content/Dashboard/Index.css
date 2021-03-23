@@ -1,0 +1,280 @@
+﻿
+.bigbarhead {
+    background-image: url("images/barheading.jpg");
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #BBCAAD;
+    border-left: 1px solid #C6C8BE;
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #FFFFFF;
+    float: left;
+    margin: 12px 0 0;
+    padding: 12px 0 12px 20px;
+    width: 98%;
+}
+
+
+.bigbarhead h3 {
+    color: #000000;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+#matricsarea {
+    background-color: #F6F5F5;
+    border-radius: 0 0 5px 5px;
+    float: left;
+    margin: 0 0 5px;
+    padding: 20px 5px;
+    width: 99%
+}
+
+
+.keyblk {
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 7px 7px 7px 7px;
+    float: left;
+    margin: 0 0 0 32px;
+    padding: 20px 0;
+    text-align: center;
+    width: 218px;
+}
+
+
+.keyblk h2 {
+    color: #1683BA !important;
+    font-size: 60px !important;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    width: 100%;
+}
+
+.keyblk p {
+    /*color: #666666;*/
+    /*color: blue;        remark by lee 2013-10-28
+    cursor:pointer;*/
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.channelarea {
+    float: left;
+    margin: 0 25px 0 0;
+    padding: 0;
+    width: 47%;
+}
+
+
+.channelhead {
+    background-image: url("images/barheading.jpg");
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #BBCAAD;
+    border-left: 1px solid #C6C8BE;
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #FFFFFF;
+    float: left;
+    margin: 12px 0 0;
+    padding: 12px 0 12px 20px;
+    width: 100%;
+}
+
+
+.channelhead h3 {
+    color: #000000;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+
+table.dataTable {
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    width: 104%;
+}
+
+
+table.dataTable tr.odd_row {
+    background-color: #F6F5F5;
+    border-collapse: collapse;
+    color: #616161;
+    margin: 0;
+    padding: 12px 7px 12px 11px;
+}
+
+
+table.dataTable td {
+    color: #616161;
+    font-size: 12px;
+    padding: 12px 6px 12px 10px;
+}
+
+
+table.dataTable td span {
+    color: #2B95BD;
+}
+
+
+table.dataTable td font {
+    color: #FF9900;
+}
+
+
+table.dataTable td font {
+    color: #FF9900;
+}
+
+.strongtxt {
+    color: #FF0000 !important;
+    font-weight: normal;
+}
+
+.greentxt {
+    color: #339900 !important;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.autocut {
+	width:400px;  
+    overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-icab-text-overflow: ellipsis;
+	-khtml-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+    display:block;
+}
+
+#lowInvTable tr
+{
+    cursor:pointer;
+}
+
+
+.pagina_hld {
+    float: left;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+.fl {
+    float: left;
+}
+.calpagi {
+    margin: 10px 0 11px;
+}
+
+
+
+.calpagi li {
+    color: #666666;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 17px;
+    list-style: none outside none;
+    margin: 0;
+}
+
+
+.calpagi li a.arrL {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.calpagi li a {
+    background-color: #747F6F;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 13px;
+    margin: 0 6px;
+    padding: 6px 9px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.calpagi li a.arrR {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.resulthld {
+    float: right;
+    margin: 10px;
+}
+
+.resulthld p {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px 4px 0 0;
+} 
+
+.showinghld {
+    float: left;
+    margin: 10px;
+}
+
+.showinghld p {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 6px 4px 0 0;
+}
+
+.lowInvRecord,.productDevCount
+{
+    float:right;
+    font-family: "Calibri",Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.lowInvRecord span,.productDevCount span
+{
+   margin:5px 20px; 
+   cursor:pointer;
+   color:blue;
+}
+
+/**For the HighStock layout*/
+#container
+{
+    clear:both;
+    margin-top:10px;
+    margin-left:5px;
+    width: 99%;
+    height: 460px;
+}

@@ -1,0 +1,71 @@
+with SKU
+as
+	(
+	select SKUID,SKU,ChannelName from CMS_SKU SKU
+		inner join Channel C on SKU.ChannelID = C.ChannelID
+	) 
+	select * from SKU  where Exists 
+	(
+		select null from  SKU_HM_Relation R where ProductID  = 2277 and SKU.SKUID = R.SKUID
+	)
+
+
+2014年2月13日11:38:23：
+	1.旧的版本在生成环境使用，新的版本开始开发。同步进行两套系统。  升级EF版本到6.0
+
+	2.新的版本StockKey引入作为Key,需要确认组合产品的Key要怎么弄【~~~~】
+	3.细节：当HMNUM为组合产品的时候，旗下子产品的的QTY应该是需要确认SellSets是不是pieces的概念。【HMGroup.js-->this.SellSets】
+	4. Costing这个表需要维护历史记录！
+
+	5. 2.0采用主外键关联设计好在建立EF关系，否则删除其中任何一条数据都会导致N个地方【对象空引用】，头发都搞白掉。2014年2月17日13:09:46
+
+	6:采用主外键，需要对那些还未建立好主要建的数据，比如SKU，做一个单独的库表隔离：
+
+	7： 能采用ID的一律用ID，不用class，原因是某些情况下jQueryEasyUI对样式支持不怎么好
+
+
+	8：SKU可以引用组合产品，这个组合产品有重复的子产品，但是SellSets不同！
+
+	9: 对于SKU随机创建组合产品的一些考虑~~（也许需要V3）
+
+	10: 全局参数的可配置：for example : 低库存的标准。  
+
+	11:http://zhidao.baidu.com/link?url=UI0LsW0ZbUPR5WjIttwZbfMjTBv4l_33IrfxW2Iasowk-UP9W2cm5AJ8y7MEEc4ACC98nuI-QmeyAOaWB-sgxK
+	src="userpic/<%=ciResult[i][22]%>" onerror="this.src='userpic/anonymity_pic.gif'" 加上一个onerror属性吧，，然后里面的地址就是你想替换的图片地址..
+
+	12.select * from SHIPVIA  HMNUM插入 SHIPVIA
+
+	13.HMNUM+Brand唯一确定一个UPC.
+	UPC码(Universal Product Code)是最早大规模应用的条码，其特性是一种长度固定、连续性的条码，目前主要在美国和加拿大使用，由于其应用范围广泛，故又被称万用条码。
+	 UPC码仅可用来表示数字，故其字码集为数字0~9。
+
+	14：【待讨论】关于MP：51997.00BRN eCOM mp=2, WEBPO  MP =1，CMS 拿WEBPO MP =1，Bonnie反馈是错的，应该拿Ecom MP=2为准。CMS改过来、
+		以后，CMS监控数据 拿WBEPO为准 MP=1，eCOM也会跟新成 MP=1 【eCOM和WEBPO的MP不相符的问题】。
+
+
+
+只在使用linq来查询得出匿名对象时，或者声明匿名对象时，才用var，理由无它，就是var可读性太差了
+一段非临时性的代码，可读性远比编写的痛快性重要得多
+
+
+foreach一个ICollection时，var表示的是object类型。我经常误以为就是ICollection中的Item的类型，这种时候还是加上var的好  
+-->
+ICollection有一个泛型方法ICollection<T>，可以用这个。
+同时如果返回结果是ICollection的 ，可以对其Cast<T>转换一下
+
+
+
+
+首先，Resharper是个好东西，但内存小了跑大一点的项目就是个坑啊。
+其次，我也觉得用var得分情况，有些地方用var就不可以，比如在遍历MatchCollection的时候，用var就行不通：
+====>
+var patternPercent = @"......";
+      var reg = new Regex(patternPercent, RegexOptions.IgnoreCase);
+      var matches = reg.Matches(percent);
+      foreach (var item in matches)
+      {
+        Console.WriteLine("Value:{0}", item.Value);
+      }
+
+这时循环里的item是object，它没有Value这个属性，所以编译通不过。
+===>var matches = reg.Matches("").Cast<Match>();
