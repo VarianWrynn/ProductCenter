@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -76,28 +77,56 @@ namespace PermaisuriCMS.BLL
 
                 //db.Configuration.LazyLoadingEnabled = false; //Object reference not set to an instance of an object. 2014年5月19日9:57:23
 
-                list.AddRange(query.Select(p => new CMS_SKU_Model
+                list.AddRange(query.Select(p =>
                 {
-                    SKUID = p.SKUID, SKU = p.SKU, ChannelID = p.ChannelID, ChannelName = p.Channel == null ? "" : p.Channel.ChannelName, ProductName = p.ProductName, Price = p.CMS_SKU_Costing == null ? 0 : p.CMS_SKU_Costing.SalePrice, strPrice = p.CMS_SKU_Costing == null ? _zeroMoeny : p.CMS_SKU_Costing.SalePrice.ToString("C", new CultureInfo("en-US")),
-                    //按照StockByPcs排序获取第一列（最小列）
-                    //StockByPcs = P.SKU_HM_Relation.Select(r => r.CMS_HMNUM.CMS_HM_Inventory == null ? 0 : r.CMS_HMNUM.CMS_HM_Inventory.StockkeyQTY)
-                    //.OrderBy(r => r.HasValue ? r.Value : 0).FirstOrDefault().ConvertToNotNull(),
-                    SKU_QTY = p.SKU_QTY, StockByPcs = p.SKU_HM_Relation == null ? 0 : p.SKU_HM_Relation.CMS_HMNUM.CMS_HM_Inventory.StockkeyQTY.ConvertToNotNull(), IsGroup = p.SKU_HM_Relation == null ? false : p.SKU_HM_Relation.CMS_HMNUM.IsGroup.ConvertToNotNull(), UpdateOn = p.UpdateOn.HasValue ? p.UpdateOn.Value.ToString("yyyy-MM-dd HH:mm:ss") : "N/A", SKU_HM_Relation = new SKU_HM_Relation_Model
+                    Debug.Assert(p.SKU_HM_Relation != null, "p.SKU_HM_Relation != null");
+                    return new CMS_SKU_Model
                     {
-                        R_QTY = p.SKU_HM_Relation.R_QTY, StockKeyID = p.SKU_HM_Relation.StockKeyID, CMS_HMNUM = new CMS_HMNUM_Model
+                        SKUID = p.SKUID, SKU = p.SKU, ChannelID = p.ChannelID,
+                        ChannelName = p.Channel == null ? "" : p.Channel.ChannelName, ProductName = p.ProductName,
+                        Price = p.CMS_SKU_Costing?.SalePrice ?? 0,
+                        strPrice = p.CMS_SKU_Costing == null
+                            ? _zeroMoeny
+                            : p.CMS_SKU_Costing.SalePrice.ToString("C", new CultureInfo("en-US")),
+
+                        SKU_QTY = p.SKU_QTY,
+                        StockByPcs = p.SKU_HM_Relation == null
+                            ? 0
+                            : p.SKU_HM_Relation.CMS_HMNUM.CMS_HM_Inventory.StockkeyQTY.ConvertToNotNull(),
+                        IsGroup = p.SKU_HM_Relation != null && p.SKU_HM_Relation.CMS_HMNUM.IsGroup.ConvertToNotNull(),
+                        UpdateOn = p.UpdateOn.HasValue ? p.UpdateOn.Value.ToString("yyyy-MM-dd HH:mm:ss") : "N/A",
+                        SKU_HM_Relation = new SKU_HM_Relation_Model
                         {
-                            HMNUM = p.SKU_HM_Relation.CMS_HMNUM.HMNUM, ProductName = p.SKU_HM_Relation.CMS_HMNUM.ProductName, StockKeyQTY = p.SKU_HM_Relation.CMS_HMNUM.CMS_HM_Inventory.StockkeyQTY.ConvertToNotNull(), Comments = p.SKU_HM_Relation.CMS_HMNUM.Comments, IsGroup = p.SKU_HM_Relation.CMS_HMNUM.IsGroup.HasValue ? p.SKU_HM_Relation.CMS_HMNUM.IsGroup.Value : false,
-                            //Children_CMS_HMNUM_List = P.SKU_HM_Relation.CMS_HMNUM.CMS_HMGroup_Children_Relation.Select(r => new CMS_HMNUM_Model
-                            Children_CMS_HMNUM_List = p.SKU_HM_Relation.CMS_HMNUM.CMS_HMGroup_Relation.Select(r => new CMS_HMNUM_Model
+                            R_QTY = p.SKU_HM_Relation.R_QTY, StockKeyID = p.SKU_HM_Relation.StockKeyID, CMS_HMNUM =
+                                new CMS_HMNUM_Model
+                                {
+                                    HMNUM = p.SKU_HM_Relation.CMS_HMNUM.HMNUM,
+                                    ProductName = p.SKU_HM_Relation.CMS_HMNUM.ProductName,
+                                    StockKeyQTY = p.SKU_HM_Relation.CMS_HMNUM.CMS_HM_Inventory.StockkeyQTY
+                                        .ConvertToNotNull(),
+                                    Comments = p.SKU_HM_Relation.CMS_HMNUM.Comments,
+                                    IsGroup = p.SKU_HM_Relation.CMS_HMNUM.IsGroup ?? false,
+                                  
+                                    Children_CMS_HMNUM_List = p.SKU_HM_Relation.CMS_HMNUM.CMS_HMGroup_Relation.Select(
+                                        r => new CMS_HMNUM_Model
+                                        {
+                                            HMNUM = r.CMS_HMNUM_Children.HMNUM,
+                                            ProductName = r.CMS_HMNUM_Children.ProductName,
+                                            Comments = r.CMS_HMNUM_Children.Comments,
+                                            StockKeyQTY = r.CMS_HMNUM_Children.CMS_HM_Inventory.StockkeyQTY
+                                                .ConvertToNotNull()
+                                        }).ToList()
+                                }
+                        },
+                        CMS_Ecom_Sync = p.CMS_Ecom_Sync == null
+                            ? null
+                            : new CMS_Ecom_Sync_Model
                             {
-                                HMNUM = r.CMS_HMNUM_Children.HMNUM, ProductName = r.CMS_HMNUM_Children.ProductName, Comments = r.CMS_HMNUM_Children.Comments, StockKeyQTY = r.CMS_HMNUM_Children.CMS_HM_Inventory.StockkeyQTY.ConvertToNotNull()
-                            }).ToList()
-                        }
-                    },
-                    CMS_Ecom_Sync = p.CMS_Ecom_Sync == null ? null : new CMS_Ecom_Sync_Model
-                    {
-                        Comments = p.CMS_Ecom_Sync.Comments, SKUID = p.CMS_Ecom_Sync.SKUID, StatusDesc = p.CMS_Ecom_Sync.StatusDesc, StatusID = p.CMS_Ecom_Sync.StatusID, UpdateBy = p.CMS_Ecom_Sync.UpdateBy, UpdateOn = p.CMS_Ecom_Sync.UpdateOn
-                    }
+                                Comments = p.CMS_Ecom_Sync.Comments, SKUID = p.CMS_Ecom_Sync.SKUID,
+                                StatusDesc = p.CMS_Ecom_Sync.StatusDesc, StatusID = p.CMS_Ecom_Sync.StatusID,
+                                UpdateBy = p.CMS_Ecom_Sync.UpdateBy, UpdateOn = p.CMS_Ecom_Sync.UpdateOn
+                            }
+                    };
                 }));
                 return list;
             }

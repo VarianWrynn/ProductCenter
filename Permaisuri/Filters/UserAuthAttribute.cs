@@ -18,7 +18,7 @@ namespace Permaisuri.Filters
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
-            return;
+            //return;
 
             //拿到当前请求的URL地址
             var requestUrl = filterContext.HttpContext.Request.Path;

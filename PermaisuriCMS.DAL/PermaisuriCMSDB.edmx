@@ -4,354 +4,28 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="PermaisuriCMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="PermaisuriCMSModelStoreContainer">
-          <EntitySet Name="Brand" EntityType="PermaisuriCMSModel.Store.Brand" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Channel" EntityType="PermaisuriCMSModel.Store.Channel" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_Ecom_Sync" EntityType="PermaisuriCMSModel.Store.CMS_Ecom_Sync" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_HM_Costing" EntityType="PermaisuriCMSModel.Store.CMS_HM_Costing" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_HMGroup_Relation" EntityType="PermaisuriCMSModel.Store.CMS_HMGroup_Relation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_HMNUM" EntityType="PermaisuriCMSModel.Store.CMS_HMNUM" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_HMNUM_Status" EntityType="PermaisuriCMSModel.Store.CMS_HMNUM_Status" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_ProductCTN" EntityType="PermaisuriCMSModel.Store.CMS_ProductCTN" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_ProductDimension" EntityType="PermaisuriCMSModel.Store.CMS_ProductDimension" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_ShipVia" EntityType="PermaisuriCMSModel.Store.CMS_ShipVia" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_ShipViaType" EntityType="PermaisuriCMSModel.Store.CMS_ShipViaType" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_SKU" EntityType="PermaisuriCMSModel.Store.CMS_SKU" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_SKU_Category" EntityType="PermaisuriCMSModel.Store.CMS_SKU_Category" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_SKU_Colour" EntityType="PermaisuriCMSModel.Store.CMS_SKU_Colour" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_SKU_Costing" EntityType="PermaisuriCMSModel.Store.CMS_SKU_Costing" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_SKU_Material" EntityType="PermaisuriCMSModel.Store.CMS_SKU_Material" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_StockKey" EntityType="PermaisuriCMSModel.Store.CMS_StockKey" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="LogOfUserLogin" EntityType="PermaisuriCMSModel.Store.LogOfUserLogin" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="LogOfUserOperating" EntityType="PermaisuriCMSModel.Store.LogOfUserOperating" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="LogOfUserOperatingDetails" EntityType="PermaisuriCMSModel.Store.LogOfUserOperatingDetails" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MediaCloudStatus" EntityType="PermaisuriCMSModel.Store.MediaCloudStatus" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MediaLibrary" EntityType="PermaisuriCMSModel.Store.MediaLibrary" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Menu_Resource" EntityType="PermaisuriCMSModel.Store.Menu_Resource" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Role_Menu_Relation" EntityType="PermaisuriCMSModel.Store.Role_Menu_Relation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Security_Role" EntityType="PermaisuriCMSModel.Store.Security_Role" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SKU_HM_Relation" EntityType="PermaisuriCMSModel.Store.SKU_HM_Relation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SKU_Media_Relation" EntityType="PermaisuriCMSModel.Store.SKU_Media_Relation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SKU_Status" EntityType="PermaisuriCMSModel.Store.SKU_Status" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User_Channel_Relation" EntityType="PermaisuriCMSModel.Store.User_Channel_Relation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User_Profile" EntityType="PermaisuriCMSModel.Store.User_Profile" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User_Profile_Ext" EntityType="PermaisuriCMSModel.Store.User_Profile_Ext" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User_Role_Relation" EntityType="PermaisuriCMSModel.Store.User_Role_Relation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User_Status" EntityType="PermaisuriCMSModel.Store.User_Status" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CMS_HM_Inventory" EntityType="PermaisuriCMSModel.Store.CMS_HM_Inventory" store:Type="Views" store:Schema="dbo" store:Name="CMS_HM_Inventory">
-            <DefiningQuery>SELECT 
-      [CMS_HM_Inventory].[ProductID] AS [ProductID], 
-      [CMS_HM_Inventory].[StockkeyQTY] AS [StockkeyQTY]
-      FROM [dbo].[CMS_HM_Inventory] AS [CMS_HM_Inventory]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="CMS_User_Profile_V" EntityType="PermaisuriCMSModel.Store.CMS_User_Profile_V" store:Type="Views" store:Schema="dbo" store:Name="CMS_User_Profile_V">
-            <DefiningQuery>SELECT 
-      [CMS_User_Profile_V].[User_Guid] AS [User_Guid], 
-      [CMS_User_Profile_V].[User_Account] AS [User_Account], 
-      [CMS_User_Profile_V].[UserPWD] AS [UserPWD], 
-      [CMS_User_Profile_V].[UserStatusID] AS [UserStatusID], 
-      [CMS_User_Profile_V].[UserStatusName] AS [UserStatusName], 
-      [CMS_User_Profile_V].[DisplayName] AS [DisplayName], 
-      [CMS_User_Profile_V].[Last_Logon] AS [Last_Logon], 
-      [CMS_User_Profile_V].[Primary_Email] AS [Primary_Email], 
-      [CMS_User_Profile_V].[IsDisabled] AS [IsDisabled], 
-      [CMS_User_Profile_V].[IsChannelControl] AS [IsChannelControl]
-      FROM [dbo].[CMS_User_Profile_V] AS [CMS_User_Profile_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Ecom_ImageUrls_V" EntityType="PermaisuriCMSModel.Store.Ecom_ImageUrls_V" store:Type="Views" store:Schema="dbo" store:Name="Ecom_ImageUrls_V">
-            <DefiningQuery>SELECT 
-      [Ecom_ImageUrls_V].[HMNUM] AS [HMNUM], 
-      [Ecom_ImageUrls_V].[ProductPicture] AS [ProductPicture]
-      FROM [dbo].[Ecom_ImageUrls_V] AS [Ecom_ImageUrls_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Export2Excel" EntityType="PermaisuriCMSModel.Store.Export2Excel" store:Type="Views" store:Schema="dbo" store:Name="Export2Excel">
-            <DefiningQuery>SELECT 
-      [Export2Excel].[SKU] AS [SKU], 
-      [Export2Excel].[ChannelName] AS [ChannelName], 
-      [Export2Excel].[ProductName] AS [ProductName], 
-      [Export2Excel].[BrandName] AS [BrandName], 
-      [Export2Excel].[MaterialName] AS [MaterialName], 
-      [Export2Excel].[ColourName] AS [ColourName], 
-      [Export2Excel].[StatusName] AS [StatusName], 
-      [Export2Excel].[SKU_QTY] AS [SKU_QTY], 
-      [Export2Excel].[UPC] AS [UPC], 
-      [Export2Excel].[Visibility] AS [Visibility], 
-      [Export2Excel].[ProductDesc] AS [ProductDesc], 
-      [Export2Excel].[Specifications] AS [Specifications], 
-      [Export2Excel].[Keywords] AS [Keywords], 
-      [Export2Excel].[URL] AS [URL], 
-      [Export2Excel].[SubCategoryName] AS [SubCategoryName], 
-      [Export2Excel].[SubCategoryID] AS [SubCategoryID], 
-      [Export2Excel].[ParentCategoryName] AS [ParentCategoryName], 
-      [Export2Excel].[ParentCategoryID] AS [ParentCategoryID], 
-      [Export2Excel].[RetailPrice] AS [RetailPrice], 
-      [Export2Excel].[SalePrice] AS [SalePrice], 
-      [Export2Excel].[EstimateFreight] AS [EstimateFreight], 
-      [Export2Excel].[MLHMNUM] AS [MLHMNUM], 
-      [Export2Excel].[ImgName] AS [ImgName], 
-      [Export2Excel].[FileFormat] AS [FileFormat], 
-      [Export2Excel].[Pieces] AS [Pieces], 
-      [Export2Excel].[HMNUM] AS [HMNUM], 
-      [Export2Excel].[MasterPack] AS [MasterPack], 
-      [Export2Excel].[HMName] AS [HMName], 
-      [Export2Excel].[StockKey] AS [StockKey], 
-      [Export2Excel].[IsGroup] AS [IsGroup], 
-      [Export2Excel].[StockkeyQTY] AS [StockkeyQTY], 
-      [Export2Excel].[FirstCost] AS [FirstCost], 
-      [Export2Excel].[OceanFreight] AS [OceanFreight], 
-      [Export2Excel].[USAHandlingCharge] AS [USAHandlingCharge], 
-      [Export2Excel].[Drayage] AS [Drayage], 
-      [Export2Excel].[SKUID] AS [SKUID], 
-      [Export2Excel].[ChannelID] AS [ChannelID], 
-      [Export2Excel].[BrandID] AS [BrandID], 
-      [Export2Excel].[StatusID] AS [StatusID], 
-      [Export2Excel].[SKUCostID] AS [SKUCostID], 
-      [Export2Excel].[ColourID] AS [ColourID], 
-      [Export2Excel].[MaterialID] AS [MaterialID], 
-      [Export2Excel].[CategoryID] AS [CategoryID], 
-      [Export2Excel].[ProductID] AS [ProductID], 
-      [Export2Excel].[HMCostID] AS [HMCostID], 
-      [Export2Excel].[UpdateOn] AS [UpdateOn], 
-      [Export2Excel].[UpdateBy] AS [UpdateBy]
-      FROM [dbo].[Export2Excel] AS [Export2Excel]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="PO_Order_V" EntityType="PermaisuriCMSModel.Store.PO_Order_V" store:Type="Views" store:Schema="dbo" store:Name="PO_Order_V">
-            <DefiningQuery>SELECT 
-      [PO_Order_V].[Orders] AS [Orders], 
-      [PO_Order_V].[Prices] AS [Prices], 
-      [PO_Order_V].[OrderYear] AS [OrderYear], 
-      [PO_Order_V].[OrderMonth] AS [OrderMonth], 
-      [PO_Order_V].[MerchantID] AS [MerchantID], 
-      [PO_Order_V].[ChannelID] AS [ChannelID]
-      FROM [dbo].[PO_Order_V] AS [PO_Order_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Reports_LowInventory_V" EntityType="PermaisuriCMSModel.Store.Reports_LowInventory_V" store:Type="Views" store:Schema="dbo" store:Name="Reports_LowInventory_V">
-            <DefiningQuery>SELECT 
-      [Reports_LowInventory_V].[HMNUM] AS [HMNUM], 
-      [Reports_LowInventory_V].[SKU] AS [SKU], 
-      [Reports_LowInventory_V].[pImage] AS [pImage], 
-      [Reports_LowInventory_V].[StockByPcs] AS [StockByPcs], 
-      [Reports_LowInventory_V].[Exp_Qty] AS [Exp_Qty], 
-      [Reports_LowInventory_V].[RepDate] AS [RepDate], 
-      [Reports_LowInventory_V].[ChannelID] AS [ChannelID], 
-      [Reports_LowInventory_V].[ChannelName] AS [ChannelName], 
-      [Reports_LowInventory_V].[BrandID] AS [BrandID], 
-      [Reports_LowInventory_V].[BrandName] AS [BrandName]
-      FROM [dbo].[Reports_LowInventory_V] AS [Reports_LowInventory_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Reports_Margin_By_Product_V" EntityType="PermaisuriCMSModel.Store.Reports_Margin_By_Product_V" store:Type="Views" store:Schema="dbo" store:Name="Reports_Margin_By_Product_V">
-            <DefiningQuery>SELECT 
-      [Reports_Margin_By_Product_V].[SKUOrder] AS [SKUOrder], 
-      [Reports_Margin_By_Product_V].[Name] AS [Name], 
-      [Reports_Margin_By_Product_V].[ImageName] AS [ImageName], 
-      [Reports_Margin_By_Product_V].[HMNUM] AS [HMNUM], 
-      [Reports_Margin_By_Product_V].[ProductName] AS [ProductName], 
-      [Reports_Margin_By_Product_V].[IsGroup] AS [IsGroup], 
-      [Reports_Margin_By_Product_V].[ChannelName] AS [ChannelName], 
-      [Reports_Margin_By_Product_V].[ChannelID] AS [ChannelID], 
-      [Reports_Margin_By_Product_V].[BrandID] AS [BrandID], 
-      [Reports_Margin_By_Product_V].[BrandName] AS [BrandName], 
-      [Reports_Margin_By_Product_V].[Inventory] AS [Inventory], 
-      [Reports_Margin_By_Product_V].[NormalSelling] AS [NormalSelling], 
-      [Reports_Margin_By_Product_V].[COG] AS [COG], 
-      [Reports_Margin_By_Product_V].[Margin] AS [Margin]
-      FROM [dbo].[Reports_Margin_By_Product_V] AS [Reports_Margin_By_Product_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="User_Role_Menu_V" EntityType="PermaisuriCMSModel.Store.User_Role_Menu_V" store:Type="Views" store:Schema="dbo" store:Name="User_Role_Menu_V">
-            <DefiningQuery>SELECT 
-      [User_Role_Menu_V].[User_Account] AS [User_Account], 
-      [User_Role_Menu_V].[User_Pwd] AS [User_Pwd], 
-      [User_Role_Menu_V].[MR_ID] AS [MR_ID], 
-      [User_Role_Menu_V].[MenuID] AS [MenuID], 
-      [User_Role_Menu_V].[MenuName] AS [MenuName], 
-      [User_Role_Menu_V].[ParentMenuID] AS [ParentMenuID], 
-      [User_Role_Menu_V].[SortNo] AS [SortNo], 
-      [User_Role_Menu_V].[MenuUrl] AS [MenuUrl], 
-      [User_Role_Menu_V].[Icon] AS [Icon]
-      FROM [dbo].[User_Role_Menu_V] AS [User_Role_Menu_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="WebPO_Category_V" EntityType="PermaisuriCMSModel.Store.WebPO_Category_V" store:Type="Views" store:Schema="dbo" store:Name="WebPO_Category_V">
-            <DefiningQuery>SELECT 
-      [WebPO_Category_V].[CategoryID] AS [CategoryID], 
-      [WebPO_Category_V].[CategoryName] AS [CategoryName], 
-      [WebPO_Category_V].[ParentCategoryID] AS [ParentCategoryID], 
-      [WebPO_Category_V].[ParentCategoryName] AS [ParentCategoryName], 
-      [WebPO_Category_V].[OrderIndex] AS [OrderIndex]
-      FROM [dbo].[WebPO_Category_V] AS [WebPO_Category_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="WebPO_Colour_V" EntityType="PermaisuriCMSModel.Store.WebPO_Colour_V" store:Type="Views" store:Schema="dbo" store:Name="WebPO_Colour_V">
-            <DefiningQuery>SELECT 
-      [WebPO_Colour_V].[ColourID] AS [ColourID], 
-      [WebPO_Colour_V].[ColourDesc] AS [ColourDesc]
-      FROM [dbo].[WebPO_Colour_V] AS [WebPO_Colour_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="WebPO_HM_Colour_Material_V" EntityType="PermaisuriCMSModel.Store.WebPO_HM_Colour_Material_V" store:Type="Views" store:Schema="dbo" store:Name="WebPO_HM_Colour_Material_V">
-            <DefiningQuery>SELECT 
-      [WebPO_HM_Colour_Material_V].[HMNUM] AS [HMNUM], 
-      [WebPO_HM_Colour_Material_V].[ProductName] AS [ProductName], 
-      [WebPO_HM_Colour_Material_V].[MaterialID] AS [MaterialID], 
-      [WebPO_HM_Colour_Material_V].[ColourID] AS [ColourID], 
-      [WebPO_HM_Colour_Material_V].[CategoryID] AS [CategoryID], 
-      [WebPO_HM_Colour_Material_V].[ParentCategoryID] AS [ParentCategoryID], 
-      [WebPO_HM_Colour_Material_V].[MasterPack] AS [MasterPack]
-      FROM [dbo].[WebPO_HM_Colour_Material_V] AS [WebPO_HM_Colour_Material_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="WebPO_ImageUrls_V" EntityType="PermaisuriCMSModel.Store.WebPO_ImageUrls_V" store:Type="Views" store:Schema="dbo" store:Name="WebPO_ImageUrls_V">
-            <DefiningQuery>SELECT 
-      [WebPO_ImageUrls_V].[HMNUM] AS [HMNUM], 
-      [WebPO_ImageUrls_V].[SmallPic] AS [SmallPic], 
-      [WebPO_ImageUrls_V].[Pic] AS [Pic]
-      FROM [dbo].[WebPO_ImageUrls_V] AS [WebPO_ImageUrls_V]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="WebPO_Material_V" EntityType="PermaisuriCMSModel.Store.WebPO_Material_V" store:Type="Views" store:Schema="dbo" store:Name="WebPO_Material_V">
-            <DefiningQuery>SELECT 
-      [WebPO_Material_V].[MaterialID] AS [MaterialID], 
-      [WebPO_Material_V].[MaterialName] AS [MaterialName]
-      FROM [dbo].[WebPO_Material_V] AS [WebPO_Material_V]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK_CMS_Ecom_Sync_CMS_SKU" Association="PermaisuriCMSModel.Store.FK_CMS_Ecom_Sync_CMS_SKU">
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-            <End Role="CMS_Ecom_Sync" EntitySet="CMS_Ecom_Sync" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_HMGroup_Relation_CMS_HMNUM" Association="PermaisuriCMSModel.Store.FK_CMS_HMGroup_Relation_CMS_HMNUM">
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-            <End Role="CMS_HMGroup_Relation" EntitySet="CMS_HMGroup_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_HMNUM_CMS_HM_Costing" Association="PermaisuriCMSModel.Store.FK_CMS_HMNUM_CMS_HM_Costing">
-            <End Role="CMS_HM_Costing" EntitySet="CMS_HM_Costing" />
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_HMNUM_CMS_HMNUM_Status" Association="PermaisuriCMSModel.Store.FK_CMS_HMNUM_CMS_HMNUM_Status">
-            <End Role="CMS_HMNUM_Status" EntitySet="CMS_HMNUM_Status" />
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_HMNUM_CMS_ShipViaType" Association="PermaisuriCMSModel.Store.FK_CMS_HMNUM_CMS_ShipViaType">
-            <End Role="CMS_ShipViaType" EntitySet="CMS_ShipViaType" />
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_HMNUM_CMS_StockKey" Association="PermaisuriCMSModel.Store.FK_CMS_HMNUM_CMS_StockKey">
-            <End Role="CMS_StockKey" EntitySet="CMS_StockKey" />
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_ProductCTN_CMS_HMNUM" Association="PermaisuriCMSModel.Store.FK_CMS_ProductCTN_CMS_HMNUM">
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-            <End Role="CMS_ProductCTN" EntitySet="CMS_ProductCTN" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_ProductDimension_CMS_HMNUM" Association="PermaisuriCMSModel.Store.FK_CMS_ProductDimension_CMS_HMNUM">
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-            <End Role="CMS_ProductDimension" EntitySet="CMS_ProductDimension" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_ShipVia_CMS_ShipViaType" Association="PermaisuriCMSModel.Store.FK_CMS_ShipVia_CMS_ShipViaType">
-            <End Role="CMS_ShipViaType" EntitySet="CMS_ShipViaType" />
-            <End Role="CMS_ShipVia" EntitySet="CMS_ShipVia" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_SKU_Brand" Association="PermaisuriCMSModel.Store.FK_CMS_SKU_Brand">
-            <End Role="Brand" EntitySet="Brand" />
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_SKU_Channel" Association="PermaisuriCMSModel.Store.FK_CMS_SKU_Channel">
-            <End Role="Channel" EntitySet="Channel" />
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_SKU_CMS_ShipViaType" Association="PermaisuriCMSModel.Store.FK_CMS_SKU_CMS_ShipViaType">
-            <End Role="CMS_ShipViaType" EntitySet="CMS_ShipViaType" />
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_SKU_CMS_SKU_Costing" Association="PermaisuriCMSModel.Store.FK_CMS_SKU_CMS_SKU_Costing">
-            <End Role="CMS_SKU_Costing" EntitySet="CMS_SKU_Costing" />
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CMS_SKU_SKU_Status" Association="PermaisuriCMSModel.Store.FK_CMS_SKU_SKU_Status">
-            <End Role="SKU_Status" EntitySet="SKU_Status" />
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MediaLibrary_CMS_StockKey" Association="PermaisuriCMSModel.Store.FK_MediaLibrary_CMS_StockKey">
-            <End Role="CMS_StockKey" EntitySet="CMS_StockKey" />
-            <End Role="MediaLibrary" EntitySet="MediaLibrary" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MediaLibrary_MediaCloudStatus" Association="PermaisuriCMSModel.Store.FK_MediaLibrary_MediaCloudStatus">
-            <End Role="MediaCloudStatus" EntitySet="MediaCloudStatus" />
-            <End Role="MediaLibrary" EntitySet="MediaLibrary" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Role_Menu_Relation_Menu_Resource" Association="PermaisuriCMSModel.Store.FK_Role_Menu_Relation_Menu_Resource">
-            <End Role="Menu_Resource" EntitySet="Menu_Resource" />
-            <End Role="Role_Menu_Relation" EntitySet="Role_Menu_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Role_Menu_Relation_Security_Role" Association="PermaisuriCMSModel.Store.FK_Role_Menu_Relation_Security_Role">
-            <End Role="Security_Role" EntitySet="Security_Role" />
-            <End Role="Role_Menu_Relation" EntitySet="Role_Menu_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SKU_HM_Relation_CMS_HMNUM" Association="PermaisuriCMSModel.Store.FK_SKU_HM_Relation_CMS_HMNUM">
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-            <End Role="SKU_HM_Relation" EntitySet="SKU_HM_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SKU_HM_Relation_CMS_SKU" Association="PermaisuriCMSModel.Store.FK_SKU_HM_Relation_CMS_SKU">
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-            <End Role="SKU_HM_Relation" EntitySet="SKU_HM_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SKU_HM_Relation_CMS_StockKey" Association="PermaisuriCMSModel.Store.FK_SKU_HM_Relation_CMS_StockKey">
-            <End Role="CMS_StockKey" EntitySet="CMS_StockKey" />
-            <End Role="SKU_HM_Relation" EntitySet="SKU_HM_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SKU_Media_Relation_CMS_SKU" Association="PermaisuriCMSModel.Store.FK_SKU_Media_Relation_CMS_SKU">
-            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
-            <End Role="SKU_Media_Relation" EntitySet="SKU_Media_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SKU_Media_Relation_MediaLibrary" Association="PermaisuriCMSModel.Store.FK_SKU_Media_Relation_MediaLibrary">
-            <End Role="MediaLibrary" EntitySet="MediaLibrary" />
-            <End Role="SKU_Media_Relation" EntitySet="SKU_Media_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM" Association="PermaisuriCMSModel.Store.FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM">
-            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
-            <End Role="CMS_HMGroup_Relation" EntitySet="CMS_HMGroup_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Channel_Relation_Channel" Association="PermaisuriCMSModel.Store.FK_User_Channel_Relation_Channel">
-            <End Role="Channel" EntitySet="Channel" />
-            <End Role="User_Channel_Relation" EntitySet="User_Channel_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Channel_Relation_User_Profile" Association="PermaisuriCMSModel.Store.FK_User_Channel_Relation_User_Profile">
-            <End Role="User_Profile" EntitySet="User_Profile" />
-            <End Role="User_Channel_Relation" EntitySet="User_Channel_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Profile_Ext_User_Profile" Association="PermaisuriCMSModel.Store.FK_User_Profile_Ext_User_Profile">
-            <End Role="User_Profile" EntitySet="User_Profile" />
-            <End Role="User_Profile_Ext" EntitySet="User_Profile_Ext" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Profile_User_Status" Association="PermaisuriCMSModel.Store.FK_User_Profile_User_Status">
-            <End Role="User_Status" EntitySet="User_Status" />
-            <End Role="User_Profile" EntitySet="User_Profile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Role_Relation_Security_Role" Association="PermaisuriCMSModel.Store.FK_User_Role_Relation_Security_Role">
-            <End Role="Security_Role" EntitySet="Security_Role" />
-            <End Role="User_Role_Relation" EntitySet="User_Role_Relation" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Role_Relation_User_Profile" Association="PermaisuriCMSModel.Store.FK_User_Role_Relation_User_Profile">
-            <End Role="User_Profile" EntitySet="User_Profile" />
-            <End Role="User_Role_Relation" EntitySet="User_Role_Relation" />
-          </AssociationSet>
-        </EntityContainer>
+    <Schema Namespace="PermaisuriCMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Brand">
           <Key>
             <PropertyRef Name="BrandID" />
           </Key>
-          <Property Name="BrandID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="BrandName" Type="nvarchar" Nullable="false" MaxLength="200" />
-          <Property Name="ShortName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Active" Type="bit" Nullable="false" />
-          <Property Name="Modifier" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Modifier_Date" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Channel">
           <Key>
             <PropertyRef Name="ChannelID" />
           </Key>
-          <Property Name="ChannelID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ChannelName" Type="nvarchar" Nullable="false" MaxLength="200" />
-          <Property Name="ShortName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ChannelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChannelName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ShortName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="API" Type="bit" Nullable="false" />
           <Property Name="Export2CSV" Type="bit" Nullable="false" />
-          <Property Name="Modifier" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Modify_Date" Type="datetime" Nullable="false" />
           <Property Name="Remarks" Type="nvarchar" MaxLength="2000" />
         </EntityType>
@@ -361,52 +35,52 @@
           </Key>
           <Property Name="SKUID" Type="bigint" Nullable="false" />
           <Property Name="StatusID" Type="int" Nullable="false" />
-          <Property Name="StatusDesc" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="StatusDesc" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="UpdateOn" Type="datetime" Nullable="false" />
-          <Property Name="UpdateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Comments" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="CMS_HM_Costing">
           <Key>
             <PropertyRef Name="HMCostID" />
           </Key>
-          <Property Name="HMCostID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HMCostID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StockKey" Type="nvarchar" MaxLength="50" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="FirstCost" Type="decimal" Scale="2" />
-          <Property Name="LandedCost" Type="decimal" Scale="2" />
-          <Property Name="OceanFreight" Type="decimal" Scale="2" />
-          <Property Name="USAHandlingCharge" Type="decimal" Scale="2" />
-          <Property Name="ManagementCost" Type="decimal" Scale="2" />
-          <Property Name="Drayage" Type="decimal" Scale="2" />
-          <Property Name="EstimateFreight" Type="decimal" Scale="2" />
-          <Property Name="ShippingCost" Type="decimal" Scale="2" />
-          <Property Name="Coupon" Type="decimal" Scale="2" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LandedCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OceanFreight" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="USAHandlingCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ManagementCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Drayage" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="EstimateFreight" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ShippingCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Coupon" Type="decimal" Precision="18" Scale="2" />
           <Property Name="EffectiveDate" Type="datetime" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="HisProductID" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_HMGroup_Relation">
           <Key>
             <PropertyRef Name="RID" />
           </Key>
-          <Property Name="RID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="bigint" Nullable="false" />
           <Property Name="ChildrenProductID" Type="bigint" Nullable="false" />
           <Property Name="SellSets" Type="int" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_HMNUM">
           <Key>
             <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ProductID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="ProductName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ProductID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="StockKeyID" Type="bigint" Nullable="false" />
-          <Property Name="StockKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StockKey" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MasterPack" Type="bigint" Nullable="false" />
           <Property Name="Comments" Type="nvarchar" MaxLength="1000" />
           <Property Name="HMCostID" Type="bigint" Nullable="false" />
@@ -414,16 +88,16 @@
           <Property Name="SubCategoryID" Type="int" />
           <Property Name="IsGroup" Type="bit" />
           <Property Name="StatusID" Type="int" Nullable="false" />
-          <Property Name="Loadability" Type="decimal" Scale="4" />
+          <Property Name="Loadability" Type="decimal" Precision="18" Scale="2" />
           <Property Name="ColourID" Type="bigint" Nullable="false" />
           <Property Name="MaterialID" Type="bigint" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ModifyOn" Type="datetime" Nullable="false" />
-          <Property Name="ModifyBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ModifyBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="WebPOColourName" Type="nvarchar" MaxLength="1000" />
           <Property Name="WebPOMaterialName" Type="nvarchar" MaxLength="1000" />
-          <Property Name="NetWeight" Type="decimal" Scale="4" />
+          <Property Name="NetWeight" Type="decimal" Precision="18" Scale="2" />
           <Property Name="IsCloud" Type="bit" />
           <Property Name="ShipViaTypeID" Type="int" />
         </EntityType>
@@ -431,23 +105,23 @@
           <Key>
             <PropertyRef Name="StatusID" />
           </Key>
-          <Property Name="StatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="StatusName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StatusName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
         </EntityType>
         <EntityType Name="CMS_ProductCTN">
           <Key>
             <PropertyRef Name="CTNID" />
           </Key>
-          <Property Name="CTNID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CTNID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="bigint" Nullable="false" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CTNTitle" Type="nvarchar" MaxLength="100" />
-          <Property Name="CTNLength" Type="numeric" Scale="2" />
-          <Property Name="CTNWidth" Type="numeric" Scale="2" />
-          <Property Name="CTNHeight" Type="numeric" Scale="2" />
-          <Property Name="CTNWeight" Type="numeric" Scale="2" />
-          <Property Name="CTNCube" Type="numeric" Scale="2" />
+          <Property Name="CTNLength" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="CTNWidth" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="CTNHeight" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="CTNWeight" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="CTNCube" Type="numeric" Precision="18" Scale="2" />
           <Property Name="CTNComment" Type="nvarchar" MaxLength="200" />
           <Property Name="CreateOn" Type="datetime" />
           <Property Name="UpdateOn" Type="datetime" />
@@ -457,14 +131,14 @@
           <Key>
             <PropertyRef Name="DimID" />
           </Key>
-          <Property Name="DimID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DimID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="bigint" Nullable="false" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DimTitle" Type="nvarchar" MaxLength="100" />
-          <Property Name="DimLength" Type="decimal" Scale="2" />
-          <Property Name="DimWidth" Type="decimal" Scale="2" />
-          <Property Name="DimHeight" Type="decimal" Scale="2" />
-          <Property Name="DimCube" Type="decimal" Scale="2" />
+          <Property Name="DimLength" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DimWidth" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DimHeight" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DimCube" Type="decimal" Precision="18" Scale="2" />
           <Property Name="DimComment" Type="nvarchar" MaxLength="200" />
           <Property Name="CreateOn" Type="datetime" />
           <Property Name="UpdateOn" Type="datetime" />
@@ -474,37 +148,38 @@
           <Key>
             <PropertyRef Name="SHIPVIAID" />
           </Key>
-          <Property Name="SHIPVIAID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SHIPVIAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ShipViaTypeID" Type="int" Nullable="false" />
           <Property Name="IsDefaultShipVia" Type="bit" Nullable="false" />
-          <Property Name="SHIPVIA" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SHIPVIA" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CarrierRouting" Type="nvarchar" MaxLength="50" />
           <Property Name="CarrierCode" Type="nvarchar" MaxLength="50" />
           <Property Name="ExpressMethod" Type="nvarchar" MaxLength="50" />
           <Property Name="ExpressNumLength" Type="int" />
           <Property Name="ExpressRule" Type="nvarchar" MaxLength="400" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="UpdateOn" Type="datetime" Nullable="false" />
-          <Property Name="UpdateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_ShipViaType">
           <Key>
             <PropertyRef Name="ShipViaTypeID" />
           </Key>
-          <Property Name="ShipViaTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ShipViaTypeName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ShipViaTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShipViaTypeName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="UpdateOn" Type="datetime" Nullable="false" />
-          <Property Name="UpdateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_SKU">
           <Key>
             <PropertyRef Name="SKUID" />
           </Key>
-          <Property Name="SKUID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="SKU" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="SKUID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SKU" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="200" />
           <Property Name="ChannelID" Type="int" Nullable="false" />
           <Property Name="BrandID" Type="int" Nullable="false" />
@@ -515,7 +190,7 @@
           <Property Name="ProductDesc" Type="nvarchar(max)" />
           <Property Name="Specifications" Type="nvarchar" MaxLength="2000" />
           <Property Name="Keywords" Type="nvarchar" MaxLength="1000" />
-          <Property Name="RetailPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="URL" Type="nvarchar" MaxLength="2000" />
           <Property Name="SKUCostID" Type="bigint" Nullable="false" />
           <Property Name="ColourID" Type="bigint" Nullable="false" />
@@ -532,7 +207,7 @@
           <Key>
             <PropertyRef Name="CategoryID" />
           </Key>
-          <Property Name="CategoryID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryName" Type="nvarchar" MaxLength="100" />
           <Property Name="CategoryDesc" Type="nvarchar" MaxLength="200" />
           <Property Name="ParentID" Type="bigint" Nullable="false" />
@@ -546,57 +221,57 @@
           <Key>
             <PropertyRef Name="ColourID" />
           </Key>
-          <Property Name="ColourID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ColourName" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ColourID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ColourName" Type="nvarchar" MaxLength="1000" Nullable="false" />
           <Property Name="ColourDesc" Type="nvarchar(max)" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
           <Property Name="ModifyOn" Type="datetime" Nullable="false" />
-          <Property Name="ModifyBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ModifyBy" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_SKU_Costing">
           <Key>
             <PropertyRef Name="SKUCostID" />
           </Key>
-          <Property Name="SKUCostID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SKUCostID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="HMCostID" Type="bigint" />
-          <Property Name="SalePrice" Type="decimal" Nullable="false" Scale="2" />
-          <Property Name="EstimateFreight" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="SalePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="EstimateFreight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="EffectiveDate" Type="datetime" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="HisSKUID" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_SKU_Material">
           <Key>
             <PropertyRef Name="MaterialID" />
           </Key>
-          <Property Name="MaterialID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="MaterialName" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="MaterialID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="1000" Nullable="false" />
           <Property Name="MaterialDesc" Type="nvarchar(max)" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
           <Property Name="ModifyOn" Type="datetime" Nullable="false" />
-          <Property Name="ModifyBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ModifyBy" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="CMS_StockKey">
           <Key>
             <PropertyRef Name="StockKeyID" />
           </Key>
-          <Property Name="StockKeyID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="StockKey" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="StockKeyID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StockKey" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="CreateTime" Type="datetime" Nullable="false" />
-          <Property Name="CreateOn" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateOn" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="UdateTime" Type="datetime" Nullable="false" />
-          <Property Name="UpdateOn" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UpdateOn" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Remark" Type="nvarchar" MaxLength="2000" />
         </EntityType>
         <EntityType Name="LogOfUserLogin">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="User_Account" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_Account" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Display_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Logging_IP" Type="nvarchar" MaxLength="50" />
           <Property Name="Machine_Name" Type="nvarchar" MaxLength="50" />
@@ -609,10 +284,10 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="User_Account" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_Account" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Display_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Model_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Model_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Action_Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Operating_Type" Type="int" />
           <Property Name="OldData" Type="nvarchar" MaxLength="2000" />
@@ -624,9 +299,9 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ModelName" Type="nvarchar" Nullable="false" MaxLength="1000" />
-          <Property Name="ActionName" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="ActionName" Type="nvarchar" MaxLength="1000" Nullable="false" />
           <Property Name="ActionType" Type="int" Nullable="false" />
           <Property Name="SKUID" Type="bigint" />
           <Property Name="SKU" Type="nvarchar" MaxLength="2000" />
@@ -636,37 +311,37 @@
           <Property Name="HMNUM" Type="nvarchar" MaxLength="50" />
           <Property Name="Descriptions" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="MediaCloudStatus">
           <Key>
             <PropertyRef Name="CloudStatusId" />
           </Key>
-          <Property Name="CloudStatusId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="CloudStatusName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CloudStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CloudStatusName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Comments" Type="nvarchar(max)" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="UpdateOn" Type="datetime" Nullable="false" />
-          <Property Name="UpdateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="MediaLibrary">
           <Key>
             <PropertyRef Name="MediaID" />
           </Key>
-          <Property Name="MediaID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MediaID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="bigint" Nullable="false" />
           <Property Name="StockKeyID" Type="bigint" Nullable="false" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SerialNum" Type="int" Nullable="false" />
-          <Property Name="ImgName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ImgName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="MediaType" Type="int" Nullable="false" />
-          <Property Name="fileFormat" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="fileSize" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="fileFormat" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="fileSize" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="fileWidth" Type="int" />
           <Property Name="fileHeight" Type="int" />
           <Property Name="Description" Type="nvarchar" MaxLength="2000" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
           <Property Name="CloudStatusID" Type="int" Nullable="false" />
           <Property Name="PrimaryImage" Type="bit" />
@@ -675,16 +350,16 @@
           <Key>
             <PropertyRef Name="MR_ID" />
           </Key>
-          <Property Name="MR_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="ParentMenuID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="MenuName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ParentMenuID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MenuName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SortNo" Type="int" Nullable="false" />
           <Property Name="MenuUrl" Type="nvarchar" MaxLength="500" />
           <Property Name="Icon" Type="char" MaxLength="10" />
           <Property Name="Visible" Type="bit" Nullable="false" />
           <Property Name="Memo" Type="nvarchar" MaxLength="500" />
-          <Property Name="Created_By" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Created_By" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Created_On" Type="datetime" Nullable="false" />
           <Property Name="Modified_By" Type="nvarchar" MaxLength="50" />
           <Property Name="Modified_On" Type="datetime" />
@@ -693,7 +368,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MR_ID" Type="int" Nullable="false" />
           <Property Name="Role_GUID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
@@ -702,8 +377,8 @@
             <PropertyRef Name="Role_GUID" />
           </Key>
           <Property Name="Role_GUID" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Role_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Role_Desc" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Role_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role_Desc" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Created_By" Type="nvarchar" MaxLength="50" />
           <Property Name="Created_On" Type="datetime" />
           <Property Name="Modified_By" Type="nvarchar" MaxLength="50" />
@@ -718,15 +393,15 @@
           <Property Name="StockKeyID" Type="bigint" Nullable="false" />
           <Property Name="R_QTY" Type="int" Nullable="false" />
           <Property Name="CreateOn" Type="datetime" Nullable="false" />
-          <Property Name="CreateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="UpdateOn" Type="datetime" Nullable="false" />
-          <Property Name="UpdateBy" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="SKU_Media_Relation">
           <Key>
             <PropertyRef Name="RelationID" />
           </Key>
-          <Property Name="RelationID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RelationID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MediaID" Type="bigint" Nullable="false" />
           <Property Name="SKUID" Type="bigint" Nullable="false" />
           <Property Name="PrimaryImage" Type="bit" Nullable="false" />
@@ -736,14 +411,14 @@
             <PropertyRef Name="StatusID" />
           </Key>
           <Property Name="StatusID" Type="int" Nullable="false" />
-          <Property Name="StatusName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="User_Channel_Relation">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="User_Guid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ChannelID" Type="int" Nullable="false" />
           <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
@@ -753,19 +428,19 @@
             <PropertyRef Name="User_Guid" />
           </Key>
           <Property Name="User_Guid" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="User_Account" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="User_Pwd" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="User_Account" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="User_Pwd" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="UserStatusID" Type="smallint" Nullable="false" />
           <Property Name="Last_Logon" Type="datetime" />
           <Property Name="Last_Pwd_Chg" Type="datetime" />
           <Property Name="Pwd_Expire_Date" Type="datetime" />
           <Property Name="FName" Type="nvarchar" MaxLength="20" />
           <Property Name="LName" Type="nvarchar" MaxLength="20" />
-          <Property Name="Display_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Display_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Primary_Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Mobile_Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="IP_Address" Type="nvarchar" MaxLength="50" />
-          <Property Name="Created_By" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Created_By" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Created_On" Type="datetime" Nullable="false" />
           <Property Name="Modified_By" Type="nvarchar" MaxLength="50" />
           <Property Name="Modified_On" Type="datetime" />
@@ -797,7 +472,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="User_Guid" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Role_Guid" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
@@ -806,12 +481,11 @@
             <PropertyRef Name="UserStatusID" />
           </Key>
           <Property Name="UserStatusID" Type="smallint" Nullable="false" />
-          <Property Name="UserStatusName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="UserStatusName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="remark" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.CMS_HM_Inventory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.CMS_HM_Inventory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CMS_HM_Inventory">
           <Key>
             <PropertyRef Name="ProductID" />
@@ -820,8 +494,7 @@
           <Property Name="StockkeyQTY" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.CMS_User_Profile_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.CMS_User_Profile_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CMS_User_Profile_V">
           <Key>
             <PropertyRef Name="User_Guid" />
@@ -838,18 +511,16 @@
           <Property Name="IsChannelControl" Type="bit" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.Ecom_ImageUrls_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.Ecom_ImageUrls_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Ecom_ImageUrls_V">
           <Key>
             <PropertyRef Name="HMNUM" />
           </Key>
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ProductPicture" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.Export2Excel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.Export2Excel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Export2Excel">
           <Key>
             <PropertyRef Name="SKU" />
@@ -876,13 +547,13 @@
             <PropertyRef Name="ProductID" />
             <PropertyRef Name="HMCostID" />
           </Key>
-          <Property Name="SKU" Type="nvarchar" Nullable="false" MaxLength="200" />
-          <Property Name="ChannelName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="SKU" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ChannelName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="200" />
-          <Property Name="BrandName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="MaterialName" Type="nvarchar" MaxLength="1000" />
           <Property Name="ColourName" Type="nvarchar" MaxLength="1000" />
-          <Property Name="StatusName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SKU_QTY" Type="int" Nullable="false" />
           <Property Name="UPC" Type="nvarchar" MaxLength="50" />
           <Property Name="Visibility" Type="int" />
@@ -894,23 +565,23 @@
           <Property Name="SubCategoryID" Type="bigint" />
           <Property Name="ParentCategoryName" Type="nvarchar" MaxLength="100" />
           <Property Name="ParentCategoryID" Type="bigint" />
-          <Property Name="RetailPrice" Type="decimal" Nullable="false" Scale="2" />
-          <Property Name="SalePrice" Type="decimal" Nullable="false" Scale="2" />
-          <Property Name="EstimateFreight" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="SalePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="EstimateFreight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="MLHMNUM" Type="nvarchar" MaxLength="50" />
           <Property Name="ImgName" Type="nvarchar" MaxLength="100" />
           <Property Name="FileFormat" Type="nvarchar" MaxLength="10" />
           <Property Name="Pieces" Type="int" Nullable="false" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MasterPack" Type="bigint" Nullable="false" />
-          <Property Name="HMName" Type="nvarchar" Nullable="false" MaxLength="200" />
-          <Property Name="StockKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HMName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="StockKey" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IsGroup" Type="bit" />
           <Property Name="StockkeyQTY" Type="int" />
-          <Property Name="FirstCost" Type="decimal" Scale="2" />
-          <Property Name="OceanFreight" Type="decimal" Scale="2" />
-          <Property Name="USAHandlingCharge" Type="decimal" Scale="2" />
-          <Property Name="Drayage" Type="decimal" Scale="2" />
+          <Property Name="FirstCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OceanFreight" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="USAHandlingCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Drayage" Type="decimal" Precision="18" Scale="2" />
           <Property Name="SKUID" Type="bigint" Nullable="false" />
           <Property Name="ChannelID" Type="int" Nullable="false" />
           <Property Name="BrandID" Type="int" Nullable="false" />
@@ -925,8 +596,7 @@
           <Property Name="UpdateBy" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.PO_Order_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.PO_Order_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="PO_Order_V">
           <Key>
             <PropertyRef Name="OrderYear" />
@@ -938,12 +608,11 @@
           <Property Name="Prices" Type="money" />
           <Property Name="OrderYear" Type="int" Nullable="false" />
           <Property Name="OrderMonth" Type="int" Nullable="false" />
-          <Property Name="MerchantID" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="MerchantID" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ChannelID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.Reports_LowInventory_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.Reports_LowInventory_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Reports_LowInventory_V">
           <Key>
             <PropertyRef Name="HMNUM" />
@@ -952,8 +621,8 @@
             <PropertyRef Name="BrandID" />
             <PropertyRef Name="pImage" />
           </Key>
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="SKU" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SKU" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="pImage" Type="nvarchar" MaxLength="161" Nullable="false" />
           <Property Name="StockByPcs" Type="int" />
           <Property Name="Exp_Qty" Type="int" />
@@ -964,8 +633,7 @@
           <Property Name="BrandName" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.Reports_Margin_By_Product_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.Reports_Margin_By_Product_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Reports_Margin_By_Product_V">
           <Key>
             <PropertyRef Name="SKUOrder" />
@@ -978,24 +646,23 @@
             <PropertyRef Name="NormalSelling" />
             <PropertyRef Name="ChannelName" />
           </Key>
-          <Property Name="SKUOrder" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="SKUOrder" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="200" />
-          <Property Name="ImageName" Type="nvarchar" Nullable="false" MaxLength="161" />
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="ProductName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="ImageName" Type="nvarchar" MaxLength="161" Nullable="false" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="IsGroup" Type="bit" />
           <Property Name="ChannelName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ChannelID" Type="int" Nullable="false" />
           <Property Name="BrandID" Type="int" Nullable="false" />
           <Property Name="BrandName" Type="nvarchar" MaxLength="200" />
           <Property Name="Inventory" Type="int" Nullable="false" />
-          <Property Name="NormalSelling" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="NormalSelling" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="COG" Type="decimal" Precision="20" Scale="2" />
           <Property Name="Margin" Type="decimal" Precision="21" Scale="2" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.User_Role_Menu_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.User_Role_Menu_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="User_Role_Menu_V">
           <Key>
             <PropertyRef Name="User_Account" />
@@ -1006,19 +673,18 @@
             <PropertyRef Name="ParentMenuID" />
             <PropertyRef Name="SortNo" />
           </Key>
-          <Property Name="User_Account" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="User_Pwd" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="User_Account" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="User_Pwd" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="MR_ID" Type="int" Nullable="false" />
-          <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="MenuName" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="ParentMenuID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MenuID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MenuName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ParentMenuID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SortNo" Type="int" Nullable="false" />
           <Property Name="MenuUrl" Type="nvarchar" MaxLength="500" />
           <Property Name="Icon" Type="char" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.WebPO_Category_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.WebPO_Category_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="WebPO_Category_V">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -1030,8 +696,7 @@
           <Property Name="OrderIndex" Type="bigint" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.WebPO_Colour_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.WebPO_Colour_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="WebPO_Colour_V">
           <Key>
             <PropertyRef Name="ColourID" />
@@ -1040,8 +705,7 @@
           <Property Name="ColourDesc" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.WebPO_HM_Colour_Material_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.WebPO_HM_Colour_Material_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="WebPO_HM_Colour_Material_V">
           <Key>
             <PropertyRef Name="HMNUM" />
@@ -1049,7 +713,7 @@
             <PropertyRef Name="ColourID" />
             <PropertyRef Name="MasterPack" />
           </Key>
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="200" />
           <Property Name="MaterialID" Type="bigint" Nullable="false" />
           <Property Name="ColourID" Type="bigint" Nullable="false" />
@@ -1058,19 +722,17 @@
           <Property Name="MasterPack" Type="bigint" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.WebPO_ImageUrls_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.WebPO_ImageUrls_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="WebPO_ImageUrls_V">
           <Key>
             <PropertyRef Name="HMNUM" />
           </Key>
-          <Property Name="HMNUM" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="HMNUM" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="SmallPic" Type="nvarchar" MaxLength="229" />
           <Property Name="Pic" Type="nvarchar" MaxLength="223" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'PermaisuriCMS.dbo.WebPO_Material_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'ProductCenter.dbo.WebPO_Material_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="WebPO_Material_V">
           <Key>
             <PropertyRef Name="MaterialID" />
@@ -1079,8 +741,8 @@
           <Property Name="MaterialName" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <Association Name="FK_CMS_Ecom_Sync_CMS_SKU">
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="1" />
-          <End Role="CMS_Ecom_Sync" Type="PermaisuriCMSModel.Store.CMS_Ecom_Sync" Multiplicity="0..1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="1" />
+          <End Role="CMS_Ecom_Sync" Type="Self.CMS_Ecom_Sync" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="CMS_SKU">
               <PropertyRef Name="SKUID" />
@@ -1091,8 +753,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_HMGroup_Relation_CMS_HMNUM">
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="1" />
-          <End Role="CMS_HMGroup_Relation" Type="PermaisuriCMSModel.Store.CMS_HMGroup_Relation" Multiplicity="*" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="1" />
+          <End Role="CMS_HMGroup_Relation" Type="Self.CMS_HMGroup_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HMNUM">
               <PropertyRef Name="ProductID" />
@@ -1103,8 +765,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_HMNUM_CMS_HM_Costing">
-          <End Role="CMS_HM_Costing" Type="PermaisuriCMSModel.Store.CMS_HM_Costing" Multiplicity="1" />
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="*" />
+          <End Role="CMS_HM_Costing" Type="Self.CMS_HM_Costing" Multiplicity="1" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HM_Costing">
               <PropertyRef Name="HMCostID" />
@@ -1115,8 +777,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_HMNUM_CMS_HMNUM_Status">
-          <End Role="CMS_HMNUM_Status" Type="PermaisuriCMSModel.Store.CMS_HMNUM_Status" Multiplicity="1" />
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="*" />
+          <End Role="CMS_HMNUM_Status" Type="Self.CMS_HMNUM_Status" Multiplicity="1" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HMNUM_Status">
               <PropertyRef Name="StatusID" />
@@ -1127,8 +789,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_HMNUM_CMS_ShipViaType">
-          <End Role="CMS_ShipViaType" Type="PermaisuriCMSModel.Store.CMS_ShipViaType" Multiplicity="0..1" />
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="*" />
+          <End Role="CMS_ShipViaType" Type="Self.CMS_ShipViaType" Multiplicity="0..1" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_ShipViaType">
               <PropertyRef Name="ShipViaTypeID" />
@@ -1139,8 +801,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_HMNUM_CMS_StockKey">
-          <End Role="CMS_StockKey" Type="PermaisuriCMSModel.Store.CMS_StockKey" Multiplicity="1" />
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="*" />
+          <End Role="CMS_StockKey" Type="Self.CMS_StockKey" Multiplicity="1" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_StockKey">
               <PropertyRef Name="StockKeyID" />
@@ -1151,8 +813,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_ProductCTN_CMS_HMNUM">
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="1" />
-          <End Role="CMS_ProductCTN" Type="PermaisuriCMSModel.Store.CMS_ProductCTN" Multiplicity="*" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="1" />
+          <End Role="CMS_ProductCTN" Type="Self.CMS_ProductCTN" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HMNUM">
               <PropertyRef Name="ProductID" />
@@ -1163,8 +825,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_ProductDimension_CMS_HMNUM">
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="1" />
-          <End Role="CMS_ProductDimension" Type="PermaisuriCMSModel.Store.CMS_ProductDimension" Multiplicity="*" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="1" />
+          <End Role="CMS_ProductDimension" Type="Self.CMS_ProductDimension" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HMNUM">
               <PropertyRef Name="ProductID" />
@@ -1175,8 +837,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_ShipVia_CMS_ShipViaType">
-          <End Role="CMS_ShipViaType" Type="PermaisuriCMSModel.Store.CMS_ShipViaType" Multiplicity="1" />
-          <End Role="CMS_ShipVia" Type="PermaisuriCMSModel.Store.CMS_ShipVia" Multiplicity="*" />
+          <End Role="CMS_ShipViaType" Type="Self.CMS_ShipViaType" Multiplicity="1" />
+          <End Role="CMS_ShipVia" Type="Self.CMS_ShipVia" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_ShipViaType">
               <PropertyRef Name="ShipViaTypeID" />
@@ -1187,8 +849,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_SKU_Brand">
-          <End Role="Brand" Type="PermaisuriCMSModel.Store.Brand" Multiplicity="1" />
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="*" />
+          <End Role="Brand" Type="Self.Brand" Multiplicity="1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Brand">
               <PropertyRef Name="BrandID" />
@@ -1199,8 +861,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_SKU_Channel">
-          <End Role="Channel" Type="PermaisuriCMSModel.Store.Channel" Multiplicity="1" />
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="*" />
+          <End Role="Channel" Type="Self.Channel" Multiplicity="1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Channel">
               <PropertyRef Name="ChannelID" />
@@ -1211,8 +873,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_SKU_CMS_ShipViaType">
-          <End Role="CMS_ShipViaType" Type="PermaisuriCMSModel.Store.CMS_ShipViaType" Multiplicity="0..1" />
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="*" />
+          <End Role="CMS_ShipViaType" Type="Self.CMS_ShipViaType" Multiplicity="0..1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_ShipViaType">
               <PropertyRef Name="ShipViaTypeID" />
@@ -1223,8 +885,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_SKU_CMS_SKU_Costing">
-          <End Role="CMS_SKU_Costing" Type="PermaisuriCMSModel.Store.CMS_SKU_Costing" Multiplicity="1" />
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="*" />
+          <End Role="CMS_SKU_Costing" Type="Self.CMS_SKU_Costing" Multiplicity="1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_SKU_Costing">
               <PropertyRef Name="SKUCostID" />
@@ -1235,8 +897,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CMS_SKU_SKU_Status">
-          <End Role="SKU_Status" Type="PermaisuriCMSModel.Store.SKU_Status" Multiplicity="1" />
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="*" />
+          <End Role="SKU_Status" Type="Self.SKU_Status" Multiplicity="1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SKU_Status">
               <PropertyRef Name="StatusID" />
@@ -1247,8 +909,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_MediaLibrary_CMS_StockKey">
-          <End Role="CMS_StockKey" Type="PermaisuriCMSModel.Store.CMS_StockKey" Multiplicity="1" />
-          <End Role="MediaLibrary" Type="PermaisuriCMSModel.Store.MediaLibrary" Multiplicity="*" />
+          <End Role="CMS_StockKey" Type="Self.CMS_StockKey" Multiplicity="1" />
+          <End Role="MediaLibrary" Type="Self.MediaLibrary" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_StockKey">
               <PropertyRef Name="StockKeyID" />
@@ -1259,8 +921,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_MediaLibrary_MediaCloudStatus">
-          <End Role="MediaCloudStatus" Type="PermaisuriCMSModel.Store.MediaCloudStatus" Multiplicity="1" />
-          <End Role="MediaLibrary" Type="PermaisuriCMSModel.Store.MediaLibrary" Multiplicity="*" />
+          <End Role="MediaCloudStatus" Type="Self.MediaCloudStatus" Multiplicity="1" />
+          <End Role="MediaLibrary" Type="Self.MediaLibrary" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MediaCloudStatus">
               <PropertyRef Name="CloudStatusId" />
@@ -1271,8 +933,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Role_Menu_Relation_Menu_Resource">
-          <End Role="Menu_Resource" Type="PermaisuriCMSModel.Store.Menu_Resource" Multiplicity="1" />
-          <End Role="Role_Menu_Relation" Type="PermaisuriCMSModel.Store.Role_Menu_Relation" Multiplicity="*" />
+          <End Role="Menu_Resource" Type="Self.Menu_Resource" Multiplicity="1" />
+          <End Role="Role_Menu_Relation" Type="Self.Role_Menu_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Menu_Resource">
               <PropertyRef Name="MR_ID" />
@@ -1283,8 +945,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Role_Menu_Relation_Security_Role">
-          <End Role="Security_Role" Type="PermaisuriCMSModel.Store.Security_Role" Multiplicity="1" />
-          <End Role="Role_Menu_Relation" Type="PermaisuriCMSModel.Store.Role_Menu_Relation" Multiplicity="*" />
+          <End Role="Security_Role" Type="Self.Security_Role" Multiplicity="1" />
+          <End Role="Role_Menu_Relation" Type="Self.Role_Menu_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Security_Role">
               <PropertyRef Name="Role_GUID" />
@@ -1295,8 +957,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SKU_HM_Relation_CMS_HMNUM">
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="1" />
-          <End Role="SKU_HM_Relation" Type="PermaisuriCMSModel.Store.SKU_HM_Relation" Multiplicity="*" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="1" />
+          <End Role="SKU_HM_Relation" Type="Self.SKU_HM_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HMNUM">
               <PropertyRef Name="ProductID" />
@@ -1307,8 +969,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SKU_HM_Relation_CMS_SKU">
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="1" />
-          <End Role="SKU_HM_Relation" Type="PermaisuriCMSModel.Store.SKU_HM_Relation" Multiplicity="0..1" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="1" />
+          <End Role="SKU_HM_Relation" Type="Self.SKU_HM_Relation" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="CMS_SKU">
               <PropertyRef Name="SKUID" />
@@ -1319,8 +981,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SKU_HM_Relation_CMS_StockKey">
-          <End Role="CMS_StockKey" Type="PermaisuriCMSModel.Store.CMS_StockKey" Multiplicity="1" />
-          <End Role="SKU_HM_Relation" Type="PermaisuriCMSModel.Store.SKU_HM_Relation" Multiplicity="*" />
+          <End Role="CMS_StockKey" Type="Self.CMS_StockKey" Multiplicity="1" />
+          <End Role="SKU_HM_Relation" Type="Self.SKU_HM_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_StockKey">
               <PropertyRef Name="StockKeyID" />
@@ -1331,8 +993,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SKU_Media_Relation_CMS_SKU">
-          <End Role="CMS_SKU" Type="PermaisuriCMSModel.Store.CMS_SKU" Multiplicity="1" />
-          <End Role="SKU_Media_Relation" Type="PermaisuriCMSModel.Store.SKU_Media_Relation" Multiplicity="*" />
+          <End Role="CMS_SKU" Type="Self.CMS_SKU" Multiplicity="1" />
+          <End Role="SKU_Media_Relation" Type="Self.SKU_Media_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_SKU">
               <PropertyRef Name="SKUID" />
@@ -1343,8 +1005,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SKU_Media_Relation_MediaLibrary">
-          <End Role="MediaLibrary" Type="PermaisuriCMSModel.Store.MediaLibrary" Multiplicity="1" />
-          <End Role="SKU_Media_Relation" Type="PermaisuriCMSModel.Store.SKU_Media_Relation" Multiplicity="*" />
+          <End Role="MediaLibrary" Type="Self.MediaLibrary" Multiplicity="1" />
+          <End Role="SKU_Media_Relation" Type="Self.SKU_Media_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MediaLibrary">
               <PropertyRef Name="MediaID" />
@@ -1355,8 +1017,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM">
-          <End Role="CMS_HMNUM" Type="PermaisuriCMSModel.Store.CMS_HMNUM" Multiplicity="1" />
-          <End Role="CMS_HMGroup_Relation" Type="PermaisuriCMSModel.Store.CMS_HMGroup_Relation" Multiplicity="*" />
+          <End Role="CMS_HMNUM" Type="Self.CMS_HMNUM" Multiplicity="1" />
+          <End Role="CMS_HMGroup_Relation" Type="Self.CMS_HMGroup_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CMS_HMNUM">
               <PropertyRef Name="ProductID" />
@@ -1367,8 +1029,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Channel_Relation_Channel">
-          <End Role="Channel" Type="PermaisuriCMSModel.Store.Channel" Multiplicity="1" />
-          <End Role="User_Channel_Relation" Type="PermaisuriCMSModel.Store.User_Channel_Relation" Multiplicity="*" />
+          <End Role="Channel" Type="Self.Channel" Multiplicity="1" />
+          <End Role="User_Channel_Relation" Type="Self.User_Channel_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Channel">
               <PropertyRef Name="ChannelID" />
@@ -1379,8 +1041,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Channel_Relation_User_Profile">
-          <End Role="User_Profile" Type="PermaisuriCMSModel.Store.User_Profile" Multiplicity="1" />
-          <End Role="User_Channel_Relation" Type="PermaisuriCMSModel.Store.User_Channel_Relation" Multiplicity="*" />
+          <End Role="User_Profile" Type="Self.User_Profile" Multiplicity="1" />
+          <End Role="User_Channel_Relation" Type="Self.User_Channel_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User_Profile">
               <PropertyRef Name="User_Guid" />
@@ -1391,8 +1053,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Profile_Ext_User_Profile">
-          <End Role="User_Profile" Type="PermaisuriCMSModel.Store.User_Profile" Multiplicity="1" />
-          <End Role="User_Profile_Ext" Type="PermaisuriCMSModel.Store.User_Profile_Ext" Multiplicity="0..1" />
+          <End Role="User_Profile" Type="Self.User_Profile" Multiplicity="1" />
+          <End Role="User_Profile_Ext" Type="Self.User_Profile_Ext" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="User_Profile">
               <PropertyRef Name="User_Guid" />
@@ -1403,8 +1065,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Profile_User_Status">
-          <End Role="User_Status" Type="PermaisuriCMSModel.Store.User_Status" Multiplicity="1" />
-          <End Role="User_Profile" Type="PermaisuriCMSModel.Store.User_Profile" Multiplicity="*" />
+          <End Role="User_Status" Type="Self.User_Status" Multiplicity="1" />
+          <End Role="User_Profile" Type="Self.User_Profile" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User_Status">
               <PropertyRef Name="UserStatusID" />
@@ -1415,8 +1077,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Role_Relation_Security_Role">
-          <End Role="Security_Role" Type="PermaisuriCMSModel.Store.Security_Role" Multiplicity="1" />
-          <End Role="User_Role_Relation" Type="PermaisuriCMSModel.Store.User_Role_Relation" Multiplicity="*" />
+          <End Role="Security_Role" Type="Self.Security_Role" Multiplicity="1" />
+          <End Role="User_Role_Relation" Type="Self.User_Role_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Security_Role">
               <PropertyRef Name="Role_GUID" />
@@ -1427,8 +1089,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Role_Relation_User_Profile">
-          <End Role="User_Profile" Type="PermaisuriCMSModel.Store.User_Profile" Multiplicity="1" />
-          <End Role="User_Role_Relation" Type="PermaisuriCMSModel.Store.User_Role_Relation" Multiplicity="*" />
+          <End Role="User_Profile" Type="Self.User_Profile" Multiplicity="1" />
+          <End Role="User_Role_Relation" Type="Self.User_Role_Relation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User_Profile">
               <PropertyRef Name="User_Guid" />
@@ -1543,6 +1205,332 @@
           <Parameter Name="Creator" Type="nvarchar" Mode="In" />
           <Parameter Name="affectedRows" Type="int" Mode="InOut" />
         </Function>
+        <EntityContainer Name="PermaisuriCMSModelStoreContainer">
+          <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Channel" EntityType="Self.Channel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_Ecom_Sync" EntityType="Self.CMS_Ecom_Sync" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_HM_Costing" EntityType="Self.CMS_HM_Costing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_HMGroup_Relation" EntityType="Self.CMS_HMGroup_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_HMNUM" EntityType="Self.CMS_HMNUM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_HMNUM_Status" EntityType="Self.CMS_HMNUM_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_ProductCTN" EntityType="Self.CMS_ProductCTN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_ProductDimension" EntityType="Self.CMS_ProductDimension" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_ShipVia" EntityType="Self.CMS_ShipVia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_ShipViaType" EntityType="Self.CMS_ShipViaType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_SKU" EntityType="Self.CMS_SKU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_SKU_Category" EntityType="Self.CMS_SKU_Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_SKU_Colour" EntityType="Self.CMS_SKU_Colour" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_SKU_Costing" EntityType="Self.CMS_SKU_Costing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_SKU_Material" EntityType="Self.CMS_SKU_Material" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_StockKey" EntityType="Self.CMS_StockKey" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogOfUserLogin" EntityType="Self.LogOfUserLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogOfUserOperating" EntityType="Self.LogOfUserOperating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogOfUserOperatingDetails" EntityType="Self.LogOfUserOperatingDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MediaCloudStatus" EntityType="Self.MediaCloudStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MediaLibrary" EntityType="Self.MediaLibrary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menu_Resource" EntityType="Self.Menu_Resource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role_Menu_Relation" EntityType="Self.Role_Menu_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Security_Role" EntityType="Self.Security_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKU_HM_Relation" EntityType="Self.SKU_HM_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKU_Media_Relation" EntityType="Self.SKU_Media_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKU_Status" EntityType="Self.SKU_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Channel_Relation" EntityType="Self.User_Channel_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Profile" EntityType="Self.User_Profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Profile_Ext" EntityType="Self.User_Profile_Ext" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Role_Relation" EntityType="Self.User_Role_Relation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Status" EntityType="Self.User_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CMS_HM_Inventory" EntityType="Self.CMS_HM_Inventory" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CMS_HM_Inventory].[ProductID] AS [ProductID], 
+    [CMS_HM_Inventory].[StockkeyQTY] AS [StockkeyQTY]
+    FROM [dbo].[CMS_HM_Inventory] AS [CMS_HM_Inventory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CMS_User_Profile_V" EntityType="Self.CMS_User_Profile_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CMS_User_Profile_V].[User_Guid] AS [User_Guid], 
+    [CMS_User_Profile_V].[User_Account] AS [User_Account], 
+    [CMS_User_Profile_V].[UserPWD] AS [UserPWD], 
+    [CMS_User_Profile_V].[UserStatusID] AS [UserStatusID], 
+    [CMS_User_Profile_V].[UserStatusName] AS [UserStatusName], 
+    [CMS_User_Profile_V].[DisplayName] AS [DisplayName], 
+    [CMS_User_Profile_V].[Last_Logon] AS [Last_Logon], 
+    [CMS_User_Profile_V].[Primary_Email] AS [Primary_Email], 
+    [CMS_User_Profile_V].[IsDisabled] AS [IsDisabled], 
+    [CMS_User_Profile_V].[IsChannelControl] AS [IsChannelControl]
+    FROM [dbo].[CMS_User_Profile_V] AS [CMS_User_Profile_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Ecom_ImageUrls_V" EntityType="Self.Ecom_ImageUrls_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Ecom_ImageUrls_V].[HMNUM] AS [HMNUM], 
+    [Ecom_ImageUrls_V].[ProductPicture] AS [ProductPicture]
+    FROM [dbo].[Ecom_ImageUrls_V] AS [Ecom_ImageUrls_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Export2Excel" EntityType="Self.Export2Excel" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Export2Excel].[SKU] AS [SKU], 
+    [Export2Excel].[ChannelName] AS [ChannelName], 
+    [Export2Excel].[ProductName] AS [ProductName], 
+    [Export2Excel].[BrandName] AS [BrandName], 
+    [Export2Excel].[MaterialName] AS [MaterialName], 
+    [Export2Excel].[ColourName] AS [ColourName], 
+    [Export2Excel].[StatusName] AS [StatusName], 
+    [Export2Excel].[SKU_QTY] AS [SKU_QTY], 
+    [Export2Excel].[UPC] AS [UPC], 
+    [Export2Excel].[Visibility] AS [Visibility], 
+    [Export2Excel].[ProductDesc] AS [ProductDesc], 
+    [Export2Excel].[Specifications] AS [Specifications], 
+    [Export2Excel].[Keywords] AS [Keywords], 
+    [Export2Excel].[URL] AS [URL], 
+    [Export2Excel].[SubCategoryName] AS [SubCategoryName], 
+    [Export2Excel].[SubCategoryID] AS [SubCategoryID], 
+    [Export2Excel].[ParentCategoryName] AS [ParentCategoryName], 
+    [Export2Excel].[ParentCategoryID] AS [ParentCategoryID], 
+    [Export2Excel].[RetailPrice] AS [RetailPrice], 
+    [Export2Excel].[SalePrice] AS [SalePrice], 
+    [Export2Excel].[EstimateFreight] AS [EstimateFreight], 
+    [Export2Excel].[MLHMNUM] AS [MLHMNUM], 
+    [Export2Excel].[ImgName] AS [ImgName], 
+    [Export2Excel].[FileFormat] AS [FileFormat], 
+    [Export2Excel].[Pieces] AS [Pieces], 
+    [Export2Excel].[HMNUM] AS [HMNUM], 
+    [Export2Excel].[MasterPack] AS [MasterPack], 
+    [Export2Excel].[HMName] AS [HMName], 
+    [Export2Excel].[StockKey] AS [StockKey], 
+    [Export2Excel].[IsGroup] AS [IsGroup], 
+    [Export2Excel].[StockkeyQTY] AS [StockkeyQTY], 
+    [Export2Excel].[FirstCost] AS [FirstCost], 
+    [Export2Excel].[OceanFreight] AS [OceanFreight], 
+    [Export2Excel].[USAHandlingCharge] AS [USAHandlingCharge], 
+    [Export2Excel].[Drayage] AS [Drayage], 
+    [Export2Excel].[SKUID] AS [SKUID], 
+    [Export2Excel].[ChannelID] AS [ChannelID], 
+    [Export2Excel].[BrandID] AS [BrandID], 
+    [Export2Excel].[StatusID] AS [StatusID], 
+    [Export2Excel].[SKUCostID] AS [SKUCostID], 
+    [Export2Excel].[ColourID] AS [ColourID], 
+    [Export2Excel].[MaterialID] AS [MaterialID], 
+    [Export2Excel].[CategoryID] AS [CategoryID], 
+    [Export2Excel].[ProductID] AS [ProductID], 
+    [Export2Excel].[HMCostID] AS [HMCostID], 
+    [Export2Excel].[UpdateOn] AS [UpdateOn], 
+    [Export2Excel].[UpdateBy] AS [UpdateBy]
+    FROM [dbo].[Export2Excel] AS [Export2Excel]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PO_Order_V" EntityType="Self.PO_Order_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PO_Order_V].[Orders] AS [Orders], 
+    [PO_Order_V].[Prices] AS [Prices], 
+    [PO_Order_V].[OrderYear] AS [OrderYear], 
+    [PO_Order_V].[OrderMonth] AS [OrderMonth], 
+    [PO_Order_V].[MerchantID] AS [MerchantID], 
+    [PO_Order_V].[ChannelID] AS [ChannelID]
+    FROM [dbo].[PO_Order_V] AS [PO_Order_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Reports_LowInventory_V" EntityType="Self.Reports_LowInventory_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Reports_LowInventory_V].[HMNUM] AS [HMNUM], 
+    [Reports_LowInventory_V].[SKU] AS [SKU], 
+    [Reports_LowInventory_V].[pImage] AS [pImage], 
+    [Reports_LowInventory_V].[StockByPcs] AS [StockByPcs], 
+    [Reports_LowInventory_V].[Exp_Qty] AS [Exp_Qty], 
+    [Reports_LowInventory_V].[RepDate] AS [RepDate], 
+    [Reports_LowInventory_V].[ChannelID] AS [ChannelID], 
+    [Reports_LowInventory_V].[ChannelName] AS [ChannelName], 
+    [Reports_LowInventory_V].[BrandID] AS [BrandID], 
+    [Reports_LowInventory_V].[BrandName] AS [BrandName]
+    FROM [dbo].[Reports_LowInventory_V] AS [Reports_LowInventory_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Reports_Margin_By_Product_V" EntityType="Self.Reports_Margin_By_Product_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Reports_Margin_By_Product_V].[SKUOrder] AS [SKUOrder], 
+    [Reports_Margin_By_Product_V].[Name] AS [Name], 
+    [Reports_Margin_By_Product_V].[ImageName] AS [ImageName], 
+    [Reports_Margin_By_Product_V].[HMNUM] AS [HMNUM], 
+    [Reports_Margin_By_Product_V].[ProductName] AS [ProductName], 
+    [Reports_Margin_By_Product_V].[IsGroup] AS [IsGroup], 
+    [Reports_Margin_By_Product_V].[ChannelName] AS [ChannelName], 
+    [Reports_Margin_By_Product_V].[ChannelID] AS [ChannelID], 
+    [Reports_Margin_By_Product_V].[BrandID] AS [BrandID], 
+    [Reports_Margin_By_Product_V].[BrandName] AS [BrandName], 
+    [Reports_Margin_By_Product_V].[Inventory] AS [Inventory], 
+    [Reports_Margin_By_Product_V].[NormalSelling] AS [NormalSelling], 
+    [Reports_Margin_By_Product_V].[COG] AS [COG], 
+    [Reports_Margin_By_Product_V].[Margin] AS [Margin]
+    FROM [dbo].[Reports_Margin_By_Product_V] AS [Reports_Margin_By_Product_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="User_Role_Menu_V" EntityType="Self.User_Role_Menu_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [User_Role_Menu_V].[User_Account] AS [User_Account], 
+    [User_Role_Menu_V].[User_Pwd] AS [User_Pwd], 
+    [User_Role_Menu_V].[MR_ID] AS [MR_ID], 
+    [User_Role_Menu_V].[MenuID] AS [MenuID], 
+    [User_Role_Menu_V].[MenuName] AS [MenuName], 
+    [User_Role_Menu_V].[ParentMenuID] AS [ParentMenuID], 
+    [User_Role_Menu_V].[SortNo] AS [SortNo], 
+    [User_Role_Menu_V].[MenuUrl] AS [MenuUrl], 
+    [User_Role_Menu_V].[Icon] AS [Icon]
+    FROM [dbo].[User_Role_Menu_V] AS [User_Role_Menu_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WebPO_Category_V" EntityType="Self.WebPO_Category_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WebPO_Category_V].[CategoryID] AS [CategoryID], 
+    [WebPO_Category_V].[CategoryName] AS [CategoryName], 
+    [WebPO_Category_V].[ParentCategoryID] AS [ParentCategoryID], 
+    [WebPO_Category_V].[ParentCategoryName] AS [ParentCategoryName], 
+    [WebPO_Category_V].[OrderIndex] AS [OrderIndex]
+    FROM [dbo].[WebPO_Category_V] AS [WebPO_Category_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WebPO_Colour_V" EntityType="Self.WebPO_Colour_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WebPO_Colour_V].[ColourID] AS [ColourID], 
+    [WebPO_Colour_V].[ColourDesc] AS [ColourDesc]
+    FROM [dbo].[WebPO_Colour_V] AS [WebPO_Colour_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WebPO_HM_Colour_Material_V" EntityType="Self.WebPO_HM_Colour_Material_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WebPO_HM_Colour_Material_V].[HMNUM] AS [HMNUM], 
+    [WebPO_HM_Colour_Material_V].[ProductName] AS [ProductName], 
+    [WebPO_HM_Colour_Material_V].[MaterialID] AS [MaterialID], 
+    [WebPO_HM_Colour_Material_V].[ColourID] AS [ColourID], 
+    [WebPO_HM_Colour_Material_V].[CategoryID] AS [CategoryID], 
+    [WebPO_HM_Colour_Material_V].[ParentCategoryID] AS [ParentCategoryID], 
+    [WebPO_HM_Colour_Material_V].[MasterPack] AS [MasterPack]
+    FROM [dbo].[WebPO_HM_Colour_Material_V] AS [WebPO_HM_Colour_Material_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WebPO_ImageUrls_V" EntityType="Self.WebPO_ImageUrls_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WebPO_ImageUrls_V].[HMNUM] AS [HMNUM], 
+    [WebPO_ImageUrls_V].[SmallPic] AS [SmallPic], 
+    [WebPO_ImageUrls_V].[Pic] AS [Pic]
+    FROM [dbo].[WebPO_ImageUrls_V] AS [WebPO_ImageUrls_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WebPO_Material_V" EntityType="Self.WebPO_Material_V" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WebPO_Material_V].[MaterialID] AS [MaterialID], 
+    [WebPO_Material_V].[MaterialName] AS [MaterialName]
+    FROM [dbo].[WebPO_Material_V] AS [WebPO_Material_V]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CMS_Ecom_Sync_CMS_SKU" Association="Self.FK_CMS_Ecom_Sync_CMS_SKU">
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+            <End Role="CMS_Ecom_Sync" EntitySet="CMS_Ecom_Sync" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_HMGroup_Relation_CMS_HMNUM" Association="Self.FK_CMS_HMGroup_Relation_CMS_HMNUM">
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+            <End Role="CMS_HMGroup_Relation" EntitySet="CMS_HMGroup_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_HMNUM_CMS_HM_Costing" Association="Self.FK_CMS_HMNUM_CMS_HM_Costing">
+            <End Role="CMS_HM_Costing" EntitySet="CMS_HM_Costing" />
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_HMNUM_CMS_HMNUM_Status" Association="Self.FK_CMS_HMNUM_CMS_HMNUM_Status">
+            <End Role="CMS_HMNUM_Status" EntitySet="CMS_HMNUM_Status" />
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_HMNUM_CMS_ShipViaType" Association="Self.FK_CMS_HMNUM_CMS_ShipViaType">
+            <End Role="CMS_ShipViaType" EntitySet="CMS_ShipViaType" />
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_HMNUM_CMS_StockKey" Association="Self.FK_CMS_HMNUM_CMS_StockKey">
+            <End Role="CMS_StockKey" EntitySet="CMS_StockKey" />
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_ProductCTN_CMS_HMNUM" Association="Self.FK_CMS_ProductCTN_CMS_HMNUM">
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+            <End Role="CMS_ProductCTN" EntitySet="CMS_ProductCTN" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_ProductDimension_CMS_HMNUM" Association="Self.FK_CMS_ProductDimension_CMS_HMNUM">
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+            <End Role="CMS_ProductDimension" EntitySet="CMS_ProductDimension" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_ShipVia_CMS_ShipViaType" Association="Self.FK_CMS_ShipVia_CMS_ShipViaType">
+            <End Role="CMS_ShipViaType" EntitySet="CMS_ShipViaType" />
+            <End Role="CMS_ShipVia" EntitySet="CMS_ShipVia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_SKU_Brand" Association="Self.FK_CMS_SKU_Brand">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_SKU_Channel" Association="Self.FK_CMS_SKU_Channel">
+            <End Role="Channel" EntitySet="Channel" />
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_SKU_CMS_ShipViaType" Association="Self.FK_CMS_SKU_CMS_ShipViaType">
+            <End Role="CMS_ShipViaType" EntitySet="CMS_ShipViaType" />
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_SKU_CMS_SKU_Costing" Association="Self.FK_CMS_SKU_CMS_SKU_Costing">
+            <End Role="CMS_SKU_Costing" EntitySet="CMS_SKU_Costing" />
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CMS_SKU_SKU_Status" Association="Self.FK_CMS_SKU_SKU_Status">
+            <End Role="SKU_Status" EntitySet="SKU_Status" />
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MediaLibrary_CMS_StockKey" Association="Self.FK_MediaLibrary_CMS_StockKey">
+            <End Role="CMS_StockKey" EntitySet="CMS_StockKey" />
+            <End Role="MediaLibrary" EntitySet="MediaLibrary" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MediaLibrary_MediaCloudStatus" Association="Self.FK_MediaLibrary_MediaCloudStatus">
+            <End Role="MediaCloudStatus" EntitySet="MediaCloudStatus" />
+            <End Role="MediaLibrary" EntitySet="MediaLibrary" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Role_Menu_Relation_Menu_Resource" Association="Self.FK_Role_Menu_Relation_Menu_Resource">
+            <End Role="Menu_Resource" EntitySet="Menu_Resource" />
+            <End Role="Role_Menu_Relation" EntitySet="Role_Menu_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Role_Menu_Relation_Security_Role" Association="Self.FK_Role_Menu_Relation_Security_Role">
+            <End Role="Security_Role" EntitySet="Security_Role" />
+            <End Role="Role_Menu_Relation" EntitySet="Role_Menu_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKU_HM_Relation_CMS_HMNUM" Association="Self.FK_SKU_HM_Relation_CMS_HMNUM">
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+            <End Role="SKU_HM_Relation" EntitySet="SKU_HM_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKU_HM_Relation_CMS_SKU" Association="Self.FK_SKU_HM_Relation_CMS_SKU">
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+            <End Role="SKU_HM_Relation" EntitySet="SKU_HM_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKU_HM_Relation_CMS_StockKey" Association="Self.FK_SKU_HM_Relation_CMS_StockKey">
+            <End Role="CMS_StockKey" EntitySet="CMS_StockKey" />
+            <End Role="SKU_HM_Relation" EntitySet="SKU_HM_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKU_Media_Relation_CMS_SKU" Association="Self.FK_SKU_Media_Relation_CMS_SKU">
+            <End Role="CMS_SKU" EntitySet="CMS_SKU" />
+            <End Role="SKU_Media_Relation" EntitySet="SKU_Media_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKU_Media_Relation_MediaLibrary" Association="Self.FK_SKU_Media_Relation_MediaLibrary">
+            <End Role="MediaLibrary" EntitySet="MediaLibrary" />
+            <End Role="SKU_Media_Relation" EntitySet="SKU_Media_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM" Association="Self.FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM">
+            <End Role="CMS_HMNUM" EntitySet="CMS_HMNUM" />
+            <End Role="CMS_HMGroup_Relation" EntitySet="CMS_HMGroup_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Channel_Relation_Channel" Association="Self.FK_User_Channel_Relation_Channel">
+            <End Role="Channel" EntitySet="Channel" />
+            <End Role="User_Channel_Relation" EntitySet="User_Channel_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Channel_Relation_User_Profile" Association="Self.FK_User_Channel_Relation_User_Profile">
+            <End Role="User_Profile" EntitySet="User_Profile" />
+            <End Role="User_Channel_Relation" EntitySet="User_Channel_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Profile_Ext_User_Profile" Association="Self.FK_User_Profile_Ext_User_Profile">
+            <End Role="User_Profile" EntitySet="User_Profile" />
+            <End Role="User_Profile_Ext" EntitySet="User_Profile_Ext" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Profile_User_Status" Association="Self.FK_User_Profile_User_Status">
+            <End Role="User_Status" EntitySet="User_Status" />
+            <End Role="User_Profile" EntitySet="User_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role_Relation_Security_Role" Association="Self.FK_User_Role_Relation_Security_Role">
+            <End Role="Security_Role" EntitySet="Security_Role" />
+            <End Role="User_Role_Relation" EntitySet="User_Role_Relation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role_Relation_User_Profile" Association="Self.FK_User_Role_Relation_User_Profile">
+            <End Role="User_Profile" EntitySet="User_Profile" />
+            <End Role="User_Role_Relation" EntitySet="User_Role_Relation" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -2376,7 +2364,7 @@
           <Property Type="Int32" Name="SubCategoryID" />
           <Property Type="Boolean" Name="IsGroup" />
           <Property Type="Int32" Name="StatusID" Nullable="false" />
-          <Property Type="Decimal" Name="Loadability" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="Loadability" Precision="18" Scale="2" />
           <Property Type="Int64" Name="ColourID" Nullable="false" />
           <Property Type="Int64" Name="MaterialID" Nullable="false" />
           <Property Type="DateTime" Name="CreateOn" Nullable="false" Precision="3" />
@@ -2385,7 +2373,7 @@
           <Property Type="String" Name="ModifyBy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="WebPOColourName" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="WebPOMaterialName" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Type="Decimal" Name="NetWeight" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="NetWeight" Precision="18" Scale="2" />
           <NavigationProperty Name="CMS_HM_Costing" Relationship="PermaisuriCMSModel.FK_CMS_HMNUM_CMS_HM_Costing" FromRole="CMS_HMNUM" ToRole="CMS_HM_Costing" />
           <NavigationProperty Name="CMS_HMGroup_Relation" Relationship="PermaisuriCMSModel.FK_CMS_HMGroup_Relation_CMS_HMNUM" FromRole="CMS_HMNUM" ToRole="CMS_HMGroup_Relation" />
           <NavigationProperty Name="CMS_HMGroup_Relation_SUB" Relationship="PermaisuriCMSModel.FK_SUB_CMS_HMGroup_Relation_CMS_HMNUM" FromRole="CMS_HMNUM" ToRole="CMS_HMGroup_Relation" />
@@ -3142,6 +3130,7 @@
           <Property Type="String" Name="UpdateBy" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CMS_ShipViaType" Relationship="PermaisuriCMSModel.FK_CMS_ShipVia_CMS_ShipViaType" FromRole="CMS_ShipVia" ToRole="CMS_ShipViaType" />
           <Property Type="Boolean" Name="IsDefaultShipVia" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="CMS_ShipViaType">
           <Key>
@@ -3994,6 +3983,7 @@
           <EntitySetMapping Name="CMS_ShipVia">
             <EntityTypeMapping TypeName="PermaisuriCMSModel.CMS_ShipVia">
               <MappingFragment StoreEntitySet="CMS_ShipVia">
+                <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="IsDefaultShipVia" ColumnName="IsDefaultShipVia" />
                 <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
                 <ScalarProperty Name="UpdateOn" ColumnName="UpdateOn" />
@@ -4039,6 +4029,7 @@
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -13,8 +13,7 @@ namespace PermaisuriCMS.DAL
     using System.Data.Entity;
     using System.Data.Entity.Core.Objects;
     using System.Data.Entity.Infrastructure;
-    using System.Linq;
-    
+
     public partial class PermaisuriCMSEntities : DbContext
     {
         public PermaisuriCMSEntities()

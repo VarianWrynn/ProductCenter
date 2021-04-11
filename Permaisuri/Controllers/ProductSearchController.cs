@@ -72,14 +72,11 @@ namespace Permaisuri.Controllers
         /// 提供给SearchProduct页面使用，每次根据AJAX请求，动态返回库存信息。
         /// </summary>
         /// <returns></returns>
-// ReSharper disable InconsistentNaming
         public ActionResult GetProductDGData(SKU_Query_Model model, User_Profile_Model useInfo)
-// ReSharper restore InconsistentNaming
         {
             try
             {
-                int totalRecord;
-                var list = new ProductCommonServices().GetProductInventorys(model, out totalRecord, useInfo);
+                var list = new ProductCommonServices().GetProductInventorys(model, out var totalRecord, useInfo);
                 return Json(new NBCMSResultJson
                 {
                     Status = StatusType.OK,

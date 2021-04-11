@@ -27,6 +27,7 @@ namespace PermaisuriCMS.DAL
         public System.DateTime UpdateOn { get; set; }
         public string UpdateBy { get; set; }
         public bool IsDefaultShipVia { get; set; }
+        public string Type { get; set; }
     
         public virtual CMS_ShipViaType CMS_ShipViaType { get; set; }
     }
