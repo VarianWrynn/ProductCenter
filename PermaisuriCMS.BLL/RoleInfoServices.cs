@@ -90,7 +90,12 @@ namespace PermaisuriCMS.BLL
 			}
 		}
 
-
+        /// <summary>
+        /// 赋予/撤销用户权限算法
+        /// </summary>
+        /// <param name="role_guid">需要赋予当前用户什么权限</param>
+        /// <param name="user_guid">当前用户唯一标识</param>
+        /// <returns></returns>
         public bool UpdateRoleInUser(string[] role_guid, Guid user_guid)
         {
             using (PermaisuriCMSEntities db = new PermaisuriCMSEntities())
