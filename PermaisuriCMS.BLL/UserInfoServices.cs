@@ -5,10 +5,10 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Transactions;
-using PermaisuriCMS.Common;
 using PermaisuriCMS.DAL;
 using PermaisuriCMS.Model;
 using System.Data.Entity.Core.Objects;
+using PermaisuriCMS.Common;
 
 namespace PermaisuriCMS.BLL {
     public class UserInfoServices

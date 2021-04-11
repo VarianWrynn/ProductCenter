@@ -47,7 +47,7 @@ namespace PermaisuriCMS.BLL
                 var patriarch = (HSSFPatriarch)sheet.CreateDrawingPatriarch();
                 //create the anchor
                 var anchor = new HSSFClientAnchor(10, 4, 1023, 255, col, row, col, row);
-                anchor.AnchorType = 1;
+                anchor.AnchorType = (AnchorType) 1;
                 //load the picture and get the picture index in the workbook
                 var picture = (HSSFPicture)patriarch.CreatePicture(anchor, id);
                 //Reset the image to the original size.

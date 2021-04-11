@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -7,10 +6,8 @@ using PermaisuriCMS.BLL;
 using PermaisuriCMS.Model;
 using PermaisuriCMS.Common;
 using System.Configuration;
-using System.Web.Script.Serialization;
 using System.IO;
 using System.Text;
-using NLog.Targets;
 
 namespace Permaisuri.Controllers
 {

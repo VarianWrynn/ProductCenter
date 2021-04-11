@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
-using Amazon;
 using Amazon.S3;
 using Amazon.S3.Transfer;
 using PermaisuriCMS.Common;
@@ -14,7 +13,7 @@ namespace Permaisuri.Cloud
 {
     public class CloudUpload
     {
-        private readonly IAmazonS3 _s3Client = AWSClientFactory.CreateAmazonS3Client();
+        private readonly IAmazonS3 _s3Client = new AmazonS3Client();
         private readonly string _defaultBucketName = string.Empty;
         private readonly string _imageStoragePath = string.Empty;
 

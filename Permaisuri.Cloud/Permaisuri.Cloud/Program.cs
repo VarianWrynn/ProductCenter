@@ -21,7 +21,7 @@ namespace Permaisuri.Cloud
     {
         public static void Main(string[] args)
         {
-            var s3Client = AWSClientFactory.CreateAmazonS3Client();
+           // var s3Client = AWSClientFactory.CreateAmazonS3Client();
 
             Console.Read();
         }

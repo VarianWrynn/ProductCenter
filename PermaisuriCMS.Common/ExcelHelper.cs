@@ -20,6 +20,7 @@ namespace PermaisuriCMS.Common
         /// </summary>
         /// <param name="dtSource">源DataTable</param>
         /// <param name="strHeaderText">表头文本</param>
+        [Obsolete]
         static MemoryStream ExportToMemorySteram(DataTable dtSource, string strHeaderText)
         {
             var workbook = new XSSFWorkbook();
@@ -84,34 +85,30 @@ namespace PermaisuriCMS.Common
                         #region 表头及样式
 
                         {
-                            if (sheet != null)
+                            var headerRow = sheet?.CreateRow(0) as XSSFRow;
+                            if (headerRow != null)
                             {
-                                var headerRow = sheet.CreateRow(0) as XSSFRow;
-                                if (headerRow != null)
+                                headerRow.HeightInPoints = 25;
+                                headerRow.CreateCell(0).SetCellValue(strHeaderText);
+
+                                var headStyle = workbook.CreateCellStyle() as XSSFCellStyle;
+                                if (headStyle != null)
                                 {
-                                    headerRow.HeightInPoints = 25;
-                                    headerRow.CreateCell(0).SetCellValue(strHeaderText);
-
-                                    var headStyle = workbook.CreateCellStyle() as XSSFCellStyle;
-                                    if (headStyle != null)
+                                    headStyle.Alignment = HorizontalAlignment.Center;
+                                    var font = workbook.CreateFont() as XSSFFont;
+                                    if (font != null)
                                     {
-                                        headStyle.Alignment = HorizontalAlignment.Center;
-                                        var font = workbook.CreateFont() as XSSFFont;
-                                        if (font != null)
-                                        {
-                                            font.FontHeightInPoints = 20;
-                                            font.Boldweight = 700;
-                                            headStyle.SetFont(font);
-                                        }
-
-                                        headerRow.GetCell(0).CellStyle = headStyle;
+                                        font.FontHeightInPoints = 20;
+                                        font.Boldweight = 700;
+                                        headStyle.SetFont(font);
                                     }
+
+                                    headerRow.GetCell(0).CellStyle = headStyle;
                                 }
                             }
 
                             //sheet.AddMergedRegion(new Region(0, 0, 0, dtSource.Columns.Count - 1));
-                            if (sheet != null)
-                                sheet.AddMergedRegion(new CellRangeAddress(0, 0, 0, dtSource.Columns.Count - 1));
+                            sheet?.AddMergedRegion(new CellRangeAddress(0, 0, 0, dtSource.Columns.Count - 1));
                             //headerRow.Dispose();
                         }
 
@@ -236,6 +233,7 @@ namespace PermaisuriCMS.Common
         /// <param name="dtSource">源DataTable</param>
         /// <param name="strHeaderText">表头文本</param>
         /// <param name="strFileName">保存位置</param>
+        [Obsolete]
         public static void ExportDTtoExcel(DataTable dtSource, string strHeaderText, string strFileName)
         {
             using (var ms = ExportToMemorySteram(dtSource, strHeaderText))

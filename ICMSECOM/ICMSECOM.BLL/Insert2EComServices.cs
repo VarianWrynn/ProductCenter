@@ -1,19 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PermaisuriCMS.Model;
 using ICMSECOM.DAL;
-using EntityFramework;
-using EntityFramework.Extensions;
-using NLog;
-using PermaisuriCMS.Common;
 using System.Data.Entity.Validation;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity;
+using PermaisuriCMS.Common;
 
 namespace ICMSECOM.BLL
 {

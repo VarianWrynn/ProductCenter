@@ -1,19 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using PermaisuriCMS.Common;
 using PermaisuriCMS.DAL;
 using PermaisuriCMS.Model;
 using System.Data.Entity;
-using EntityFramework.Extensions;
 
 namespace PermaisuriCMS.BLL
 {

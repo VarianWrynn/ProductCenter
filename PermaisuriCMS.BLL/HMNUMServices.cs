@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Data.Entity;
-using System.Text;
-using System.Threading.Tasks;
-using PermaisuriCMS.Common;
 using PermaisuriCMS.DAL;
 using PermaisuriCMS.Model;
-using System.Data;
 using System.Configuration;
 using System.Data.Entity.Infrastructure;
 
